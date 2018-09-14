@@ -56,7 +56,7 @@ function build_taxonomies() {
   register_taxonomy( 'leadership', 'team',
     array( 
       'hierarchical' => true, // true = acts like categories false = acts like tags
-      'label' => 'Organization Type', 
+      'label' => 'Leadership', 
       'query_var' => true, 
       'rewrite' => true ,
       'show_admin_column' => true,
@@ -67,7 +67,7 @@ function build_taxonomies() {
   register_taxonomy( 'law', 'team',
     array( 
       'hierarchical' => true, // true = acts like categories false = acts like tags
-      'label' => 'Organization Type', 
+      'label' => 'Law', 
       'query_var' => true, 
       'rewrite' => true ,
       'show_admin_column' => true,
