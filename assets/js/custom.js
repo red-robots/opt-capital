@@ -17,6 +17,20 @@ jQuery(document).ready(function ($) {
         $(this).addClass("active");
         }
 	});
+	/*
+	*
+	*	Mobile Burger Menu
+	*
+	------------------------------------*/
+	$('.burger, .overlay').click(function(){
+	  $('.burger').toggleClass('clicked');
+	  $('.overlay').toggleClass('show');
+	  $('nav').toggleClass('show');
+	  $('body').toggleClass('overflow');
+	});
+	$('nav.mobilemenu li').click(function() {
+	    $(this).find('ul.dropdown').toggleClass('active');
+	});
 
 	/*
 	*
@@ -83,9 +97,7 @@ jQuery(document).ready(function ($) {
 	*	Nice Page Scroll
 	*
 	------------------------------------*/
-	$(function(){	
-		$("html").niceScroll();
-	});
+	
 	
 	
 	/*

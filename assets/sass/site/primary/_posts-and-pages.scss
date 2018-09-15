@@ -26,3 +26,218 @@
 	clear: both;
 	margin: 0 0 1.5em;
 }
+#slider {
+	width: 100%;
+	float: left;
+	display: none;
+	@media screen and (min-width: $tabwidth) {
+		display: block;
+	}
+}
+.slide {
+	width: 100%;
+	position: relative;
+	z-index: 50;
+	
+	
+	img {
+		width: 100%;
+	}
+	.message {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		text-align: center;
+		color: #fff;
+		@media screen and (min-width: $tabwidth) {
+
+		}
+		h2 {
+			font-size: 4.5vw;
+			font-weight: 400;
+			margin: 0 0 10px 0;
+		}
+		span.superbold {
+			font-weight: 800;
+		}
+		.desc {
+			font-weight: 300;
+			font-size: 1rem;
+			width: 70%;
+			margin: 0 auto;
+			font: {
+				weight: 300;
+				size: 1.1rem;
+			}
+		}
+	}
+}
+section.home-middle {
+	width: 100%;
+	float: left;
+	padding: 0px 0 0 0;
+	margin: 0 0 50px 0;
+	@media screen and (min-width: $tabwidth) {
+		padding: 90px 0 0 0;
+	}
+	section.video {
+		width: 100%;
+		float: left;
+		@media screen and (min-width: $tabwidth) {
+			width: 64%;
+		}
+	}
+	.video-player-wrapper {
+		width: 100%;
+		background-color: $color-med-grey;
+		padding: 15px;
+		@media screen and (min-width: $tabwidth) {
+
+		}
+		.video-player {
+			width: 100%;
+		}
+	}
+	.content {
+		h2 {
+			color: $color-orange;
+			@media screen and (min-width: $tabwidth) {
+
+			}
+		}
+	}
+	section.strategies {
+		width: 100%;
+		float: left;
+		margin: 30px 0;
+		@media screen and (min-width: $tabwidth) {
+			width: 33%;
+			float: right;
+			border-left: 1px solid $color-light-grey;
+			padding: 0 0 0 2%;
+			margin: 0;
+		}
+		h2 {
+			color: $color-orange;
+			margin: 0 0 10px 0;
+			font: {
+				size: 8vw;
+				weight: 300;
+			}
+			@media screen and (min-width: $tabwidth) {
+				font-size: 4vw;
+			}
+		}
+		h3 {
+			color: $color-orange;
+			margin: 0 0 0px 0;
+			font: {
+				size: 1rem;
+				weight: 700;
+			}
+			@media screen and (min-width: $tabwidth) {
+
+			}
+		}
+	}
+}
+section.boxes {
+	width: 100%;
+	float: left;
+
+	@media screen and (min-width: $tabwidth) {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: center;
+	}
+	.box {
+		width: 100%;
+		margin: 0 0 40px 0;
+		padding: 4% 2% 2% 2%;
+		text-align: center;
+		color: #fff;
+		clear: both;
+		@include transition(all ease .2s);
+		@media screen and (min-width: $tabwidth) {
+			width: auto;
+			flex-basis: 28%;
+			transform: scale(1);
+			margin: 30px 20px;
+			clear: none;
+			display: flex;
+			flex-direction: column;
+		}
+		&:hover {
+			@media screen and (min-width: $tabwidth) {
+				transform: scale(1.1);
+			}
+		}
+		.icon {
+			width: 50%;
+			display: inline-block;
+			margin: 0 auto;
+			img {
+				width: 100%;
+			}
+		}
+		h2 {
+			font: {
+				weight: 300;
+				size: 3vw;
+			}
+			line-height: 1.1;
+		}
+		.desc {
+			width: 100%;
+			float: left;
+			margin: 0 0 30px 0;
+		}
+		.learnmore {
+			border: 2px solid #fff;
+			align-self: flex-end;
+			margin-top: auto;
+		}
+		.swipe {
+			color:#fff;
+			a {
+				background-color: #fff;
+				&:hover {
+					background-color:rgba(#fff, 0);
+				}
+			}
+
+			.insider {
+				background-color:$color-med-grey;
+			}
+
+		}
+	}
+	.box1 {
+		@include bluegrad;
+		.learnmore a {
+			color: $color-blue;
+			&:hover {color: #fff;}
+		}
+	}
+	.box2 {
+		@include orangegrad;
+		.learnmore a {
+			color: $color-orange;
+			&:hover {color: #fff;}
+		}
+	}
+	.box3 {
+		@include greygrad;
+		.learnmore a {
+			color: $color-med-grey;
+			display: block;
+			&:hover {color: #fff;}
+		}
+	}
+}
