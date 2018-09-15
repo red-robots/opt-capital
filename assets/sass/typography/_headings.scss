@@ -2,6 +2,16 @@ h1, h2, h3, h4, h5, h6 {
 	clear: both;
 }
 
-.entry-content h1 {
-	font-size: 30px;
+h1.entry-title {
+	color: $color-orange;
+	font: {
+		size: 30px;
+		weight: 300;
+	}
+	@media screen and (min-width: $tabwidth) {
+		font-size: 25px;
+	}
+	@media screen and (min-width: $deskwidth) {
+		font-size: 30px;
+	}
 }

@@ -33,6 +33,19 @@ jQuery(document).ready(function ($) {
 	});
 
 	/*
+        FAQ dropdowns
+	__________________________________________
+	*/
+	$('.question').click(function() {
+	 
+	    $(this).next('.answer').slideToggle(500);
+	    $(this).toggleClass('close');
+	    $(this).find('.plus-minus-toggle').toggleClass('collapsed');
+	    $(this).parent().toggleClass('active');
+	 
+	});
+
+	/*
 	*
 	*	Responsive iFrames
 	*

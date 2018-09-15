@@ -5,7 +5,7 @@
 	width: 100%;
 	background-color: #fff;
 	display: none;
-	@media screen and (min-width: $tabwidth) {
+	@media screen and (min-width: $midwidth) {
 		clear: none;
 		width: auto;
 		display: block;
@@ -16,7 +16,6 @@
 	}
 	.menu {
 		@include transition(all ease 1s);
-		overflow: hidden;
 		display: block;
 	}
 	&.toggled .menu {
@@ -37,41 +36,57 @@
 		@media screen and (min-width: $tabwidth) {
 			display: flex;
 		}
+		li {
 
+			&:hover > ul,
+				&.focus > ul {
+					max-height: 1000px;
+				}
+				@media screen and (min-width: $tabwidth) {
+		
+				}
+				@media screen and (min-width: $deskwidth) {
+					
+				}
+		}
 		ul {
-			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+			// box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 			float: left;
 			position: absolute;
-			top: 1.5em;
-			left: -999em;
+			top: 3em;
 			z-index: 99999;
-
+			max-height: 0;
+			background-color: $color-orange;
+			@include transition(all ease .7s);
+			width: 250px;
+			display: flex;
+			flex-direction: column;
 			ul {
 				left: -999em;
 				top: 0;
 			}
 
 			li {
-				&:hover > ul,
-				&.focus > ul {
-					left: 100%;
-				}
-				@media screen and (min-width: $tabwidth) {
-		
-				}
-				@media screen and (min-width: $deskwidth) {
-					
-				}
+				width: 100%;
+				display: block;
+				text-align: left;
 			}
 
 
 			a {
-				width: 200px;
+				width:100%;
+				display: block;
+				color: #fff;
+				background-color: rgba(#fff, 0);
 				@media screen and (min-width: $tabwidth) {
 		
 				}
 				@media screen and (min-width: $deskwidth) {
 					
+				}
+				&:hover {
+					background-color: rgba(#fff, .2);
+					color: #fff;
 				}
 			}
 
@@ -100,8 +115,8 @@
 		font-family: $font-heading;
 		font-weight: 300;
 		width: 100%;
-		@media screen and (min-width: $tabwidth) {
-			
+		@media screen and (min-width: $midwidth) {
+			font-size: 1.1vw;
 			line-height: 3;
 			width: auto;
 			// padding: 0 20px;
@@ -481,11 +496,11 @@ body {
   width: 50px;
   height: 50px;
   position: absolute;
-  top: 5px;
-  left: 5px;
+  top: 10px;
+  right: 5px;
   border-radius: 4px;
   z-index: 100002;
-  @media screen and (min-width: $tabwidth) {
+  @media screen and (min-width: $midwidth) {
   	display: none;
   }
   
@@ -524,14 +539,14 @@ nav.mobilemenu {
   top: 0;
   right: 0;
   height: 100%;
-  max-width: 515px;
+  // max-width: 515px;
   width: 100%;
   padding: 100px 40px 60px 40px;
   overflow-y: auto;
   z-index: 100001;
   @include transform(translateX(100%));
   @include transition(transform .55s cubic-bezier(0.785, 0.135, 0.15, 0.86));
-  @media screen and (min-width: $tabwidth) {
+  @media screen and (min-width: $midwidth) {
   	display: none;
   }
   ul {
