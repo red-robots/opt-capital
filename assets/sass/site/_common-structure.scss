@@ -6,17 +6,23 @@ a {
 	@include transition(all ease .3s);
 }
 .clear {clear: both;}
-.wrapper {
+body.page-template-page-people {
+	.page-wrapper {
+		background-color: #efefef;
+	}
+}
+.wrapper, .page-wrapper {
 	width: 100%;
 	margin: 0px auto;
 	padding: 20px;
+
 	
 	@media screen and (min-width: $tabwidth) {
 		width: 100%;
+		float: left;
 	}
 	@media screen and (min-width: $deskwidth) {
-		width: 90%;
-		padding: 0px;
+		padding: 0 5%;
 	}
 }
 
@@ -33,7 +39,9 @@ a {
 		/*width: 1200px;*/
 	}
 }
-
+.center {
+	text-align: center;
+}
 .widget-area {
 	width: 100%;
 	margin: 0px auto;
@@ -64,8 +72,8 @@ a {
 	.wrapper {
 		padding: 10px;
 		@media screen and (min-width: $deskwidth) {
-			width: 90%;
-			padding: 0px;
+			width: 100%;
+			padding: 0 5%;
 		}
 	}
 }

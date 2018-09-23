@@ -21,7 +21,10 @@
 <script defer src="<?php bloginfo( 'template_url' ); ?>/assets/svg-with-js/js/fontawesome-all.js"></script>
 
 
-<?php wp_head(); ?>
+<?php wp_head(); 
+
+
+?>
 </head>
 
 <body <?php body_class(); ?>>
@@ -64,4 +67,4 @@
 
 	<?php if(is_front_page()){ get_template_part('inc/home-slider'); } ?>
 
-	<div id="content" class="site-content wrapper">
+	<div id="content" class="site-content page-wrapper">

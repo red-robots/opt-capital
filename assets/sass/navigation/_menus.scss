@@ -61,6 +61,7 @@
 			width: 250px;
 			display: flex;
 			flex-direction: column;
+			overflow: hidden;
 			ul {
 				left: -999em;
 				top: 0;

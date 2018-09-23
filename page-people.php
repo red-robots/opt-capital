@@ -8,8 +8,8 @@
  */
 
 get_header(); ?>
-
-	<div id="primary" class="content-area">
+<div class="people">
+	<div id="primary" class="content-area-full">
 		<main id="main" class="site-main" role="main">
 
 			<?php
@@ -17,15 +17,12 @@ get_header(); ?>
 
 				get_template_part( 'template-parts/content', 'page' );
 
-				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
 
 			endwhile; // End of the loop.
 			?>
 
 			<section class="people">
+				<div class="card-wrap">
 				<?php
 				$wp_query = new WP_Query();
 				$wp_query->query(array(
@@ -44,11 +41,11 @@ get_header(); ?>
 				<?php while ($wp_query->have_posts()) :  $wp_query->the_post(); 
 					$title=get_field('title');
 					$img=get_field('team_image');
-					$year=get_field('year_joined_company');
-					$experience=get_field('previous_experience');
-					$education=get_field('education');
+					//$year=get_field('year_joined_company');
+					//$experience=get_field('previous_experience');
+					//$education=get_field('education');
 				?>
-					<div class="person">
+					<div class="card">
 						<?php if($img) { ?>
 							<div class="image">
 								<img src="<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
@@ -67,17 +64,20 @@ get_header(); ?>
 						<?php if($education) { ?>
 							<div class="education"><?php echo $education; ?></div>
 						<?php } ?>
-						<div class="learnmore swipe">
-							<div class='insider'></div>
-							<a href="<?php the_permalink(); ?>">Read More</a>
+						<div class="center">
+							<div class="learnmore swipe">
+								<div class='insider'></div>
+								<a href="<?php the_permalink(); ?>">Full Bio</a>
+							</div>
 						</div>
 					</div>
 				<?php endwhile; ?>
 			<?php endif; ?>
+			</div>
 			</section>	
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-
+</div>
 <?php
 get_footer();
