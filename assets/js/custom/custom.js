@@ -5,7 +5,7 @@
  *	Designed by: Austin Crane
  */
 
-jQuery(document).ready(function ($) {
+$(document).ready(function ($) {
 	
 	/*
 	*
@@ -92,25 +92,6 @@ jQuery(document).ready(function ($) {
 			}
  		 });
 	});
-
-	/*
-	*
-	*	Smooth Scroll to Anchor
-	*
-	------------------------------------*/
-	 $('a').click(function(){
-	    $('html, body').animate({
-	        scrollTop: $('[name="' + $.attr(this, 'href').substr(1) + '"]').offset().top
-	    }, 500);
-	    return false;
-	});
-
-	/*
-	*
-	*	Nice Page Scroll
-	*
-	------------------------------------*/
-	
 	
 	
 	/*
@@ -126,5 +107,33 @@ jQuery(document).ready(function ($) {
 	*
 	------------------------------------*/
 	new WOW().init();
+    
+    /* Additional JS */
+    if( $(".styledTitle").length > 0 ) {
+        var pagetitle = $(".styledTitle");
+        var str = pagetitle.text();
+        var count_words = str.split(' ');
+        var total_words = count_words.length;
+        if(total_words>1) {
+            var new_title = '';
+            var i=1;
+            $(count_words).each( function(k,v) {
+                if(i==total_words) {
+                    new_title += ' ' + '<span class="last-word">'+v+'</span>';
+                } else {
+                    new_title += v;
+                }
+                i++;
+            });
+            pagetitle.html(new_title);
+        }
+    }
+    
+    /* timeline */
+    $('.timeline-info').each(function(){
+        if($(this).hasClass('highlight')) {
+            $(this).prev().addClass('before');
+        }
+    });
 
 });// END #####################################    END

@@ -5,13 +5,16 @@ h1, h2, h3, h4, h5, h6 {
 h1.entry-title {
 	color: $color-orange;
 	font: {
-		size: 30px;
+		size: 40px;
 		weight: 300;
 	}
+    .last-word {
+        font-weight: 600;
+    }
 	@media screen and (min-width: $tabwidth) {
-		font-size: 25px;
+		font-size: 65px;
 	}
 	@media screen and (min-width: $deskwidth) {
-		font-size: 30px;
+		font-size: 85px;
 	}
 }

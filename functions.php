@@ -68,3 +68,8 @@ require get_template_directory() . '/inc/block-all-registration-and-comments.php
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+add_filter("gform_init_scripts_footer", "init_scripts");
+function init_scripts() {
+    return true;
+}

@@ -17,7 +17,6 @@
 }
 
 .page-content,
-.entry-content,
 .entry-summary {
 	margin: 1.5em 0 0;
 }
@@ -507,31 +506,223 @@ section.other-team {
 }
 section.stats {
 	width: 100%;
+    text-align:center;
+    padding-bottom: 30px;
 	@media screen and (min-width: $tabwidth) {
-		margin: 120px 0 0 0;
+		margin: 155px 0 0 0;
+        padding-bottom: 50px;
 	}
 }
-.speech-bubble {
-	width: 100%;
-	margin: 0 0 40px 0;
-	position: relative;
-	background: rgba($color-med-grey,1);
-	border-radius: .4em;
-	padding: 5%;
-	color: #fff;
+.timeline-title {
+    margin: 0 0 20px;
+    color:$color-orange;
+    font: {
+        size: 35px;
+        weight: 300;
+    }
+    @media screen and (min-width: $tabwidth) {
+        margin-bottom: 30px;
+        font: {
+            size: 50px;
+        }
+    }
 }
-
-.speech-bubble:after {
-	content: '';
-	position: absolute;
-	bottom: 0;
-	left: 50%;
-	width: 0;
-	height: 0;
-	border: 20px solid transparent;
-	border-top-color:rgba($color-med-grey,1);
-	border-bottom: 0;
-	border-left: 0;
-	margin-left: -10px;
-	margin-bottom: -20px;
+.timeline-info {
+    position: relative;
+    .pointer {
+        position: relative;
+        width: 100%;
+        height: 65px;
+        margin-top: 4px;
+        margin-bottom: 4px;
+        span {
+            display: inline-block;
+            position: relative;
+            &.circle {
+                width: 21px;
+                height: 21px;
+                border-radius: 100px;
+                background: #FFF;
+                border: 2px solid $color-dark-grey;
+                z-index: 3;
+            }
+            &.tail {
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                span {
+                    display: inline-block;
+                    width: 2px;
+                    height: 100%;
+                    background: $color-dark-grey;
+                }
+            }
+        }
+    }
+    &.before {
+        span.tail {
+            span {
+                background: $color-dark-grey;
+                background: -moz-linear-gradient(top, $color-dark-grey 0%, $color-dark-grey 10%, $color-orange 100%);
+                background: -webkit-linear-gradient(top, $color-dark-grey 0%,$color-dark-grey 10%,$color-orange 100%);
+                background: linear-gradient(to bottom, $color-dark-grey 0%,$color-dark-grey 10%,$color-orange 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color-dark-grey', endColorstr='$color-orange',GradientType=0 );
+            }
+        }
+    }
+    &.highlight {
+        .text {
+            color:$color-orange;
+            font-weight: 600;
+        }
+        span.circle {
+            border: 5px solid $color-orange;
+        }
+        span.tail {
+            span {
+                width: 5px;
+                background: $color-orange;
+                background: -moz-linear-gradient(top, $color-orange 0%, $color-orange 50%, $color-dark-grey 100%);
+                background: -webkit-linear-gradient(top, $color-orange 0%,$color-orange 50%,$color-dark-grey 100%);
+                background: linear-gradient(to bottom, $color-orange 0%,$color-orange 50%,$color-dark-grey 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color-orange', endColorstr='$color-dark-grey',GradientType=0 );
+            }
+        }
+    }
+    &.last {
+        .pointer {
+            display: none;
+        }
+    }
+}
+.subpage-wrapper {
+    position: relative;
+}
+.page-template-page-contact {
+    .page-wrapper {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .content-area {
+        width: 90%;
+        margin: 0 auto;
+        float: none;
+    }
+}
+.full-image-wrap {
+    position: relative;
+    height: 400px;
+    @include background-image-full(scroll,center center);
+    height: 600px;
+    .bg-overlay {
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,.7);
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+.contact-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.contact-content {
+    position: relative;
+    z-index: 5;
+    .site-main {
+        width: 100%;
+        padding-top: 70px;
+    }
+    .topContent {
+        color:#FFF;
+        margin-top:100px;
+        margin-bottom:50px;
+        width: 40%;
+        h2 {
+            font-size:35px;
+        }
+    }
+}
+.formCol,
+addressCol {
+    float: left;
+    position: relative;
+}
+.contact-form-wrapper {
+    background: #FFF;
+    position: relative;
+    width: 100%;
+    padding-bottom: 30px;
+    .formCol {
+        width: 70%;
+        .inside {
+            padding:15px 60px;
+        }
+    }
+    .addressCol {
+        width: 30%;
+        background: #eb692e;
+        background: -moz-linear-gradient(-45deg, #eb692e 0%, #e5853b 64%, #f4a21f 100%);
+        background: -webkit-linear-gradient(-45deg, #eb692e 0%,#e5853b 64%,#f4a21f 100%);
+        background: linear-gradient(135deg, #eb692e 0%,#e5853b 64%,#f4a21f 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eb692e', endColorstr='#f4a21f',GradientType=1 );
+    }
+    .row {
+        display: flex;
+        &:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    }
+    .c_title1 {
+        margin: 0 0;
+        font: {
+            size: 35px;
+            weight:600;
+        }
+        color:#000;
+    }
+    .c_text {
+        position: relative;
+        top: -8px;
+        color:#000;
+        font-size: 20px;
+    }
+    .formWrap {
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            border-top:none;
+            border-left:none;
+            border-right:none;
+            border-bottom:1px solid $color-med-grey;
+            border-radius: 0;
+            outline:0;
+            -webkit-appearance:none;
+        }
+    }
+    .gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
+         display: none;
+    }
+    .gform_body {
+        display: block;
+        width: 100%;
+        ul {
+            width: 100%;
+        }
+    }
+    .gform_wrapper {
+        li {
+            display: block;
+            float: left;
+            width: 100%;
+        }
+    }
 }
