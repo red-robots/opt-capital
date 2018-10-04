@@ -135,5 +135,9 @@ $(document).ready(function ($) {
             $(this).prev().addClass('before');
         }
     });
+    
+    $(document).on("click","#formSubmitBtn",function(){
+        $('.gform_button').trigger("click");
+    });
 
 });// END #####################################    END

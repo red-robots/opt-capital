@@ -36,15 +36,40 @@ $atts = ($img) ? " style=background-image:url(".$image_src.")" : '';
                                 $contact_content = get_field('contact_content');
                             ?>
                             <?php if( $form_shortcode &&  do_shortcode($form_shortcode) ) { ?>
-                                <h2 class="c_title1"><?php echo $contact_title; ?></h2>
+                                <div class="c-title-wrap">
+                                    <h2 class="c_title1"><?php echo $contact_title; ?></h2>
+                                    <span class="mail-icon">
+                                        <svg enable-background="new 0 0 55.5 31.1" version="1.1" viewBox="0 0 55.5 31.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+                                            <path class="st00" d="M11.4,0.9h41.3c1.1,0,2,0.9,2,2v25.5c0,1.1-0.9,2-2,2H11.4"/>
+                                            <path class="st11" d="M17.3,6.1L32,16.8c0.7,0.5,1.7,0.5,2.4,0L48.7,6.1"/>
+                                            <line class="st11" x1="41.5" x2="50.8" y1="16.5" y2="26.1"/>
+                                            <line class="st11" x2="13.6" y1="9.2" y2="9.2"/>
+                                            <line class="st11" x1="4.6" x2="18.2" y1="15.5" y2="15.5"/>
+                                            <line class="st11" x1="10" x2="23.6" y1="22.3" y2="22.3"/>
+                                        </svg>
+                                    </span>
+                                </div>
+                                
                                 <div class="c_text"><?php echo $contact_content; ?></div>
-                                <div class="formWrap">
+                                
+                                <div class="formWrap clear">
                                     <?php echo do_shortcode($form_shortcode); ?>
+                                    <a id="formSubmitBtn">
+                                        <span>
+                                            <svg enable-background="new 0 0 31.8 26.4" version="1.1" viewBox="0 0 31.8 26.4" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+                                            <polygon class="st0" points="1.5 12.4 31 0.9 25.8 25.5 14.7 17.1"/>
+                                            <polyline class="st0" points="31 0.9 14.7 17.1 14.7 24.9 19.2 20.5"/>
+                                            </svg>
+                                        </span>
+                                    </a> 
                                 </div>
                             <?php } ?>
                             </div>
                         </div>
                         <div class="addressCol column">
+                            <div class="a_inside clear">
+                                <h3 class="a-title">Our Contacts</h3>
+                            </div>
                         </div>
                     </div>
                 </div>

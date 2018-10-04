@@ -5,6 +5,8 @@ a {
 	text-decoration: none;
 	@include transition(all ease .3s);
 }
+.clear:before, .clear:after { content: " "; display: table; }
+.clear { *zoom: 1; }
 .clear {clear: both;}
 body.page-template-page-people {
 	.page-wrapper {
@@ -115,7 +117,7 @@ body.page-template-page-people {
 #primary {
 	margin-top: 100px;
 	@media screen and (min-width: $midwidth) {
-		margin-top: 50px;
+		margin-top: 70px;
 	}
 }
 .readmore {
