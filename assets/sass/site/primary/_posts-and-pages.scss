@@ -649,37 +649,77 @@ section.stats {
         }
     }
 }
-.formCol,
-addressCol {
-    float: left;
-    position: relative;
-}
+
 .contact-form-wrapper {
     background: #FFF;
     position: relative;
     width: 100%;
     box-shadow: 0px 3px 16px -4px rgba(0,0,0,0.3);
+    .formCol,
+    addressCol {
+        position: relative;
+    }
     .formCol {
-        width: 70%;
+        width: 100%;
         .inside {
+            padding:15px 20px;
+        }
+        @media screen and (min-width: $tabwidth) {
             padding:15px 60px;
         }
     }
     .addressCol {
         color:#FFF;
-        width: 30%;
+        width: 100%;
+        position: relative;
         background: #eb692e;
         background: -moz-linear-gradient(-45deg, #eb692e 0%, #e5853b 64%, #f4a21f 100%);
         background: -webkit-linear-gradient(-45deg, #eb692e 0%,#e5853b 64%,#f4a21f 100%);
         background: linear-gradient(135deg, #eb692e 0%,#e5853b 64%,#f4a21f 100%);
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eb692e', endColorstr='#f4a21f',GradientType=1 );
         .a-title {
-            font-size: 20px;
+            font-size: 25px;
             font-weight: 600;
             margin-top: 10px;
+            margin-bottom: 40px;
         }
         .a_inside {
             padding:20px 30px;
+        }
+        .a-info {
+            position: relative;
+            padding-left: 33px;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+        .icon {
+            display: inline-block;
+            font-size: 25px;
+            position: absolute;
+            top: -3px;
+            left: 0;
+            &.phone {
+                transform: rotateY(180deg);
+                font-size:18px;
+            }
+            &.email {
+                font-size: 20px;
+            }
+        }
+        .trans-logo {
+            width: 130px;
+            position: absolute;
+            bottom: 10px;
+            right: 20px;
+            opacity: 0.25;
+            img {
+                width:100%;
+                height:auto;
+            }
+        }
+        a {
+            color:#FFF;
+            text-decoration: none;
         }
         @media screen and (min-width: $tabwidth) {
             .a_inside {
@@ -689,10 +729,14 @@ addressCol {
                 font-size: 30px;
                 margin-top: 20px;
             }
+            .a-info {
+                font-size:18px;
+                margin-bottom: 30px;
+            }
         }
     }
     .row {
-        display: flex;
+        display: block;
         &:after {
             content: "";
             display: table;
@@ -723,7 +767,12 @@ addressCol {
         margin-bottom: 40px;
     }
     .gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
-         display: none;
+         opacity: 0.7;
+    }
+    @media screen and (min-width: $tabwidth) {
+        .gform_wrapper .field_sublabel_below .ginput_complex.ginput_container label {
+            display: none;
+        }
     }
     .gform_body {
         display: block;
@@ -736,7 +785,7 @@ addressCol {
         li {
             display: block;
             float: left;
-            width: 45%;
+            width: 100%;
             clear:none;
             &#field_2_1,
             &#field_2_4 {
@@ -746,7 +795,7 @@ addressCol {
                 float:right;
             }
             div.ginput_complex.ginput_container.gf_name_has_2 span{
-                width: 45%;
+                width: 100%;
                 margin-right: 0;
             }
             span.name_last {
@@ -756,7 +805,16 @@ addressCol {
                 font-size: 14px;
                 font-weight: 400;
             }
-            
+            @media screen and (min-width: $tabwidth) {
+                div.ginput_complex.ginput_container.gf_name_has_2 span{
+                    width: 45%;
+                }
+            }
+        }
+        @media screen and (min-width: $tabwidth) {
+            li {
+               width: 45%;
+            }
         }
         
     }
@@ -769,7 +827,7 @@ addressCol {
     .gform_wrapper ul.gform_fields li.gfield {
         padding-right: 0;
         clear:none;
-        margin-bottom: 40px;
+        margin-bottom: 20px;
     }
     .gform_wrapper .top_label div.ginput_container {
         margin-top: 0;
@@ -786,14 +844,7 @@ addressCol {
         border-radius: 0;
         outline:0;
         -webkit-appearance:none;
-    }
-    
-    @media screen and (min-width: $tabwidth) {
-        .gform_wrapper textarea {
-            &.textarea {
-                padding-right:80px;
-            }
-        }
+        width: 100%;
     }
     
     .gform_footer {
@@ -804,6 +855,7 @@ addressCol {
         border-left:none;
         border-right:none;
         border-bottom: 1p solid #790000;
+        width: 100%;
     }
     .gform_wrapper li.gfield.gfield_error {
         border-top: 0;
@@ -812,8 +864,8 @@ addressCol {
     }
     #formSubmitBtn {
         display: inline-block;
-        width: 90px;
-        height:90px;
+        width: 70px;
+        height: 70px;
         border-radius: 100px;
         background: $color-orange;
         cursor: pointer;
@@ -822,11 +874,11 @@ addressCol {
         right: 0;
         text-align: center;
         span {
-            width: 55px;
+            width: 40px;
             display: inline-block;
             position: relative;
-            top: 22px;
-            left: -5px;
+            top: 19px;
+            left: -3px;
         }
         &:hover {
             background: $color-blue;
@@ -837,6 +889,53 @@ addressCol {
         stroke:#FFFFFF;
         stroke-miterlimit:10;
     }
+    .mail-icon {
+        display: block;
+        width: 60px;
+        position: absolute;
+        top: 10px;
+        right: 0;
+        .st00{fill:none;stroke:#000000;stroke-width:1.44;stroke-miterlimit:10;}
+        .st11{fill:none;stroke:#000000;stroke-width:1.8;stroke-miterlimit:10;}
+    }
+    @media screen and (min-width: $tabwidth) {
+        .row {
+            display: flex;
+        }
+        .mail-icon {
+            width: 90px;
+            top: 25px;
+        }
+        .gform_wrapper textarea {
+            &.textarea {
+                padding-right:80px;
+                height: 100px;
+            }
+        }
+        .gform_wrapper ul.gform_fields li.gfield {
+            margin-bottom: 40px;
+        }
+        #formSubmitBtn {
+            width: 90px;
+            height:90px;
+            span {
+                width: 55px;
+                top: 22px;
+                left: -5px;
+            }
+        }
+        .formCol {
+            width: 70%;
+        }
+        .addressCol {
+            width: 30%;
+        }
+        .formCol,
+        .addressCol {
+            float: left;
+        }
+    }
+    
 }
 body .gform_wrapper .validation_message,
 body .gform_wrapper div.validation_error {
@@ -845,15 +944,7 @@ body .gform_wrapper div.validation_error {
 body .gform_wrapper .field_description_below .gfield_description {
     padding-top: 0;
 }
+
 .c-title-wrap {
     position: relative;
-}
-.mail-icon {
-    display: block;
-    width: 90px;
-    position: absolute;
-    top: 25px;
-    right: 0;
-    .st00{fill:none;stroke:#000000;stroke-width:1.44;stroke-miterlimit:10;}
-    .st11{fill:none;stroke:#000000;stroke-width:1.8;stroke-miterlimit:10;}
 }

@@ -69,6 +69,44 @@ $atts = ($img) ? " style=background-image:url(".$image_src.")" : '';
                         <div class="addressCol column">
                             <div class="a_inside clear">
                                 <h3 class="a-title">Our Contacts</h3>
+                                <?php 
+                                    $address = get_field('physical_address', 'option'); 
+                                    $contact_numbers = get_field('contact_numbers', 'option'); 
+                                    $email = get_field('email', 'option'); 
+                                    $whiteLogo = get_field('white_logo', 'option'); 
+                                ?>
+                                <?php if($address) { ?>
+                                <div class="a-info clear">
+                                    <span class="icon marker">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </span>
+                                    <div class="txt"><?php echo $address; ?></div>
+                                </div>
+                                <?php } ?>
+                                
+                                <?php if($contact_numbers) { ?>
+                                <div class="a-info clear">
+                                    <span class="icon phone">
+                                        <i class="fa fa-phone" aria-hidden="true"></i>
+                                    </span>
+                                    <div class="txt"><?php echo nl2br($contact_numbers); ?></div>
+                                </div>
+                                <?php } ?>
+                                
+                                <?php if($email) { ?>
+                                <div class="a-info clear">
+                                    <span class="icon email">
+                                        <i class="fas fa-envelope" aria-hidden="true"></i>
+                                    </span>
+                                    <div class="txt"><a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a></div>
+                                </div>
+                                <?php } ?>
+                                
+                                <?php if($whiteLogo) { ?>
+                                <div class="trans-logo">
+                                    <img src="<?php echo $whiteLogo?>" alt="" />
+                                </div>
+                                <?php } ?>
                             </div>
                         </div>
                     </div>
