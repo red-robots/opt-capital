@@ -787,16 +787,22 @@ section.stats {
             float: left;
             width: 100%;
             clear:none;
-            &#field_2_1,
-            &#field_2_4 {
+            &#field_1_1,
+            &#field_1_4 {
                 width: 100%;
             }
-            &#field_2_3 {
+            &#field_1_3 {
                 float:right;
             }
             div.ginput_complex.ginput_container.gf_name_has_2 span{
-                width: 100%;
+                width: 45%;
                 margin-right: 0;
+                @media screen and (min-width: $tabwidth) {
+                	width: 46.5%;
+               	}
+            }
+            span.name_first {
+            	float:left;
             }
             span.name_last {
                 float:right;
@@ -804,11 +810,6 @@ section.stats {
             label {
                 font-size: 14px;
                 font-weight: 400;
-            }
-            @media screen and (min-width: $tabwidth) {
-                div.ginput_complex.ginput_container.gf_name_has_2 span{
-                    width: 45%;
-                }
             }
         }
         @media screen and (min-width: $tabwidth) {
