@@ -73,7 +73,7 @@ $atts = ($img) ? " style=background-image:url(".$image_src.")" : '';
                                     $address = get_field('physical_address', 'option'); 
                                     $contact_numbers = get_field('contact_numbers', 'option'); 
                                     $email = get_field('email', 'option'); 
-                                    $whiteLogo = get_field('white_logo', 'option'); 
+                                    $whiteLogo = get_field('logo_white', 'option'); 
                                 ?>
                                 <?php if($address) { ?>
                                 <div class="a-info clear">
