@@ -83,15 +83,15 @@ $(document).ready(function ($) {
 	*	Isotope with Images Loaded
 	*
 	------------------------------------*/
-	var $container = $('#container').imagesLoaded( function() {
-  	$container.isotope({
-    // options
-	 itemSelector: '.item',
-		  masonry: {
-			gutter: 15
-			}
- 		 });
-	});
+//	var $container = $('#container').imagesLoaded( function() {
+//  	$container.isotope({
+//    // options
+//	 itemSelector: '.item',
+//		  masonry: {
+//			gutter: 15
+//			}
+// 		 });
+//	});
 	
 	
 	/*
@@ -106,28 +106,8 @@ $(document).ready(function ($) {
 	*	Wow Animation
 	*
 	------------------------------------*/
-	new WOW().init();
+	//new WOW().init();
     
-    /* Additional JS */
-    if( $(".styledTitle").length > 0 ) {
-        var pagetitle = $(".styledTitle");
-        var str = pagetitle.text();
-        var count_words = str.split(' ');
-        var total_words = count_words.length;
-        if(total_words>1) {
-            var new_title = '';
-            var i=1;
-            $(count_words).each( function(k,v) {
-                if(i==total_words) {
-                    new_title += ' ' + '<span class="last-word">'+v+'</span>';
-                } else {
-                    new_title += v;
-                }
-                i++;
-            });
-            pagetitle.html(new_title);
-        }
-    }
     
     /* timeline */
     $('.timeline-info').each(function(){
@@ -136,8 +116,34 @@ $(document).ready(function ($) {
         }
     });
     
-    $(document).on("click","#formSubmitBtn",function(){
+    $('body').on("click","#formSubmitBtn",function(){
         $('.gform_button').trigger("click");
     });
+    
+    
+    /* Our People */
+    auto_resize_no_photo();
+    function auto_resize_no_photo() {
+        if( $('.staff-photo').length > 0 ) {
+            var hNums = [];
+            $('.staff-photo').each(function(){
+                var imgHeight = $(this).height();
+                var heightVal = imgHeight + 'px';
+                hNums.push(imgHeight);
+            });
+
+            if(hNums.length>0) {
+                var arrs = jQuery.unique( hNums );
+                arrs.sort(function(a, b){
+                  return parseInt(b)- parseInt(a);
+                });
+                var maxH = arrs[0] + 'px';
+                $('.people .no-image').each(function(){
+                   $(this).css('height',maxH); 
+                });
+            }
+        }
+    }
+    
 
 });// END #####################################    END

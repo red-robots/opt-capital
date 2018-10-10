@@ -9,7 +9,7 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
+	<div id="primary" class="content-area faq-content">
 		<main id="main" class="site-main" role="main">
 
 			<?php
@@ -24,23 +24,53 @@ get_header(); ?>
 
 			endwhile; // End of the loop.
 			?>
+            
+            <?php  
+                $faq_fields = array('loan','deferral');  
+                $subFields[] = array('question','answer');
+                $subFields[] = array('question_1','answer_2');
+            ?>
+            
+            <div class="faq-wrapper clear">
+                <div class="row clear">
+                <?php $i=0; foreach($faq_fields as $f) {  
+                    $field_faqs = $f . '_faqs';
+                    $field_title = $f . '_title'; 
+                    $sub =  $subFields[$i];
+            
+                    ?>
+                    <?php if(have_rows($field_faqs)) { ?>
+                    <section data-type="<?php echo $f;?>" id="<?php echo $f;?>_faqs" class="faqs faqcol">
+                        <div class="inner">
+                            <?php if( $faq_title= get_field($field_title) ) { ?>
+                                <div class="titlewrap clear">
+                                    <h2 class="title"><?php echo $faq_title; ?></h2>
+                                </div>
+                            <?php } ?>
+                            
+        
+                            <?php while(have_rows($field_faqs)): the_row();       
+                                $question = get_sub_field( $sub[0] );
+                                $answer = get_sub_field( $sub[1] );  ?>
+                                <div class="faqrow">
 
-			<section class="faqs">
-				<?php if(have_rows('loan_faqs')): ?>
-					<?php while(have_rows('loan_faqs')): the_row();
-						$question=get_sub_field('question');
-						$answer=get_sub_field('answer');
-					?>
-							<div class="faqrow">
-								<div class="question">
-									<div class="plus-minus-toggle collapsed"></div>
-									<?php the_sub_field('question'); ?>
-								</div>
-								<div class="answer"><?php the_sub_field('answer'); ?></div>
-							</div><!-- faqrow -->
-					<?php endwhile; ?>
-				<?php endif; ?>
-			</section>
+                                    <?php if($question) { ?>
+                                    <div class="question">
+                                        <div class="plus-minus-toggle collapsed"></div>
+                                        <span class="q"><?php echo $question; ?></span>
+                                    </div>
+
+                                    <div class="answer"><?php echo $answer; ?></div>
+                                    <?php } ?>
+
+                                </div><!-- faqrow -->
+                            <?php endwhile; ?>
+                        </div>
+                    </section>
+                    <?php } ?>
+                <?php $i++; } ?>
+                </div>
+            </div>    
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

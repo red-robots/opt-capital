@@ -10,7 +10,7 @@ a {
 .clear {clear: both;}
 body.page-template-page-people {
 	.page-wrapper {
-		background-color: #efefef;
+		background-color: $color__background-grey;
 	}
 }
 .wrapper, .page-wrapper {
@@ -117,7 +117,7 @@ body.page-template-page-people {
 #primary {
 	margin-top: 100px;
 	@media screen and (min-width: $midwidth) {
-		margin-top: 70px;
+		margin-top: 50px;
 	}
 }
 .readmore {

@@ -29,18 +29,24 @@ $antispam=antispambot($email);
 						</li>
 						<?php endwhile; ?>
 						<li>
+                            <?php 
+                                $social_links = ge_social_fields(); /* functions.php */
+                            ?>
 							<div class="icons">
-								<?php if($linkedin) { ?>
-									<a href="<?php echo $linkedin; ?>">
-										<i class="fab fa-linkedin"></i>
-									</a>
-								<?php } ?>
-								<?php if($antispam) { ?>
-									<a href="<?php echo 'mailto:'.$antispam; ?>">
-										<i class="fal fa-envelope"></i>
-									</a>
+                                <?php foreach($social_links as $s) { 
+                                    $link = get_field( $s['field'], 'option' );
+                                    $icon = $s['icon'];
+                                    $att = ( isset($s['att']) && $s['att'] ) ? $s['att'] : '';
+                                    $href_val = ($att) ? $att . ':' . $link : $link; ?>
+                                    
+                                    <?php if($link) { ?>
+                                        <a href="<?php echo $href_val; ?>" target="_blank">
+                                            <i class="<?php echo $icon?>"></i>
+                                        </a>
+                                    <?php } ?>
+                                
+                                <?php } ?>
 								
-								<?php } ?>
 							</div>
 						</li>
 					</ul>

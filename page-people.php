@@ -14,68 +14,61 @@ get_header(); ?>
 
 			<?php
 			while ( have_posts() ) : the_post();
-
 				get_template_part( 'template-parts/content', 'page' );
-
-
 			endwhile; // End of the loop.
 			?>
+            
+            <?php
+            $team_lists = get_the_teams();
+            if($team_lists) { ?>
+            <div class="team-wrapper clear">
+                <?php foreach($team_lists as $obj) { 
+                $category = $obj['term_name'];
+                $members = $obj['members']; ?>
+                <section class="people">   
+                    <h2 class="team-category"><span><?php echo $category; ?></span></h2>
+                    <div class="row clear">
+                        <div class="card-wrap">
+                        <?php if($members) { ?>
+                            <?php foreach($members as $m) { 
+                                $postId = $m->post_id;
+                                $post_title = $m->post_title;
+                                $img = get_field('team_image',$postId);
+                                $title = get_field('title',$postId);
+                                ?>
+                            
+                                <div class="card">
+                                    <div class="pad clear">
+                                        <?php if($img) { ?>
+                                            <div class="image has-image clear">
+                                                <img class="staff-photo" src="<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
+                                            </div>
+                                        <?php } else { ?>
+                                            <div class="image no-image clear">
+                                                <span><i class="fa fa-user"></i></span>
+                                            </div>
+                                        <?php } ?>
+                                        <h2 class="name"><?php echo $post_title; ?></h2>
+                                        <?php if($title) { ?>
+                                            <h3 class="designation"><?php echo $title; ?></h3>
+                                        <?php } ?>
 
-			<section class="people">
-				<div class="card-wrap">
-				<?php
-				$wp_query = new WP_Query();
-				$wp_query->query(array(
-				'post_type'=>'team',
-				'posts_per_page' => -1,
-				'paged' => $paged,
-				// 'tax_query' => array(
-				// 	array(
-				// 		'taxonomy' => 'custom_taxonomy', // your custom taxonomy
-				// 		'field' => 'slug',
-				// 		'terms' => array( 'green', 'blue' ) // the terms (categories) you created
-				// 	)
-				// )
-			));
-				if ($wp_query->have_posts()) : ?>
-				<?php while ($wp_query->have_posts()) :  $wp_query->the_post(); 
-					$title=get_field('title');
-					$img=get_field('team_image');
-					//$year=get_field('year_joined_company');
-					//$experience=get_field('previous_experience');
-					//$education=get_field('education');
-				?>
-					<div class="card">
-						<?php if($img) { ?>
-							<div class="image">
-								<img src="<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
-							</div>
-						<?php } ?>
-						<h2><?php the_title(); ?></h2>
-						<?php if($title) { ?>
-							<h3><?php echo $title; ?></h3>
-						<?php } ?>
-						<?php if($year) { ?>
-							<div class="year"><?php echo $year; ?></div>
-						<?php } ?>
-						<?php if($experience) { ?>
-							<div class="experience"><?php echo $experience; ?></div>
-						<?php } ?>
-						<?php if($education) { ?>
-							<div class="education"><?php echo $education; ?></div>
-						<?php } ?>
-						<div class="center">
-							<div class="learnmore swipe">
-								<div class='insider'></div>
-								<a href="<?php the_permalink(); ?>">Full Bio</a>
-							</div>
-						</div>
-					</div>
-				<?php endwhile; ?>
-			<?php endif; ?>
-			</div>
-			</section>	
-
+                                        <div class="center">
+                                            <div class="learnmore swipe">
+                                                <div class='insider'></div>
+                                                <a href="<?php echo get_the_permalink($postId); ?>">Full Bio</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php } ?>
+                        <?php } ?>
+                    </div>
+                    </div>    
+                </section>
+                <?php } ?>
+            </div>
+            <?php } ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 </div>

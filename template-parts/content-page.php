@@ -10,8 +10,28 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+    
+    <?php 
+            $str = get_the_title();
+            $count = str_word_count($str);
+            $title = $str;
+            if($count>1) {
+                $pieces = explode(' ', $str);
+                $last_word = end($pieces);
+                $title = '';
+                $i=1; foreach($pieces as $word) {
+                    $comma = ($i>1) ? ' ':'';
+                    if($i==$count) {
+                        $title .= $comma . '<span class="last-word">'.$word.'</span>';
+                    } else {
+                        $title .= $comma . $word;
+                    }
+                    $i++;
+                }
+            }
+    ?>
 	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title styledTitle">', '</h1>' ); ?>
+        <h1 class="entry-title styledTitle"><?php echo $title; ?></h1>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
