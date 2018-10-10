@@ -1990,15 +1990,16 @@ section.people .card-wrap .image.no-image{height:250px;display:-webkit-box;displ
 @media screen and (min-width:768px){section.people .card-wrap .image.no-image{height:393px}
 }section.people .card-wrap .image span{display:inline-block;font-size:80px;opacity:.2;position:relative;left:-5px}
 @media screen and (min-width:768px){section.people .card-wrap{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:left;-webkit-justify-content:left;-ms-flex-pack:left;justify-content:left;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap}
-}section.people .card{-webkit-flex-basis:90%;-ms-flex-preferred-size:90%;flex-basis:90%;margin-bottom:10px}
+}section.people .card{-webkit-flex-basis:90%;-ms-flex-preferred-size:90%;flex-basis:90%;margin-bottom:20px}
 section.people .card .pad{box-shadow:0 1px 2px rgba(0,0,0,0.07);background-color:#fff;padding:30px;-webkit-transition:all ease .3s;transition:all ease .3s}
-@media screen and (min-width:768px){section.people .card{padding:20px;-webkit-flex-basis:45%;-ms-flex-preferred-size:45%;flex-basis:45%}
+@media screen and (min-width:768px){section.people .card{padding:20px;-webkit-flex-basis:45%;-ms-flex-preferred-size:45%;flex-basis:45%;margin-bottom:0}
 }@media screen and (min-width:1200px){section.people .card{-webkit-flex-basis:33.333%;-ms-flex-preferred-size:33.333%;flex-basis:33.333%}
 }section.people .card:hover .pad{box-shadow:0 4px 7px rgba(0,0,0,0.2)}
 section.people .card h2{font-weight:300;font-size:30px;color:#eb692e;margin-top:3px;position:relative}
 section.people .card h3{font-weight:300;font-size:16px;color:#96a1aa;margin:0 0 10px 0;border-bottom:1px solid #efefef;padding:3px 0 10px 0}
-section.people .card .learnmore{margin:50px auto 30px}
-section.people .image{width:100%}
+section.people .card .learnmore{margin:20px auto 0}
+@media screen and (min-width:768px){section.people .card .learnmore{margin:50px auto 30px}
+}section.people .image{width:100%}
 section.people .image img{width:100%;height:auto;float:left}
 .single-person .top-wrap{width:100%;margin:0 0 50px 0}
 @media screen and (min-width:768px){.single-person .top-wrap{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:end;-webkit-align-items:flex-end;-ms-flex-align:end;align-items:flex-end}
@@ -2130,14 +2131,14 @@ body .gform_wrapper .field_description_below .gfield_description{padding-top:0}
 }.pagewrap404{padding-bottom:90px}
 .pagewrap404 .page-title{margin:0;font-size:30px}
 .pagewrap404 .page-content{margin-top:10px}
-.pagewrap404 .page-link-list{margin-top:40px}
-.pagewrap404 .linklist{margin:0;padding:0;list-style:none}
-.pagewrap404 .linklist ul{list-style:none;margin:0 0 5px 20px;padding:0}
-.pagewrap404 .linklist li{margin-bottom:5px}
-.pagewrap404 .linklist a{color:#eb692e;position:relative;display:inline-block;padding-left:12px;-webkit-transition:all ease-out .3s;transition:all ease-out .3s}
-.pagewrap404 .linklist a:before{content:'';display:block;width:0;height:0;border-left:5px solid #eb692e;border-top:4px solid transparent;border-bottom:4px solid transparent;position:absolute;top:8px;left:0;margin-left:0;-webkit-transition:all ease-out .2s;transition:all ease-out .2s}
-.pagewrap404 .linklist a:hover{color:#16bae0}
-.pagewrap404 .linklist a:hover:before{border-left:5px solid #16bae0;margin-left:2px}
+.page-link-list{margin-top:40px}
+.page-link-list .linklist{margin:0;padding:0;list-style:none}
+.page-link-list .linklist ul{list-style:none;margin:0 0 5px 20px;padding:0}
+.page-link-list .linklist li{margin-bottom:5px}
+.page-link-list .linklist a{color:#eb692e;position:relative;display:inline-block;padding-left:12px;-webkit-transition:all ease-out .3s;transition:all ease-out .3s}
+.page-link-list .linklist a:before{content:'';display:block;width:0;height:0;border-left:5px solid #eb692e;border-top:4px solid transparent;border-bottom:4px solid transparent;position:absolute;top:8px;left:0;margin-left:0;-webkit-transition:all ease-out .2s;transition:all ease-out .2s}
+.page-link-list .linklist a:hover{color:#16bae0}
+.page-link-list .linklist a:hover:before{border-left:5px solid #16bae0;margin-left:2px}
 .blog .format-aside .entry-title,.archive .format-aside .entry-title{display:none}
 .comment-content a{word-wrap:break-word}
 .bypostauthor{display:block}

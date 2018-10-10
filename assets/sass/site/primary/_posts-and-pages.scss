@@ -401,7 +401,7 @@ section.people {
 	}
 	.card {
 		flex-basis: 90%;
-		margin-bottom: 10px;
+		margin-bottom: 20px;
         .pad {
             box-shadow: 0 1px 2px rgba(0,0,0,0.07);
             background-color: #fff;
@@ -411,6 +411,7 @@ section.people {
 		@media screen and (min-width: $tabwidth) {
             padding: 20px;
 			flex-basis: 45%;
+            margin-bottom: 0;
 		}
 		@media screen and (min-width: $deskwidth) {
 			flex-basis: 33.333%;
@@ -436,7 +437,10 @@ section.people {
 			padding: 3px 0 10px 0;
 		}
         .learnmore {
-            margin: 50px auto 30px;
+            margin: 20px auto 0;
+            @media screen and (min-width: $tabwidth) {
+                margin: 50px auto 30px;
+            }
         }
 	}
 	.image {
@@ -1072,10 +1076,10 @@ body .gform_wrapper .field_description_below .gfield_description {
     }
     .page-content {
         margin-top: 10px;
-    }
-    .page-link-list {
-        margin-top:40px;
-    }
+    }    
+}
+.page-link-list {
+    margin-top:40px;
     .linklist {
         margin: 0 0 0;
         padding: 0 0;
