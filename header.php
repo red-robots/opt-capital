@@ -22,10 +22,7 @@
 
 <?php
     $bodyCalss = ( is_front_page() || is_home() ) ? 'home-page':'subpage';
-?>
-<?php wp_head(); 
-
-
+    wp_head();
 ?>
 </head>
 

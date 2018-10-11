@@ -189,7 +189,24 @@ section.home-middle {
         .learnmore {
             margin: 6px 0 0;
         }
+        .strat-content {
+            margin-top:10px;
+            h2,h3 {
+                font-size:18px;
+                font-weight: 600;
+                margin-top:15px;
+                margin-bottom: 5px;
+                position: relative;
+                top: 0;
+                color:$color-dark-grey;
+            }
+            p {
+                margin-bottom: 15px;
+            }
+        }
 	}
+    
+    
 }
 section.boxes {
 	width: 100%;

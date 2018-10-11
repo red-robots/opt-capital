@@ -57,7 +57,7 @@ if ( have_posts() ) : the_post();
                                 'posts_per_page'   => 1,
                                 'orderby'          => 'date',
                                 'order'            => 'DESC',
-                                'post_type'        => 'strategies',
+                                'post_type'        => 'post',
                                 'post_status'      => 'publish'
                             );
                         $strategy = new WP_Query($args);
@@ -69,7 +69,12 @@ if ( have_posts() ) : the_post();
                                     $postId = get_the_ID();
                                     $s_excerpt = get_field('strategy_excerpt');
                                     if($s_content || $s_excerpt ) {
-                                    $strategy_text = ($s_excerpt) ? $s_excerpt : shortenText($s_content,600);
+                                        if($s_excerpt) {
+                                            $strategy_text = $s_excerpt;
+                                        } else {
+                                            $strategy_text = shortenText($s_content,400);
+                                            $strategy_text = wpautop($strategy_text);
+                                        }
                                     ?>
                                     <h3 class="vtitle"><?php the_title(); ?></h3>
                                     <div class="strat-content">
