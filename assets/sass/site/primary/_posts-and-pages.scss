@@ -1,3 +1,6 @@
+* {
+    box-sizing: border-box;
+}
 .sticky {
 	display: block;
 }
@@ -1168,5 +1171,116 @@ body .gform_wrapper .field_description_below .gfield_description {
                 }
             }
         }
+    }
+}
+.single {
+    .entry-title {
+        font-size: 55px;
+    }
+    .entry-content {
+        margin-top:20px;
+    }
+}
+.widget-area {
+    margin: 66px 0 0;
+    ul {
+        margin: 0 0 0 15px;
+        padding: 0 0;
+        list-style: none;
+        li {
+            margin-bottom: 5px;
+            line-height: 1.4;
+        }
+    }
+    a {
+        display: inline-block;
+        color:$color-dark-grey;
+        position: relative;
+        padding-left: 12px;
+        @include transition(all ease-out 0.3s);
+        &:before {
+            content:'';
+            display: block;
+            width: 6px;
+            height: 6px;
+            background: $color-orange;
+            position: absolute;
+            top: 8px;
+            left: 0;
+        }
+        &:hover {
+            color:$color-orange;
+        }
+    }
+}
+.widget-title {
+    font-size:20px;
+    font-weight: 500;
+    color:$color-orange;
+}
+.widget_search {
+    position: relative;
+    width: 100%;
+    *,input {
+        box-sizing: border-box;
+    }
+    form {
+        position: relative;
+        width: 100%;
+    }
+    .search-form {
+        label {
+            &:before,
+            &:after {
+                content:'';
+                display: block;
+                position: absolute;
+                opacity: 0.5;
+            }
+            &:before {
+                width: 16px;
+                height: 16px;
+                border-radius: 100px;
+                border:2px solid $color-med-grey;
+                top: 8px;
+                right: 8px;
+            }
+            &:after {
+                content:'';
+                display: block;
+                width: 2px;
+                height: 7px;
+                background: $color-med-grey;
+                top: 20px;
+                right: 8px;
+                @include transform( rotate(-45deg) );
+            }
+        }
+    }
+    .search-field {
+        width: 100%;
+        border-radius: 0;
+        -webkit-appearance:none;
+        outline: none;
+        height: 35px;
+        line-height: 35px;
+        padding: 5px 10px;
+        @include transition(all ease-out 0.3s);
+        &:focus {
+            border-color:$color-orange;
+            box-shadow: 0px 0px 10px 0px rgba(235,105,46,0.5);
+        }
+    }
+    .search-submit {
+        position: absolute;
+        top: 0;
+        right: 0;
+        text-indent: -999em;
+        border:none;
+        -webkit-appearance:none;
+        outline: none;
+        background: transparent;
+        z-index: 5;
+
     }
 }
