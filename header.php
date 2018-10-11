@@ -20,15 +20,17 @@
 
 <script defer src="<?php bloginfo( 'template_url' ); ?>/assets/svg-with-js/js/fontawesome-all.js"></script>
 
-
+<?php
+    $bodyCalss = ( is_front_page() || is_home() ) ? 'home-page':'subpage';
+?>
 <?php wp_head(); 
 
 
 ?>
 </head>
 
-<body <?php body_class(); ?>>
-<div id="page" class="site">
+<body <?php body_class($bodyCalss); ?>>
+<div id="page" class="site clear">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'acstarter' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
@@ -67,4 +69,4 @@
 
 	<?php if(is_front_page()){ get_template_part('inc/home-slider'); } ?>
 
-	<div id="content" class="site-content page-wrapper">
+	<div id="content" class="site-content page-wrapper clear">

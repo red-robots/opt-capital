@@ -27,6 +27,8 @@ if ( have_posts() ) : the_post();
 	$box3title=get_field('box_3_title');
 	$box3desc=get_field('box_3_description');
 	$box3link=get_field('box_3_link');
+    $video_title = get_field('video_title');
+    $video_description = get_field('video_description');
  endif; ?>
 	<div id="primary" class="content-area-full">
 		<main id="main" class="site-main" role="main">
@@ -39,16 +41,51 @@ if ( have_posts() ) : the_post();
 						</div>
 					</div>
 					<div class="content">
-						<h2></h2>
+                        <?php if($video_title) { ?>
+                            <h2 class="vtitle"><?php echo $video_title;?></h2>
+                        <?php } ?>
+						<?php if($video_description) { ?>
+                            <div class="vdesc"><?php echo $video_description;?></div>
+                        <?php } ?>
 					</div>
 				</section>
+                
+                <?php /* STRATEGIES */ ?>
 				<section class="strategies">
-					<?php the_field('strategies'); ?>
-					<div class="learnmore swipe">
-						<div class='insider'></div>
-						<a href="">Read More</a>
-					</div>
+                    <?php  
+                        $args = array(
+                                'posts_per_page'   => 1,
+                                'orderby'          => 'date',
+                                'order'            => 'DESC',
+                                'post_type'        => 'strategies',
+                                'post_status'      => 'publish'
+                            );
+                        $strategy = new WP_Query($args);
+                        if ( $strategy->have_posts() ) {  ?>
+                            <?php while ( $strategy->have_posts() ) : $strategy->the_post(); ?>
+                                <h2 class="title">Strategies</h2>
+                                <?php
+                                    $s_content = get_the_content();
+                                    $postId = get_the_ID();
+                                    $s_excerpt = get_field('strategy_excerpt');
+                                    if($s_content || $s_excerpt ) {
+                                    $strategy_text = ($s_excerpt) ? $s_excerpt : shortenText($s_content,600);
+                                    ?>
+                                    <h3 class="vtitle"><?php the_title(); ?></h3>
+                                    <div class="strat-content">
+                                        <?php echo $strategy_text; ?>
+                                    </div>
+                                    <div class="learnmore swipe">
+                                        <div class='insider'></div>
+                                        <a href="<?php echo get_permalink($postId);?>">Read More</a>
+                                    </div>
+                                <?php } ?>
+                            <?php endwhile; wp_reset_postdata(); ?>
+                        <?php } else { ?>
+                            <?php the_field('strategies'); ?>
+                        <?php } ?>
 				</section>
+                
 			</section>
 			<section class="boxes">
 				<div class="box box1">

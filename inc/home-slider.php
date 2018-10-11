@@ -15,9 +15,15 @@ if ( have_posts() ) : the_post();
 					$title1=get_sub_field('title_1');
 					$title2=get_sub_field('title_2');
 					$description=get_sub_field('description');
+                    if($img) {
+                        $style = ' style="background-image:url('.$img['url'].')"';
+                    } else {
+                        $style = '';
+                    }
 				?>
 				<li>
 					<div class="slide">
+                        <div class="slide-image"<?php echo $style;?>></div>
 						<img src="<?php echo $img['url']; ?>">
 						<div class="message">
 							<h2>

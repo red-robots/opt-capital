@@ -18,7 +18,16 @@ function js_custom_init()  {
             'menu_name' => 'Case Study',
             'plural'    => 'Case Study',
             'single'    => 'Case Study',
+            'menu_icon' => 'dashicons-welcome-write-blog',
             'supports'  => array('title','editor','thumbnail')
+        ),
+        array(
+            'post_type' => 'strategies',
+            'menu_name' => 'Strategies',
+            'plural'    => 'Strategies',
+            'single'    => 'Strategy',
+            'menu_icon' => 'dashicons-megaphone',
+            'supports'  => array('title','editor','custom-fields','thumbnail')
         )
     );  
   
