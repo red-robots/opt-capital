@@ -1629,7 +1629,7 @@ td,th{padding:0}
 button:focus{outline:0}
 body,button,input,select,textarea{color:#404040;font-family:"Open Sans",sans-serif;font-size:16px;font-size:1rem;line-height:1.5}
 h1,h2,h3,h4,h5,h6{clear:both}
-h1.entry-title{color:#eb692e;font-size:40px;font-weight:300}
+h1.entry-title{color:#eb692e;font-size:40px;font-weight:300;line-height:1.2;margin-bottom:10px}
 h1.entry-title .last-word{font-weight:600}
 @media screen and (min-width:768px){h1.entry-title{font-size:65px}
 }@media screen and (min-width:1200px){h1.entry-title{font-size:85px}
