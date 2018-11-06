@@ -18,3 +18,29 @@ a {
 		outline: 0;
 	}
 }
+.step {
+	width: auto;
+	overflow: hidden;
+	margin: 0 0 20px 0;	
+	background-color: rgba(255,255,255,.05);
+	// border-radius: 10px;
+}
+.step-title {
+	
+}
+.question-image {
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	left: 0px;
+	top: 3px;
+	background-image: url(images/faq.png);
+	background-repeat: no-repeat;
+	background-position: 0 0;	
+}
+.question-image.close {
+	background-position: -15px 0;	
+}
+.step-desc {
+	display:none;
+}

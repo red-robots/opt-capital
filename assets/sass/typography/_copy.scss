@@ -1,5 +1,18 @@
+.entry-content {
+	font-size: 1.3rem;
+	color: $color-dark-grey;
+	h1, h2, h3, h4, h5, h6 {
+		clear: both;
+		color: $color-orange;
+	}
+	p {
+		font-size: 1.3rem;
+	}
+}
+
 p {
 	margin: 0 0 1.5em 0;
+
 }
 
 dfn, cite, em, i {

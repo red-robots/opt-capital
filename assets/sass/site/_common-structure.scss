@@ -43,6 +43,19 @@ body.page-template-page-people {
 		/*width: 1200px;*/
 	}
 }
+.content-area-intro {
+	width: 100%;
+	margin: 0px auto;
+    padding-bottom: 30px;
+	@media screen and (min-width: $tabwidth) {
+		width: 66%;
+		margin: 0 auto;
+        padding-bottom: 50px;
+	}
+	@media screen and (min-width: $deskwidth) {
+		/*width: 1200px;*/
+	}
+}
 .center {
 	text-align: center;
 }
@@ -176,7 +189,7 @@ body.page-template-page-people {
 		width:100%;
 		height:20px;
 		position:absolute;
-		left:-145px;
+		left:-165px;
 
 		@include transform(rotateZ(45deg));
 	}
@@ -274,3 +287,98 @@ body.page-template-page-people {
 		}
 	}
 }
+section.banner {
+	width: 100%;
+	position: relative;
+	clear: both;
+	margin: 75px 0 0 0;
+	@media screen and (min-width: $tabwidth) {
+		margin: 80px 0 0 0;
+	}
+	@media screen and (min-width: $midwidth) {
+
+	}
+	@media screen and (min-width: $deskwidth) {
+
+	}
+	img {
+		width: 100%;
+	}
+	.title {
+		width: 100%;
+		height: 100%;
+		text-align: center;
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		h1 {
+			font: {
+				size: 7vw;
+				weight: 700;
+			}
+			color: #fff;
+			@media screen and (min-width: $tabwidth) {
+				font-size: 7vw;
+			}
+			@media screen and (min-width: $midwidth) {
+				font-size: 6vw;
+			}
+			@media screen and (min-width: $deskwidth) {
+				font-size: 6vw;
+			}
+		}
+	}
+}
+.subtitle {
+	color: $color-orange;
+	width: 60%;
+	font-size: 4vw;
+	font-weight: 300;
+	text-align: center;
+	margin: 0px auto 0 auto;
+	@media screen and (min-width: $tabwidth) {
+		
+		width: 60%;
+		font-size: 4vw;
+	}
+	@media screen and (min-width: $midwidth) {
+		width: 60%;
+		font-size: 4vw;
+	}
+	@media screen and (min-width: $deskwidth) {
+		width: 60%;
+		font-size: 4vw;
+	}
+}
+// .circle {
+// 	position: relative;
+// 	width: 10%;
+// 	height: 0;
+// 	padding: 5% 0;
+// 	margin: 1em auto;
+// 	border-radius: 50%;
+// 	background: #a7cd80;
+// 	.content {
+// 		position: absolute;
+// 		top: 0;
+// 		left: 0;
+// 		width: 100%;
+// 		height: 100%;
+// 		text-align: center;
+// 	}
+// 	.content:before {
+// 		content: '';
+// 		vertical-align: middle;
+// 		display: inline-block;
+// 		width: 0;
+// 		height: 100%;
+// 	}
+
+// 	.content span {
+// 		vertical-align: middle;
+// 		display: inline-block;
+// 	}
+// }

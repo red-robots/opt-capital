@@ -64,6 +64,12 @@
 		</div><!-- wrapper -->
 	</header><!-- #masthead -->
 
-	<?php if(is_front_page()){ get_template_part('inc/home-slider'); } ?>
+	<?php 
+		if(is_front_page()){ 
+			get_template_part('inc/home-slider'); 
+		} else {
+			get_template_part('inc/banner');
+		}
+	?>
 
 	<div id="content" class="site-content page-wrapper clear">

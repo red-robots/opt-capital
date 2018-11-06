@@ -44,6 +44,18 @@ $(document).ready(function ($) {
 	    $(this).parent().toggleClass('active');
 	 
 	});
+	/*
+        Deferral Steps
+	__________________________________________
+	*/
+	$('.step-title').click(function() {
+	 
+	    $(this).next('.step-desc').slideToggle(500);
+	    $(this).toggleClass('close');
+	    $(this).find('.plus').toggleClass('active');
+	    $(this).parent().toggleClass('active');
+	 
+	});
 
 	/*
 	*
