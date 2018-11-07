@@ -212,6 +212,11 @@ section.home-middle {
     
     
 }
+section.bott-page {
+	padding: 40px 0;
+	width: 100%;
+	float: left;
+}
 section.boxes {
 	width: 100%;
 	float: left;
@@ -505,82 +510,159 @@ section.people {
 	}
 }
 .single-person {
-	.top-wrap {
-		width: 100%;
-		margin: 0 0 50px 0;
-		@media screen and (min-width: $tabwidth) {
-			display: flex;
-			flex-direction: row;
-			justify-content: space-between;
-			align-items: flex-end;
-		}
+	margin: 0;
+	@media screen and (min-width: $tabwidth) {
+		margin: -30px 0 0 0;
 	}
+	// .top-wrap {
+	// 	width: 100%;
+	// 	margin: 0 auto 50px auto;
+	// 	@media screen and (min-width: $tabwidth) {
+	// 		display: flex;
+	// 		flex-direction: row;
+	// 		justify-content: space-between;
+	// 		align-items: flex-end;
+	// 	}
+	// }
 	.image {
 		width: 100%;
+		position: relative;
+		z-index: 5;
 		@media screen and (min-width: $tabwidth) {
-			width: 45%;
-			float: left;
+			width: 70%;
+			margin: 0 auto;
+		}
+		@media screen and (min-width: $midwidth) {
+			width: 60%;
+		}
+		@media screen and (min-width: $deskwidth) {
+			width: 55%;
 		}
 		img {
 			width: 100%;
 		}
 	}
+	.details-sub {
+		width: 100%;
+		background-color: rgba(255,255,255,1);
+		// @include box-shadow;
+		@include light-grey-grad;
+		text-align: center;
+		position: relative;
+		z-index: 4;
+		padding: 70px 10px 30px;
+		@media screen and (min-width: $tabwidth) {
+			margin: -50px auto 0;
+			width: 70%;
+		}
+		@media screen and (min-width: $midwidth) {
+			width: 60%;
+		}
+		@media screen and (min-width: $deskwidth) {
+			width: 55%;
+		}
+		.pre-desc {
+			color: #333;
+			font-size: 14px;
+			text-transform: uppercase;
+		}
+		.deets {
+			color: #333;
+			font-size: 15px;
+		}
+	}
 	.details {
 		width: 100%;
-		float: right;
+		background-color: rgba(255,255,255,1);
+		@include box-shadow;
+		text-align: center;
+		position: relative;
+		z-index: 5;
+		padding: 20px;
 		@media screen and (min-width: $tabwidth) {
-			width: 45%;
+			margin: -90px auto 0;
+			width: 60%;
+		}
+		@media screen and (min-width: $midwidth) {
+			width: 50%;
+		}
+		@media screen and (min-width: $deskwidth) {
+			width: 40%;
 		}
 		h1 {
 			font-weight: 300;
 			font-size: 30px;
 			color: $color-orange;
+			border-bottom: 1px solid #efefef;
 		}
 		h3 {
 			font-weight: 300;
 			font-size: 16px;
 			color: $color-med-grey;
-			margin: 0 0 10px 0;
-			border-bottom: 1px solid #efefef;
+			margin: 0;
+			
 			padding: 3px 0 10px 0;
+		}
+		.pre-desc {
+			color: #333;
+			font-size: 12px;
+			text-transform: uppercase;
+		}
+		.deets {
+			color: #333;
+			font-size: 14px;
 		}
 		
 	}
 	.content {
 		padding: 5%;
 	}
-	section.q-n-a {
-		padding: 5%;
-		.row {
-			width: 100%;
-			margin: 0 0 10px 0;
-		}
-		.questionz {
-			color: $color-orange;
-		}
-		.answerz {
-			color: $color-med-grey;
-		}
+	
+}
+.single-person-info-wrap {
+	width: 90%;
+	margin: 0 auto;
+}
+section.q-n-a {
+	padding: 5%;
+	.row {
+		width: 100%;
+		margin: 0 0 10px 0;
+	}
+	.questionz {
+		color: $color-orange;
+	}
+	.answerz {
+		color: $color-med-grey;
 	}
 }
 section.other-team {
 	width: 100%;
+	clear: both;
+	float: left;
 	@media screen and (min-width: $tabwidth) {
-		margin: 100px 0 0 0;
+		margin: 30px 0 50px 0;
 	}
 	h2 {
 		color: $color-orange;
 		font-weight: 300;
 		font-size: 20px;
 		margin: 0 0 30px 0;
+		width: 100%;
+		text-align: center;
 	}
 }
 .side-person {
-	width: 100%;
+	width: auto;
 	margin: 0 0 20px 0;
 	padding: 2%;
-	border-bottom: 2px solid $color-light-grey;
+	// border-bottom: 2px solid $color-light-grey;
+	@include box-shadow;
 	float: left;
+	@include transition(all ease .3s);
+	@media screen and (min-width: $tabwidth) {
+		flex-basis: 24%;
+	}
 	.sideflex {
 		display: flex;
 		flex-direction: row;
@@ -602,9 +684,10 @@ section.other-team {
 	}
 	.title {
 		// width: 65%;
-		width: 90%;
+		width: 100%;
+		text-align: center;
 		// float: right;
-		float: left;
+		// float: left;
 		h2 {
 			margin: 0 0 0px 0;
 			font-size: 16px;
@@ -619,10 +702,19 @@ section.other-team {
 		@include transition(all ease .3s);
 	}
 	&:hover {
+		@include box-shadow-hover;
 		.chevron {
 			padding: 0 0 0 10px;
 		}
 	}
+}
+.other-team-members {
+	width: 80%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	flex-wrap: wrap;
 }
 section.stats {
 	width: 100%;
@@ -1308,6 +1400,7 @@ section.bullets {
 }
 section.steps {
 	width: 100%;
+	@include light-grey-grad;
 	h2 {
 		width: 70%;
 		text-align: center;
@@ -1332,8 +1425,8 @@ section.steps {
 		// color: #fff;
 		&:hover {
 			.plus {
-				margin: -0px auto 10px auto;
-				transform: rotate(0deg);
+				// margin: -0px auto 10px auto;
+				transform: rotate(180deg);
 			}
 		}
 		.step-num {
@@ -1397,7 +1490,8 @@ section.steps {
 		width: 75%;
 		margin: 0 auto;
 		// background-color: #fff;
-		background-color: #ededed82;
+		// background-color: #ededed82;
+		@include light-grey-grad;
 		padding: 20px 5%;
 		// border-top: 3px solid $color-blue;
 		// clear: both;

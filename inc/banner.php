@@ -1,3 +1,4 @@
+<?php if( !is_page('contact-us') ) :?>
 <?php if( has_post_thumbnail() ) : ?>
 	<section class="banner">
 		<?php the_post_thumbnail(); ?>
@@ -13,5 +14,5 @@ $subtitle = get_field('sub_title');
 if( $subtitle ) {
 	echo '<div class="subtitle">'. $subtitle . '</div>';
 }
-
+endif;
 ?>

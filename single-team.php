@@ -9,7 +9,7 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
+	<div id="primary" class="content-area-intro">
 		<main id="main" class="site-main" role="main">
 
 		<?php
@@ -34,45 +34,60 @@ get_header(); ?>
 						<?php if($title) { ?>
 							<h3><?php echo $title; ?></h3>
 						<?php } ?>
+					</div>
+					<div class="details-sub">
 						<?php if($year) { ?>
-							<div class="year">Joined: <?php echo $year; ?></div>
+							<div class="year deets"><span class="pre-desc">Joined:</span> <?php echo $year; ?></div>
 						<?php } ?>
 						<?php if($experience) { ?>
-							<div class="experience"><?php echo $experience; ?></div>
+							<div class="experience deets"><span class="pre-desc">Experience:</span> <?php echo $experience; ?></div>
 						<?php } ?>
 						<?php if($education) { ?>
-							<div class="education"><?php echo $education; ?></div>
+							<div class="education deets"><span class="pre-desc">Education:</span> <?php echo $education; ?></div>
 						<?php } ?>
 
 					</div>
 				</div>
+			</div>	
+
+
 				
-				<div class="content"><?php the_content(); ?></div>
 
-				<?php if(have_rows('q&a')): ?>
-					<section class="q-n-a">
-						<?php while(have_rows('q&a')):the_row();
-								$question=get_sub_field('question');
-								$answer=get_sub_field('answer');
-						 ?>
-						 	<div class="row">
-							 	<div class="questionz"><?php echo $question; ?></div>
-							 	<div class="answerz"><?php echo $answer; ?></div>
-						 	</div>
-						<?php endwhile; ?>
-					</section>
-				<?php endif; ?>
-			</div>
+				
+			
 
-		<?php endwhile; // End of the loop.
-		?>
+		
+
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
+<div class="single-person-info-wrap">
+	<div class="content-area">
+		<div class="content"><?php the_content(); ?></div>
+	</div>
+	<div class="widget-area">
+		<?php if(have_rows('q&a')): ?>
+			<section class="q-n-a">
+				<?php while(have_rows('q&a')):the_row();
+						$question=get_sub_field('question');
+						$answer=get_sub_field('answer');
+				 ?>
+				 	<div class="row">
+					 	<div class="questionz"><?php echo $question; ?></div>
+					 	<div class="answerz"><?php echo $answer; ?></div>
+				 	</div>
+				<?php endwhile; ?>
+			</section>
 
-<div class="widget-area">
+		<?php endif; ?>
+	</div>
+</div>
+<?php endwhile; // End of the loop. ?>
+
 <section class="other-team">
 <h2>Team Members</h2>
+<section class="other-team-members">
+
 	<?php
 	$wp_query = new WP_Query();
 	$wp_query->query(array(
@@ -102,16 +117,12 @@ get_header(); ?>
 					<h2><?php the_title(); ?></h2>
 					<h3><?php echo $title; ?></h3>
 				</div>
-				<div class="chevron">
-					
-						<i class="fas fa-chevron-right"></i>
-					
-				</div>
+				
 				</div>
 			</a>
 		</div>	
 	<?php endwhile; endif; ?>
-</div>
+</section>
 </section>
 <?php
 get_footer();
