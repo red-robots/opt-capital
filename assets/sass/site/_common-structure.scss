@@ -316,8 +316,8 @@ section.banner {
 		justify-content: center;
 		h1 {
 			font: {
-				size: 7vw;
-				weight: 700;
+				size: 7vw; 
+				// weight: 700;
 			}
 			color: #fff;
 			@media screen and (min-width: $tabwidth) {

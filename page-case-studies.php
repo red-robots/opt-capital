@@ -9,7 +9,7 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
+	<div id="primary" class="content-area-full">
 		<main id="main" class="site-main" role="main">
 
 			<?php
@@ -20,7 +20,8 @@ get_header(); ?>
 			endwhile; // End of the loop.
 			?>
 
-			<?php
+<?php
+	$i=0;
 	$wp_query = new WP_Query();
 	$wp_query->query(array(
 	'post_type'=>'case_study',
@@ -28,14 +29,36 @@ get_header(); ?>
 	'paged' => $paged,
 ));
 	if ($wp_query->have_posts()) : ?>
-    <?php while ($wp_query->have_posts()) : ?>
-        
-    <?php $wp_query->the_post(); ?>	
-    
-    <h1><?php the_title(); ?></h1>
-    <?php the_content(); ?>
+		<section class="case-study">
+		    <?php while ($wp_query->have_posts()) : ?>
+		        
+		    <?php $wp_query->the_post(); $i++; 
+		    		if( $i == 2 ) {
+		    			$divClass = 'even';
+		    			$i = 0;
+		    		} else {
+		    			$divClass = 'odd';
+		    		}
 
-<?php endwhile; endif; ?>
+		    ?>	
+		    
+		    <div class="case">
+				<div class="pointer <?php echo $divClass; ?>">
+		    		<div class="circle <?php echo $divClass; ?>">
+		    		<img src="<?php bloginfo('template_url'); ?>/images/circle.jpg">
+		    		</div>
+		    		<div class="line <?php echo $divClass; ?>"></div>
+		    	</div>
+		    	<div class="case-content <?php echo $divClass; ?>">
+		    		<h1><?php the_title(); ?></h1>
+		    		<?php the_content(); ?>
+		    	</div>
+		    </div>
+		    
+
+			<?php endwhile; ?>
+		</section>
+	<?php endif; ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
