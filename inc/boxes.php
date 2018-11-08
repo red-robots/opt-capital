@@ -20,6 +20,10 @@ $box3link = get_field('box_3_link', 'option');
 // $box3desc = '#';
 // $box3link = '#';
 
+// echo '<pre>';
+// print_r($box1link);
+// echo '</pre>';
+
  ?>
 <section class="bott-page">
 	
@@ -30,7 +34,7 @@ $box3link = get_field('box_3_link', 'option');
 			<div class="desc"><?php echo $box1desc; ?></div>
 			<div class="learnmore swipe">
 				<div class='insider'></div>
-				<a href="<?php echo $box1link; ?>">Learn More</a>
+				<a href="<?php echo $box1link['url']; ?>">Learn More</a>
 			</div>
 		</div>
 		<div class="box box2">
@@ -38,7 +42,7 @@ $box3link = get_field('box_3_link', 'option');
 			<div class="desc"><?php echo $box2desc; ?></div>
 			<div class="learnmore swipe">
 				<div class='insider'></div>
-				<a href="<?php echo $box2link; ?>">Learn More</a>
+				<a href="<?php echo $box2link['url']; ?>">Learn More</a>
 			</div>
 		</div>
 		<div class="box box3">
@@ -46,7 +50,7 @@ $box3link = get_field('box_3_link', 'option');
 			<div class="desc"><?php echo $box3desc; ?></div>
 			<div class="learnmore swipe">
 				<div class='insider'></div>
-				<a href="<?php echo $box3link; ?>">Learn More</a>
+				<a href="<?php echo $box3link['url']; ?>">Learn More</a>
 			</div>
 		</div>
 	</section>
