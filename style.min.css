@@ -1935,7 +1935,7 @@ section.banner .title h1{font-size:7vw;color:#fff}
 }.subtitle{color:#eb692e;width:60%;font-size:4vw;font-weight:300;text-align:center;margin:20px auto 0 auto;line-height:1}
 @media screen and (min-width:768px){.subtitle{width:60%;font-size:4vw}
 }@media screen and (min-width:1027px){.subtitle{width:60%;font-size:4vw}
-}@media screen and (min-width:1200px){.subtitle{width:60%;font-size:4vw}
+}@media screen and (min-width:1200px){.subtitle{width:60%;font-size:40px}
 }*{box-sizing:border-box}
 .sticky{display:block}
 .hentry{margin:0 0 1.5em}
@@ -2209,13 +2209,13 @@ section.about-meet-our-team{width:100%;margin:-30px auto 0 auto;text-align:cente
 section.bullets{width:100%;float:left;margin:0 0 20px 0}
 section.bullets .bullet{width:100%;margin:0 0 20px 0;border-left:5px solid #eb692e;background-color:#efefef;padding:10px 10px 10px 30px}
 section.steps{width:100%;background-image:-webkit-linear-gradient(330deg,#fdfbfb 0,#ebedee 100%);background-image:linear-gradient(120deg,#fdfbfb 0,#ebedee 100%)}
-section.steps h2{width:70%;text-align:center;font-size:60px;color:#eb692e;font-weight:700;margin:30px auto 100px auto;line-height:1}
+section.steps h2{width:70%;text-align:center;font-size:40px;color:#eb692e;font-weight:300;margin:30px auto 100px auto;line-height:1}
 section.steps .step-wrap{box-shadow:0 0 8px 0 rgba(0,0,0,0.1);padding:30px 0}
 section.steps .step-title{background-color:#fff;z-index:10;width:100%;position:relative;cursor:pointer}
 section.steps .step-title:hover .plus{-webkit-transform:rotate(180deg);-ms-transform:rotate(180deg);transform:rotate(180deg)}
 section.steps .step-title .step-num{width:100%;float:left}
 section.steps .step-title .circle{width:75px;height:75px;border:3px solid #16bae0;border-radius:50%;text-align:center;margin:0 auto;font-size:30px;line-height:75px}
-section.steps .step-title .name{width:100%;text-align:center;font-size:50px;background-color:#fff;color:#16bae0;z-index:10;width:100%;position:relative;padding:5px 0;position:relative}
+section.steps .step-title .name{width:100%;text-align:center;font-size:40px;background-color:#fff;color:#16bae0;z-index:10;width:100%;position:relative;padding:5px 0;position:relative}
 section.steps .step-title .name:after{content:'';width:30%;border-bottom:5px solid #16bae0;bottom:0;left:35%;position:absolute}
 section.steps .step-title .plus{width:50px;height:50px;background-color:#eb692e;color:#fff;border-radius:50%;text-align:center;margin:-10px auto 10px auto;font-size:30px;line-height:50px;position:relative;z-index:9;-webkit-transform:rotate(0);-ms-transform:rotate(0);transform:rotate(0);-webkit-transition:all ease .3s;transition:all ease .3s}
 section.steps .step-title .plus.active{margin:5px auto 10px auto;-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg)}
