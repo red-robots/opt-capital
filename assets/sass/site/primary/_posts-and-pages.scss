@@ -516,8 +516,13 @@ section.people {
 }
 .single-person {
 	margin: 0;
+	padding: 2%;
+	background-color: #fff;
+	@include box-shadow;
 	@media screen and (min-width: $tabwidth) {
-		margin: -30px 0 0 0;
+		margin: 0px 0 0 0;
+		width: 34%;
+		float: left;
 	}
 	// .top-wrap {
 	// 	width: 100%;
@@ -534,14 +539,14 @@ section.people {
 		position: relative;
 		z-index: 5;
 		@media screen and (min-width: $tabwidth) {
-			width: 70%;
+			// width: 70%;
 			margin: 0 auto;
 		}
 		@media screen and (min-width: $midwidth) {
-			width: 60%;
+			// width: 60%;
 		}
 		@media screen and (min-width: $deskwidth) {
-			width: 55%;
+			// width: 55%;
 		}
 		img {
 			width: 100%;
@@ -551,23 +556,23 @@ section.people {
 		width: 100%;
 		background-color: rgba(255,255,255,1);
 		// @include box-shadow;
-		@include light-grey-grad;
+		// @include light-grey-grad;
 		text-align: center;
 		position: relative;
 		z-index: 4;
 		padding: 70px 10px 30px;
 		@media screen and (min-width: $tabwidth) {
 			margin: -50px auto 0;
-			width: 70%;
+			// width: 80%;
 		}
 		@media screen and (min-width: $midwidth) {
-			width: 60%;
+			// width: 60%;
 		}
 		@media screen and (min-width: $deskwidth) {
-			width: 55%;
+			// width: 55%;
 		}
 		.pre-desc {
-			color: #333;
+			color: $color-orange;
 			font-size: 14px;
 			text-transform: uppercase;
 		}
@@ -585,14 +590,14 @@ section.people {
 		z-index: 5;
 		padding: 20px;
 		@media screen and (min-width: $tabwidth) {
-			margin: -90px auto 0;
-			width: 60%;
+			margin: -60px auto 0;
+			width: 80%;
 		}
 		@media screen and (min-width: $midwidth) {
-			width: 50%;
+			// width: 50%;
 		}
 		@media screen and (min-width: $deskwidth) {
-			width: 40%;
+			// width: 40%;
 		}
 		h1 {
 			font-weight: 300;
@@ -603,13 +608,13 @@ section.people {
 		h3 {
 			font-weight: 300;
 			font-size: 16px;
-			color: $color-med-grey;
+			// color: $color-med-grey;
 			margin: 0;
-			
+			color: #5a6065;
 			padding: 3px 0 10px 0;
 		}
-		.pre-desc {
-			color: #333;
+		span.pre-desc {
+			color:  $color-orange;
 			font-size: 12px;
 			text-transform: uppercase;
 		}
@@ -624,12 +629,20 @@ section.people {
 	}
 	
 }
+.person-content {
+	width: 60%;
+	float: right;
+	padding: 2%;
+	background-color: #fff;
+	font-size: 17px;
+	@include box-shadow;
+}
 .single-person-info-wrap {
 	width: 90%;
 	margin: 0 auto;
 }
 section.q-n-a {
-	padding: 5%;
+	padding: 5% 0;
 	.row {
 		width: 100%;
 		margin: 0 0 10px 0;
@@ -645,6 +658,9 @@ section.other-team {
 	width: 100%;
 	clear: both;
 	float: left;
+	// @include box-shadow;
+	// background-color: #fff;
+	padding: 30px 0;
 	@media screen and (min-width: $tabwidth) {
 		margin: 30px 0 50px 0;
 	}
@@ -661,6 +677,7 @@ section.other-team {
 	width: auto;
 	margin: 0 0 20px 0;
 	padding: 2%;
+	background-color: #fff;
 	// border-bottom: 2px solid $color-light-grey;
 	@include box-shadow;
 	float: left;
@@ -1275,14 +1292,6 @@ body .gform_wrapper .field_description_below .gfield_description {
         }
     }
 }
-.single {
-    .entry-title {
-        font-size: 55px;
-    }
-    .entry-content {
-        margin-top:20px;
-    }
-}
 .widget-area {
     ul {
         margin: 0 0 0 15px;
@@ -1405,7 +1414,21 @@ section.bullets {
 }
 section.steps {
 	width: 100%;
-	@include light-grey-grad;
+	position: relative;
+	&:after {
+		content: '';
+		opacity: .2;
+		background-image: url(images/how-it-works.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		z-index: -1;
+	}
+	// @include light-grey-grad;
 	h2 {
 		width: 70%;
 		text-align: center;
@@ -1417,11 +1440,11 @@ section.steps {
 	}
 	.step-wrap {
 		// background-color: #ededed;
-		@include box-shadow;
+		// @include box-shadow;
 		padding: 30px 0;
 	}
 	.step-title {
-		background-color: #fff;
+		// background-color: #fff;
 		z-index: 10;
 		width: 100%;
 		position: relative;
@@ -1431,7 +1454,8 @@ section.steps {
 		&:hover {
 			.plus {
 				// margin: -0px auto 10px auto;
-				transform: rotate(180deg);
+				// transform: rotate(45deg);
+				transform: scale(1.1);
 			}
 		}
 		.step-num {
@@ -1453,7 +1477,7 @@ section.steps {
 			width: 100%;
 			text-align: center;
 			font-size: 40px;
-			background-color: #fff;
+			// background-color: #fff;
 			color: $color-blue;
 			z-index: 10;
 			width: 100%;
@@ -1477,7 +1501,8 @@ section.steps {
 			color: #fff;
 			border-radius: 50%;
 			text-align: center;
-			margin: -10px auto 10px auto; 
+			// margin: -10px auto 10px auto; 
+			margin: 5px auto 10px auto; 
 			font-size: 30px;
 			line-height: 50px;
 			position: relative;
@@ -1496,7 +1521,7 @@ section.steps {
 		margin: 0 auto;
 		// background-color: #fff;
 		// background-color: #ededed82;
-		@include light-grey-grad;
+		// @include light-grey-grad;
 		padding: 20px 5%;
 		// border-top: 3px solid $color-blue;
 		// clear: both;
@@ -1595,5 +1620,42 @@ section.case-study {
 				font-size: 40px;
 			}
 		}
+	}
+}
+section.news {
+	width: 100%;
+	float: left;
+	padding: 40px 0;
+}
+article.blogpost, article.post {
+	background-color: #fff;
+	width: 100%;
+	float: left;
+	margin: 0 0 40px 0;
+	padding: 5%;
+	@include box-shadow;
+	h1 {
+		color: $color-orange;
+		font-weight: 300;
+		font-size: 26px;
+		margin: 0 0 20px 0;
+		@media screen and (min-width: $tabwidth) {
+			font-size: 30px;
+		}
+		@media screen and (min-width: $deskwidth) {
+			font-size: 40px;
+		}
+	}
+	.learnmore {
+		margin: 0 0 20px 0;
+	}
+}
+.single-post {
+	article h1 {
+		width: 100%;
+		float: left;
+		padding: 0 0 30px 0;
+		margin: 0 0 30px 0;
+		border-bottom: 1px solid #e6e6e6;
 	}
 }

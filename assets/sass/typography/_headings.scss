@@ -17,6 +17,50 @@ h1.entry-title {
 		font-size: 65px;
 	}
 	@media screen and (min-width: $deskwidth) {
-		font-size: 85px;
+		font-size: 75px;
+	}
+}
+h2 {
+    font-weight: 600;
+	font-size: 20px;
+	text-transform: uppercase;
+	@media screen and (min-width: $tabwidth) {
+		font-size: 22px;
+	}
+	@media screen and (min-width: $deskwidth) {
+		// font-size: 75px;
+	}
+}
+.single {
+    .entry-title {
+        font-size: 28px;
+        @media screen and (min-width: $tabwidth) {
+            font-size: 35px;
+        }
+        @media screen and (min-width: $deskwidth) {
+            font-size: 45px;
+        }
+    }
+    .entry-content {
+        margin-top:20px;
+    }
+    
+}
+.entry-footer{
+	padding: 5px 0;
+	border-top: 1px solid #e6e6e6;
+	border-bottom: 1px solid #e6e6e6;
+	a {
+		color: $color-blue;
+		&:hover {
+			color: $color-orange;
+		}
+	}
+}
+header.page-header {
+	 h1.page-title {
+	 	text-transform: uppercase;
+	 	margin: 0 0 50px 0;
+	 	color: #b3b4b5;
 	}
 }

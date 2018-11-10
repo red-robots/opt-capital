@@ -9,7 +9,7 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area-intro">
+	<div id="primary" class="content-area-full">
 		<main id="main" class="site-main" role="main">
 
 		<?php
@@ -53,7 +53,23 @@ get_header(); ?>
 
 				
 
-				
+			<div class="person-content">
+				<div class="entry-contents"><?php the_content(); ?></div>
+				<?php if(have_rows('q&a')): ?>
+					<section class="q-n-a">
+						<?php while(have_rows('q&a')):the_row();
+								$question=get_sub_field('question');
+								$answer=get_sub_field('answer');
+						 ?>
+						 	<div class="row">
+							 	<div class="questionz"><?php echo $question; ?></div>
+							 	<div class="answerz"><?php echo $answer; ?></div>
+						 	</div>
+						<?php endwhile; ?>
+					</section>
+
+				<?php endif; ?>
+			</div>
 			
 
 		
@@ -63,23 +79,10 @@ get_header(); ?>
 	</div><!-- #primary -->
 <div class="single-person-info-wrap">
 	<div class="content-area">
-		<div class="content"><?php the_content(); ?></div>
+		
 	</div>
 	<div class="widget-area">
-		<?php if(have_rows('q&a')): ?>
-			<section class="q-n-a">
-				<?php while(have_rows('q&a')):the_row();
-						$question=get_sub_field('question');
-						$answer=get_sub_field('answer');
-				 ?>
-				 	<div class="row">
-					 	<div class="questionz"><?php echo $question; ?></div>
-					 	<div class="answerz"><?php echo $answer; ?></div>
-				 	</div>
-				<?php endwhile; ?>
-			</section>
-
-		<?php endif; ?>
+		
 	</div>
 </div>
 <?php endwhile; // End of the loop. ?>

@@ -8,9 +8,31 @@ a {
 .clear:before, .clear:after { content: " "; display: table; }
 .clear { *zoom: 1; }
 .clear {clear: both;}
-body.page-template-page-people {
+body.page-template-page-people, .page-template-page-news, .single-post, .archive, .single-team {
 	.page-wrapper {
 		background-color: $color__background-grey;
+	}
+}
+.page-template-page-news, .archive {
+	.widget-area {
+		margin-top: 30px;
+		@media screen and (min-width: $tabwidth) {
+			margin-top: 200px;
+		}
+		@media screen and (min-width: $deskwidth) {
+			margin-top: 200px;
+		}
+	}
+}
+.single-post {
+	.widget-area {
+		margin-top: 100px;
+		@media screen and (min-width: $tabwidth) {
+			// margin-top: 200px;
+		}
+		@media screen and (min-width: $deskwidth) {
+			// margin-top: 200px;
+		}
 	}
 }
 .wrapper, .page-wrapper {
