@@ -5,6 +5,14 @@ add_action('init', 'js_custom_init');
 function js_custom_init()  {
 	
     $post_types = array(
+        // array(
+        //     'post_type' => 'strategy',
+        //     'menu_name' => 'Strategy',
+        //     'plural'    => 'Strategy',
+        //     'single'    => 'Strategy',
+        //     'menu_icon' => 'dashicons-chart-bar',
+        //     'supports'  => array('title','editor','thumbnail')
+        // ),
         array(
             'post_type' => 'team',
             'menu_name' => 'Team',
