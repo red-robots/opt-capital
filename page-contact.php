@@ -68,7 +68,7 @@ $atts = ($img) ? " style=background-image:url(".$image_src.")" : '';
                         </div>
                         <div class="addressCol column">
                             <div class="a_inside clear">
-                                <h3 class="a-title">Our Contacts</h3>
+                                <!-- <h3 class="a-title">Our Contacts</h3> -->
                                 <?php 
                                     $address = get_field('physical_address', 'option'); 
                                     $contact_numbers = get_field('contact_numbers', 'option'); 
