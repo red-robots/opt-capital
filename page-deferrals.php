@@ -7,7 +7,11 @@
  * @package ACStarter
  */
 
-get_header(); ?>
+get_header(); 
+
+$vidLink = get_field('video_link');
+
+?>
 
 	<div id="primary" class="content-area-intro">
 		<main id="main" class="site-main" role="main">
@@ -32,7 +36,7 @@ get_header(); ?>
 	<section class="about-meet-our-team">
 		<div class="learnmore swipe">
 			<div class='insider'></div>
-			<a href="<?php echo $sectionlink; ?>">View Video</a>
+			<a href="<?php echo $vidLink; ?>">View Video</a>
 		</div>
 	</section>
 

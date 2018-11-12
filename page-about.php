@@ -24,12 +24,7 @@ $sectiontext = get_field('section_text');
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-	<section class="about-meet-our-team">
-		<div class="learnmore swipe">
-			<div class='insider'></div>
-			<a href="<?php echo $sectionlink; ?>"><?php echo $sectiontext; ?></a>
-		</div>
-	</section>
+	
 
 	<div class="content-area">
 		<?php if(have_rows('bullets')) : ?>
@@ -75,6 +70,19 @@ $sectiontext = get_field('section_text');
 		</div>
 	<?php $i++; endwhile; endif; ?>
 	</section>
+
+	
+
+
 </div>
+
+<section class="meet-team-link">
+		<div class="learnmore swipe">
+			<div class='insider'></div>
+			<a href="<?php echo $sectionlink; ?>"><?php echo $sectiontext; ?></a>
+		</div>
+	</section>
+
+
 <?php
 get_footer();
