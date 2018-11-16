@@ -65,7 +65,7 @@ if($color) { ?>
 					<div class="step-num">
 						<div class="name">
 							<div class="midwrap"><?php echo $stepTitle; ?>
-								<div class="plus <?php if($i == 1){echo 'active';} ?>">
+								<div class="plus">
 									<span class="icon1"><i class="fas fa-caret-down"></i></span>
 								</div>
 							</div>
