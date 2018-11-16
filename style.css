@@ -8860,7 +8860,7 @@ section.steps {
       border-bottom: none; }
   section.steps .numtext {
     position: absolute;
-    top: 18px;
+    top: 20px;
     left: 0;
     color: #56595a;
     font-size: 58px;
