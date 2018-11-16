@@ -1535,28 +1535,16 @@ section.steps {
 			z-index:10;
 			transform: rotate(0deg);
 			@include transition(all ease .3s);
-			.icon1,
-			.icon2 {
+			.icon1 {
 				position:absolute;
 				top: 0;
 				right: 0;
 				@include transition(all ease-out .2s);
 			}
-			.icon2 {
-				opacity: 0;
-				visibility: hidden;
-				font-size: 25px;
-				right: 2px;
-			}
 			&.active {
 				.icon1 {
-					opacity: 0;
-					visibility: hidden;
-				}
-				.icon2 {
-					opacity: 1;
-					visibility: visible;
-				}
+					transform: rotate(180deg);
+				}	
 			}
 		}
 
