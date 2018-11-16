@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Deferrals
+ * 
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
@@ -8,32 +8,27 @@
  */
 
 get_header(); 
-$vidLink = get_field('video_link'); 
-$the_steps = get_field('steps');
-if($the_steps){ ?>
-<style type="text/css">
-<?php $j=1; foreach($the_steps as $a) { 
-$color = $a['step_text_color'];
-if($color) { ?>
-#stepno_<?php echo $j;?> .numtext,
-#stepno_<?php echo $j;?> .name,
-#stepno_<?php echo $j;?> .plus,
-#stepno_<?php echo $j;?> .step-desc {
-	color:<?php echo $color;?>!important;
-}
-<?php } ?>
-<?php $j++; } ?>
-</style>
-<?php }
+
+$vidLink = get_field('video_link');
+
 ?>
 
 	<div id="primary" class="content-area-intro">
 		<main id="main" class="site-main" role="main">
+
 			<?php
 			while ( have_posts() ) : the_post();
+
 				get_template_part( 'template-parts/content', 'page' );
+
+				// If comments are open or we have at least one comment, load up the comment template.
+				if ( comments_open() || get_comments_number() ) :
+					comments_template();
+				endif;
+
 			endwhile; // End of the loop.
 			?>
+
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
@@ -55,24 +50,21 @@ if($color) { ?>
 		<?php while(have_rows('steps')) : the_row(); $i++;
 			$stepTitle = get_sub_field('step_title');
 			$stepDesc = get_sub_field('step_description');
-		?>	
-			
-			<div id="stepno_<?php echo $i;?>" class="step">
-				<div class="numtext"><?php echo $i;?></div>
+		?>
+			<div class="step">
 				<div class="step-title">
 					<div class="step-num">
-						<div class="name">
-							<div class="midwrap"><?php echo $stepTitle; ?>
-								<div class="plus <?php if($i == 1){echo 'active';} ?>">
-									<span class="icon1"><i class="fas fa-caret-down"></i></span>
-									<span class="icon2"><i class="fas fa-times"></i></span>
-								</div>
-							</div>
+						<!-- <div class="circle">
+							<?php echo $i; ?>
+						</div> -->
+						<div class="name"><?php echo $i . ' / ' . $stepTitle; ?></div>
+						<div class="plus <?php if($i == 1){echo 'active';} ?>">
+							<i class="fas fa-plus"></i>
 						</div>
 					</div>
 					
 				</div>
-				<div class="step-desc entry-content clear" style="<?php if($i == 1){echo'display: block;';}?>"> 
+				<div class="step-desc entry-content " style="<?php if($i == 1){echo'display: block;';}?>"> 
 					<?php echo $stepDesc; ?>
 				</div>
 			</div>

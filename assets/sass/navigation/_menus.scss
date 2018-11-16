@@ -56,7 +56,7 @@
 			top: 3em;
 			z-index: 99999;
 			max-height: 0;
-			background-color: $color-orange;
+			background-color:$color-dark-grey;
 			@include transition(all ease .7s);
 			width: 250px;
 			display: flex;

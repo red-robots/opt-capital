@@ -78,7 +78,7 @@ if ( have_posts() ) : the_post();
                                     ?>
                                     <h3 class="vtitle"><?php the_title(); ?></h3>
                                     <div class="strat-content">
-                                        <?php echo $strategy_text; ?>
+                                        <?php the_excerpt(); ?>
                                     </div>
                                     <div class="learnmore swipe">
                                         <div class='insider'></div>

@@ -41,11 +41,16 @@ $sectiontext = get_field('section_text');
 			<?php the_field('story'); ?>
 		</div>
 		
-
+		<section class="meet-team-link">
+			<div class="learnmore swipe">
+				<div class='insider'></div>
+				<a href="<?php echo $sectionlink; ?>"><?php echo $sectiontext; ?></a>
+			</div>
+		</section>
 	</div>
 	
 	
-<div class="widget-area">
+<div class="widget-area timeline">
     <section class="stats">
 	<?php 
         $statsArrs = get_field('stats');
@@ -70,18 +75,8 @@ $sectiontext = get_field('section_text');
 		</div>
 	<?php $i++; endwhile; endif; ?>
 	</section>
-
-	
-
-
 </div>
 
-<section class="meet-team-link">
-		<div class="learnmore swipe">
-			<div class='insider'></div>
-			<a href="<?php echo $sectionlink; ?>"><?php echo $sectiontext; ?></a>
-		</div>
-	</section>
 
 
 <?php
