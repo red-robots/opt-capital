@@ -73,7 +73,7 @@ if($color) { ?>
 					</div>
 					
 				</div>
-				<div class="step-desc entry-content clear" style="<?php if($i == 1){echo'display: block;';}?>"> 
+				<div class="step-desc entry-content clear"> 
 					<?php echo $stepDesc; ?>
 				</div>
 			</div>
