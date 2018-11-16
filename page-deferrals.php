@@ -10,7 +10,9 @@
 get_header(); 
 $vidLink = get_field('video_link'); 
 $the_steps = get_field('steps');
-if($the_steps){ ?>
+$step_count = 0;
+if($the_steps){ 
+$step_count = count($the_steps); ?>
 <style type="text/css">
 <?php $j=1; foreach($the_steps as $a) { 
 $color = $a['step_text_color'];
@@ -57,7 +59,7 @@ if($color) { ?>
 			$stepDesc = get_sub_field('step_description');
 		?>	
 			
-			<div id="stepno_<?php echo $i;?>" class="step">
+			<div id="stepno_<?php echo $i;?>" class="step<?php echo($i==$step_count) ? ' last':'';?>">
 				<div class="numtext"><?php echo $i;?></div>
 				<div class="step-title">
 					<div class="step-num">

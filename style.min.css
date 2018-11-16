@@ -2219,9 +2219,10 @@ section.about-meet-our-team{width:100%;margin:-30px auto 0 auto;text-align:cente
 section.bullets{width:100%;float:left;margin:0 0 20px 0}
 section.bullets .bullet{width:100%;margin:0 0 20px 0;border-left:5px solid #eb692e;background-color:#efefef;padding:10px 10px 10px 30px}
 section.steps{width:100%;position:relative;box-shadow:0 0 19px -3px rgba(0,0,0,0.52);overflow:hidden}
-section.steps .step{position:relative;border-bottom:1px solid #c5c7c7;margin:0;padding-top:20px;padding-bottom:20px;padding-left:50px}
+section.steps .step{position:relative;border-bottom:1px solid #c5c7c7;margin:0;padding-top:25px;padding-bottom:25px;padding-left:50px}
 @media screen and (min-width:768px){section.steps .step{padding-left:60px}
-}section.steps .numtext{position:absolute;top:20px;left:0;color:#56595a;font-size:58px;line-height:58px}
+}section.steps .step.last{border-bottom:0}
+section.steps .numtext{position:absolute;top:18px;left:0;color:#56595a;font-size:58px;line-height:58px}
 section.steps:after{content:'';opacity:.8;display:block;width:100.1%;height:100%;background-image:url(images/how-it-works.jpg);background-repeat:no-repeat;background-size:cover;position:absolute;top:0;left:0;bottom:0;right:0;z-index:-1}
 section.steps h2{width:70%;text-align:center;font-size:40px;color:#eb692e;font-weight:300;margin:30px auto 50px auto;line-height:1;text-transform:none}
 section.steps .step-wrap{position:relative;padding:30px 20px}

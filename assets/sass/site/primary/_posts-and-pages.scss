@@ -1435,16 +1435,19 @@ section.steps {
 		position:relative;
 		border-bottom:1px solid #c5c7c7;
 		margin: 0 0;
-		padding-top: 20px;
-		padding-bottom: 20px;
+		padding-top: 25px;
+		padding-bottom: 25px;
 		padding-left: 50px;
 		@media screen and (min-width: $tabwidth) {
 			padding-left: 60px;
 		}
+		&.last {
+			border-bottom: none;
+		}
 	}
 	.numtext {
 		position:absolute;
-		top: 20px;
+		top: 18px;
 		left: 0;
 		color:$color-dark-grey;
 		font-size: 58px;
