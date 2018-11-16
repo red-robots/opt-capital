@@ -1530,7 +1530,7 @@ section.steps {
 			font-size: 38px;
 			line-height: 52px;
 			position: absolute;
-			top: 0;
+			top: -4px;
 			right: 0;
 			z-index:10;
 			transform: rotate(0deg);
@@ -1540,7 +1540,7 @@ section.steps {
 				position:absolute;
 				top: 0;
 				right: 0;
-				@include transition(all ease-out .3s);
+				@include transition(all ease-out .2s);
 			}
 			.icon2 {
 				opacity: 0;
@@ -1564,6 +1564,12 @@ section.steps {
 	.step-desc {
 		padding-top:10px;
 		margin: 0 auto;
+		p:last-child {
+			margin-bottom: 5px;
+		}
+		ul:last-child {
+			margin-bottom: 5px;
+		}
 	}
 }
 section.case-study {
