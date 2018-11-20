@@ -129,10 +129,13 @@ body.page-template-page-people, .page-template-page-news, .single-post, .archive
 	width: 250px;
 	// margin: 10px auto;
 	float: left;
+	position: relative;
+	top: 8px;
 	@media screen and (min-width: $midwidth) {
 		width: 300px;
 		float: left;
 		margin: 0;
+		top: 0;
 	}
 	@media screen and (min-width: $deskwidth) {
 		/*width: 1200px;*/
