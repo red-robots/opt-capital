@@ -346,13 +346,13 @@ section.banner {
 			}
 			color: #fff;
 			@media screen and (min-width: $tabwidth) {
-				font-size: 7vw;
+				font-size: 40px;
 			}
 			@media screen and (min-width: $midwidth) {
-				font-size: 6vw;
+				font-size: 50px;
 			}
 			@media screen and (min-width: $deskwidth) {
-				font-size: 6vw;
+				font-size: 70px;
 			}
 		}
 	}
