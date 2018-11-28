@@ -4,11 +4,14 @@
 $wp_query = new WP_Query(array('post_status'=>'private','pagename'=>'homepage'));
 if ( have_posts() ) : the_post(); 
 	
+	$slides = get_field('slides');
+	$total_slides = ($slides) ? count($slides) : 0;
+	$slider_class = ($total_slides>1) ? 'flexslider':'flexsliderNojs';
 
 	if( have_rows('slides')):
 	?>
 	<div id="slider">
-		<div class="flexslider">
+		<div class="slidewrapper <?php echo $slider_class?>">
 			<ul class="slides">
 				<?php while(have_rows('slides')):the_row(); 
 					$img=get_sub_field('slide_image');
