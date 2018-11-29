@@ -28,7 +28,7 @@ if($color) { ?>
 </style>
 <?php }
 ?>
-
+<div class="wrapper clear">
 	<div id="primary" class="content-area-intro">
 		<main id="main" class="site-main" role="main">
 			<?php
@@ -83,6 +83,6 @@ if($color) { ?>
 	<?php endif; ?>
 
 	<?php get_template_part('inc/boxes'); ?>
-
+</div>
 <?php
 get_footer();

@@ -37,8 +37,8 @@
     position: relative;
 	@include orangegrad;
 	padding:0 0;
-	margin: 88px 0 30px 0;
-    height: 450px;
+	margin: 80px 0 30px 0;
+    height: 400px;
     @media screen and (min-width: $tabwidth) {
         height: 520px;
     }
@@ -49,7 +49,7 @@
 	img {
 		display: none;
 		@media screen and (min-width: $tabwidth) {
-			display: block;
+			display: none;
 		}
 	}
 	.slidewrapper,
@@ -143,7 +143,7 @@ section.home-middle {
 		width: 100%;
 		float: left;
 		@media screen and (min-width: $midwidth) {
-			width: 64%;
+			width: 64.8%;
             margin-bottom: 0;
 		}
 	}
@@ -214,9 +214,12 @@ section.home-middle {
     
 }
 section.bott-page {
-	padding: 40px 0;
+	padding: 0 0 40px;
 	width: 100%;
 	float: left;
+	@media screen and (min-width: $tabwidth) {
+		padding: 40px 0;
+	}
 }
 section.boxes {
 	width: 100%;
@@ -240,10 +243,13 @@ section.boxes {
 			width: auto;
 			flex-basis: 28%;
 			transform: scale(1);
-			margin: 30px 12px;
+			margin: 30px 13px;
 			clear: none;
 			display: flex;
 			flex-direction: column;
+		}
+		&.has-link {
+			cursor: pointer;
 		}
 		&:hover {
 			@media screen and (min-width: $tabwidth) {
@@ -317,6 +323,9 @@ section.boxes {
 			&:hover {color: #fff;}
 		}
 	}
+}
+.home section.boxes  {
+	margin-bottom: 40px;
 }
 .faqrow {
 	width: auto;
@@ -401,6 +410,12 @@ section.boxes {
       }
     }
 }
+div.people {
+	padding-top: 80px;
+	@media screen and (min-width: $tabwidth) {
+		padding-top: 0;
+    }
+}
 section.people {
     margin-bottom: 20px;
     .row {
@@ -413,12 +428,15 @@ section.people {
     }
 
     .team-category {
-        margin: 0 0;
+        margin: 0 0 10px;
         color:$color-orange;
         position: relative;
         font:{
             size: 25px;
             weight: 500;
+        }
+        @media screen and (min-width: $tabwidth) {
+        	margin: 0 0;
         }
         span {
             display: inline-block;
@@ -476,15 +494,19 @@ section.people {
 	.card {
 		flex-basis: 90%;
 		margin-bottom: 20px;
+		box-sizing: border-box;
         .pad {
             box-shadow: 0 1px 2px rgba(0,0,0,0.07);
             background-color: #fff;
-            padding: 30px;
+            padding: 20px;
             @include transition(all ease .3s);
+            @media screen and (min-width: $tabwidth) {
+            	padding: 30px;
+            }
         }
 		@media screen and (min-width: $tabwidth) {
             padding: 20px;
-			flex-basis: 45%;
+			flex-basis: 50%;
             margin-bottom: 0;
 		}
 		@media screen and (min-width: $deskwidth) {
@@ -511,18 +533,44 @@ section.people {
 			padding: 3px 0 10px 0;
 		}
         .learnmore {
-            margin: 20px auto 0;
+            margin: 20px auto 10px;
             @media screen and (min-width: $tabwidth) {
-                margin: 50px auto 30px;
+                margin: 30px auto 10px;
             }
         }
 	}
 	.image {
 		width: 100%;
+		overflow: hidden;
 		img {
+			display: none;
 			width: 100%;
             height: auto;
             float: left;
+		}
+		&.has-image {
+			background: #FFF;
+		}
+	}
+	.imageDiv {
+		width: 100%;
+		height:300px;
+		background-position: top center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-color: #FFF;
+		position: relative;
+		top: -5px;
+		@media screen and (min-width: $xswidth) {
+			height: 400px;
+			top: -10px;
+		}
+		@media screen and (min-width: $tabwidth) {
+			height: 360px;
+			top: -5px;
+		}
+		@media screen and (min-width: $midwidth) {
+			height: 330px;
 		}
 	}
 }
@@ -761,19 +809,13 @@ section.other-team {
 section.stats {
 	width: 100%;
     text-align:center;
-    padding: 5%;
-    // padding-bottom: 30px;
-    // background-color: #fff;
-    // background-color: $color-blue;
+    padding: 5% 5% 7%;
     @include box-shadow;
-	@media screen and (min-width: $tabwidth) {
-		// margin: 155px 0 0 0;
-        // padding-bottom: 50px;
-	}
 }
 .timeline-title {
     margin: 0 0 20px;
     color:$color-orange;
+    line-height: 1.2;
     font: {
         size: 35px;
         weight: 300;
@@ -865,7 +907,6 @@ section.stats {
         padding-right: 0;
     }
     .content-area {
-        width: 90%;
         margin: 0 auto;
         float: none;
     }
@@ -926,16 +967,19 @@ section.stats {
     position: relative;
     width: 100%;
     box-shadow: 0px 3px 16px -4px rgba(0,0,0,0.3);
+    margin-bottom: 50px;
     .formCol,
-    addressCol {
+    .addressCol {
         position: relative;
     }
     .formCol {
         width: 100%;
+        box-sizing: border-box;
+        padding:15px 10px;
         .inside {
             padding:15px 20px;
         }
-        @media screen and (min-width: $tabwidth) {
+        @media screen and (min-width: $midwidth) {
             padding:15px 60px;
         }
     }
@@ -1443,7 +1487,7 @@ section.steps {
 		margin: 0 0;
 		padding-top: 25px;
 		padding-bottom: 25px;
-		padding-left: 50px;
+		padding-left: 0;
 		@media screen and (min-width: $tabwidth) {
 			padding-left: 60px;
 		}
@@ -1453,11 +1497,16 @@ section.steps {
 	}
 	.numtext {
 		position:absolute;
-		top: 20px;
+		top: 26px;
 		left: 0;
 		color:$color-dark-grey;
-		font-size: 58px;
-		line-height: 58px;
+		font-size: 55px;
+		line-height: 55px;
+		@media screen and (min-width: $tabwidth) {
+			top: 22px;
+			font-size: 58px;
+			line-height: 58px;
+		}
 	}
 	&:after {
 		content: '';
@@ -1477,14 +1526,18 @@ section.steps {
 	}
 	// @include light-grey-grad;
 	h2 {
-		width: 70%;
+		width: 90%;
 		text-align: center;
-		font-size: 40px;
+		font-size: 35px;
 		color: $color-orange;
 		font-weight: 300;
 		margin: 30px auto 50px auto;
-		line-height: 1;
+		line-height: 1.2;
 		text-transform: none;
+		@media screen and (min-width: $tabwidth) {
+			width: 70%;
+			font-size: 40px;
+		}
 	}
 	.step-wrap {
 		position:relative;
@@ -1516,7 +1569,7 @@ section.steps {
 		}
 		.name {
 			width: 100%;
-			font-size: 25px;
+			font-size: 22px;
 			font-weight: 500;
 			line-height: 1.3;
 			color: $color-blue;
@@ -1530,7 +1583,11 @@ section.steps {
 			.midwrap {
 				display: block;
 				position:relative;
-				padding-right: 40px;
+				padding-right: 50px;
+				padding-left: 42px;
+				@media screen and (min-width: $tabwidth) {
+					padding-left: 0;
+				}
 			}
 		}
 		.plus {
@@ -1703,9 +1760,11 @@ article.blogpost, article.post {
 }
 section.meet-team-link {
 	width: 100%;
-	padding: 30px 0;
-	float: left;
+	padding: 0 0;
 	text-align: center;
+	@media screen and (min-width: $tabwidth) {
+		padding: 30px 0;
+	}
 }
 .widget-area.timeline {
 	margin-bottom: 50px;
@@ -1726,4 +1785,13 @@ section.meet-team-link {
 			color: $color-blue;
 		}
 	}
+}
+.content-sidebar-wrap {
+	margin-top: 30px;
+	@media screen and (min-width: $tabwidth) {
+		margin-top: 100px;
+	}
+}
+.error404 header.page-header h1.page-title {
+	margin-bottom: 0;
 }

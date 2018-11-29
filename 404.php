@@ -8,6 +8,7 @@
  */
 
 get_header(); ?>
+<div class="wrapper clear">
 	<div id="primary" class="content-area pagewrap404">
 		<main id="main" class="site-main" role="main">
 
@@ -24,5 +25,6 @@ get_header(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
+</div>
 <?php
 get_footer();

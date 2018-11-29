@@ -4,7 +4,7 @@
  */
 
 get_header(); ?>
-
+<div class="wrapper clear">
 	<div id="primary" class="content-area-intro">
 		<main id="main" class="site-main" role="main">
 			<?php
@@ -30,6 +30,6 @@ get_header(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-
+</div>
 <?php
 get_footer();

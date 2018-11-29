@@ -156,6 +156,21 @@ $(document).ready(function ($) {
             }
         }
     }
+
+    $('.box').each(function(){
+    	var box = $(this);
+    	if( box.find('.learnmore a').length>0 ) {
+    		box.addClass('has-link');
+    	}
+    });
     
+    $(document).on("click",".boxes .box",function(){
+    	if( $(this).find(".learnmore a").length > 0 ) {
+    		var link = $(this).find(".learnmore a").attr("href");
+    		if(link) {
+	    		window.location.href = link;
+	    	}
+    	}
+    });
 
 });// END #####################################    END

@@ -38,16 +38,14 @@ body.page-template-page-people, .page-template-page-news, .single-post, .archive
 .wrapper, .page-wrapper {
 	width: 100%;
 	margin: 0px auto;
-	padding: 20px;
-    position:relative;
-
-	
-	@media screen and (min-width: $tabwidth) {
-		width: 100%;
-		float: left;
-	}
+	position:relative;
+    box-sizing: border-box;
+}
+.wrapper {
+	max-width: 1300px;
+	padding: 0 20px;
 	@media screen and (min-width: $deskwidth) {
-		padding: 0 5%;
+		padding: 0 20px;
 	}
 }
 
@@ -100,19 +98,23 @@ body.page-template-page-people, .page-template-page-news, .single-post, .archive
 	padding: 0;
 	position: fixed;
 	top: 0;
-	margin: 0 0 30px 0;
+	margin: 0 0;
 	z-index: 1000;
-	background-color: rgba(#fff, .9);
+	background-color: #FFF;
+	height: 80px;
 	@media screen and (min-width: $midwidth) {
+		height: auto;
 		padding: 30px 0;
 		margin: 0;
 		position: relative;
 	}
 	.wrapper {
 		padding: 10px;
+		float: left;
 		@media screen and (min-width: $deskwidth) {
 			width: 100%;
-			padding: 0 5%;
+			padding: 0 20px;
+			float: none;
 		}
 	}
 }
@@ -127,35 +129,45 @@ body.page-template-page-people, .page-template-page-news, .single-post, .archive
 /* Logo */
 .logo , h1.logo {
 	width: 250px;
-	// margin: 10px auto;
-	float: left;
-	position: relative;
-	top: 8px;
+	position: absolute;
+	top: 14px;
 	@media screen and (min-width: $midwidth) {
-		width: 300px;
-		float: left;
-		margin: 0;
+		width: 300px;	
+		position: relative;
 		top: 0;
-	}
-	@media screen and (min-width: $deskwidth) {
-		/*width: 1200px;*/
+		float: left;
+		margin: 0 0;
 	}
 }
 .logo a, h1.logo a {
 	width: 100%;
 	display: block;
-
+	float: left;
 	@media screen and (min-width: $tabwidth) {
 		
 	}
 	@media screen and (min-width: $deskwidth) {
 		
 	}
+	img {
+		width: 100%;
+		height: auto;
+		float: left;
+	}
 }
 #primary {
 	margin-top: 100px;
 	@media screen and (min-width: $midwidth) {
 		margin-top: 50px;
+	}
+}
+.subpage #primary  {
+	margin-top: 15px;
+	@media screen and (min-width: $tabwidth) {
+		margin-top: 100px;
+	}
+	&.nomargintop {
+		margin-top: 0;
 	}
 }
 .home #primary {
@@ -316,7 +328,7 @@ section.banner {
 	width: 100%;
 	position: relative;
 	clear: both;
-	margin: 75px 0 0 0;
+	margin: 80px 0 0 0;
 	@media screen and (min-width: $tabwidth) {
 		margin: 80px 0 0 0;
 	}

@@ -19,7 +19,8 @@ $atts = ($img) ? " style=background-image:url(".$image_src.")" : '';
         <div class="bg-overlay"></div>
     </div>
 
-    <div id="primary" class="content-area contact-content">
+    <div class="wrapper clear">
+        <div id="primary" class="full-content-area contact-content clear">
         <main id="main" class="site-main clear" role="main">
             <?php  while ( have_posts() ) : the_post(); ?>
                 <div class="topContent">
@@ -113,7 +114,8 @@ $atts = ($img) ? " style=background-image:url(".$image_src.")" : '';
                 </div>
             <?php endwhile; ?>
         </main><!-- #main -->
-    </div><!-- #primary -->
+        </div><!-- #primary -->
+    </div>
 </div>
 
 <?php

@@ -8,15 +8,15 @@
  */
 
 get_header(); ?>
-
-	<div id="primary" class="content-area-full">
+<div class="wrapper clear">
+	<div id="primary" class="content-area-full clear">
 		<main id="main" class="site-main" role="main">
 
 			<?php
 			while ( have_posts() ) : the_post();
-
-				get_template_part( 'template-parts/content', 'page' );
-
+				if( get_the_content() ) {
+					get_template_part( 'template-parts/content', 'page' );
+				}
 			endwhile; // End of the loop.
 			?>
 
@@ -62,6 +62,6 @@ get_header(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-
+</div>
 <?php
 get_footer();

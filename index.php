@@ -18,18 +18,31 @@ get_header();
 $wp_query = new WP_Query(array('post_status'=>'private','pagename'=>'homepage'));
 if ( have_posts() ) : the_post(); 
 	$video=get_field('video');
+	$box1icon=get_field('box_1_icon');
 	$box1title=get_field('box_1_title');
 	$box1desc=get_field('box_1_description');
 	$box1link=get_field('box_1_link');
+
+	$box2icon=get_field('box_2_icon');
 	$box2title=get_field('box_2_title');
 	$box2desc=get_field('box_2_description');
 	$box2link=get_field('box_2_link');
+
+	$box3icon=get_field('box_3_icon');
 	$box3title=get_field('box_3_title');
 	$box3desc=get_field('box_3_description');
 	$box3link=get_field('box_3_link');
+
+	$boxes[] = array('icon'=>$box1icon,'title'=>$box1title,'desc'=>$box1desc,'link'=>$box1link);
+	$boxes[] = array('icon'=>$box2icon,'title'=>$box2title,'desc'=>$box2desc,'link'=>$box2link);
+	$boxes[] = array('icon'=>$box3icon,'title'=>$box3title,'desc'=>$box3desc,'link'=>$box3link);
+
+
     $video_title = get_field('video_title');
     $video_description = get_field('video_description');
  endif; ?>
+
+<div class="wrapper clear">
 	<div id="primary" class="content-area-full">
 		<main id="main" class="site-main" role="main">
 
@@ -92,44 +105,33 @@ if ( have_posts() ) : the_post();
 				</section>
                 
 			</section>
+
 			<section class="boxes">
-				<div class="box box1">
-					<div class="icon">
-						<img src="<?php bloginfo('template_url'); ?>/images/deferrals.png">
+				<?php $j=1; foreach($boxes as $b) { 
+					$b_icon = $b['icon'];
+					$b_title = $b['title'];
+					$b_desc = $b['desc'];
+					$b_link = ($b['link']) ? $b['link'] : '#';
+					if( $b_title && $b_desc ) { ?>
+					<div class="box box<?php echo $j;?>">
+						<?php if($b_icon) { ?>
+						<div class="icon">
+							<img src="<?php echo $b_icon['url'];?>" alt="<?php echo $b_icon['title'];?>" />
+						</div>
+						<?php } ?>
+						<h2><?php echo $b_title; ?></h2>
+						<div class="desc"><?php echo $b_desc; ?></div>
+						<div class="learnmore swipe">
+							<div class='insider'></div>
+							<a class="boxlink" href="<?php echo $b_link; ?>">Learn More</a>
+						</div>
 					</div>
-					<h2><?php echo $box1title; ?></h2>
-					<div class="desc"><?php echo $box1desc; ?></div>
-					<div class="learnmore swipe">
-						<div class='insider'></div>
-						<a href="<?php echo $box1link; ?>">Learn More</a>
-					</div>
-				</div>
-				<div class="box box2">
-					<div class="icon">
-						<img src="<?php bloginfo('template_url'); ?>/images/better-loans.png">
-					</div>
-					<h2><?php echo $box2title; ?></h2>
-					<div class="desc"><?php echo $box2desc; ?></div>
-					<div class="learnmore swipe">
-						<div class='insider'></div>
-						<a href="<?php echo $box2link; ?>">Learn More</a>
-					</div>
-				</div>
-				<div class="box box3">
-					<div class="icon">
-						<img src="<?php bloginfo('template_url'); ?>/images/financial-advisor.png">
-					</div>
-					<h2><?php echo $box3title; ?></h2>
-					<div class="desc"><?php echo $box3desc; ?></div>
-					<div class="learnmore swipe">
-						<div class='insider'></div>
-						<a href="<?php echo $box3link; ?>">Learn More</a>
-					</div>
-				</div>
+					<?php $j++; } ?>
+				<?php } ?>
 			</section>
 		
 		</main><!-- #main -->
 	</div><!-- #primary -->
-
+</div>
 <?php
 get_footer();

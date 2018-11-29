@@ -548,7 +548,7 @@ nav.mobilemenu {
   height: 100%;
   // max-width: 515px;
   width: 100%;
-  padding: 100px 40px 60px 40px;
+  padding: 40px 40px 60px 40px;
   overflow-y: auto;
   z-index: 100001;
   @include transform(translateX(100%));
@@ -622,7 +622,7 @@ nav.mobilemenu {
   }
   
   @media (min-width: 667px) {
-    padding: 120px 90px 70px 90px;
+    padding: 40px 90px 70px 40px;
   }
    
   ul.main {
