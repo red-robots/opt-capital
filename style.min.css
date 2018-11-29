@@ -1741,7 +1741,7 @@ body.overflow{overflow:hidden}
 .burger.clicked span::after{-webkit-transform:translateY(-9px) rotate(-45deg);-ms-transform:translateY(-9px) rotate(-45deg);transform:translateY(-9px) rotate(-45deg)}
 .burger.clicked span:before,.burger.clicked span:after{background-color:#fff}
 .burger:hover{cursor:pointer}
-nav.mobilemenu{background-color:#eb692e;position:fixed;z-index:9;top:0;right:0;height:100%;width:100%;padding:40px 40px 60px 40px;overflow-y:auto;z-index:100001;-webkit-transform:translateX(100%);-ms-transform:translateX(100%);transform:translateX(100%);-webkit-transition:transform .55s cubic-bezier(0.785,0.135,0.15,0.86);-webkit-transition:-webkit-transform .55s cubic-bezier(0.785,0.135,0.15,0.86);transition:-webkit-transform .55s cubic-bezier(0.785,0.135,0.15,0.86);transition:transform .55s cubic-bezier(0.785,0.135,0.15,0.86);transition:transform .55s cubic-bezier(0.785,0.135,0.15,0.86),-webkit-transform .55s cubic-bezier(0.785,0.135,0.15,0.86)}
+nav.mobilemenu{background-color:#eb692e;position:fixed;z-index:9;top:0;right:0;height:100%;width:100%;padding:60px 40px 60px 40px;overflow-y:auto;z-index:100001;-webkit-transform:translateX(100%);-ms-transform:translateX(100%);transform:translateX(100%);-webkit-transition:transform .55s cubic-bezier(0.785,0.135,0.15,0.86);-webkit-transition:-webkit-transform .55s cubic-bezier(0.785,0.135,0.15,0.86);transition:-webkit-transform .55s cubic-bezier(0.785,0.135,0.15,0.86);transition:transform .55s cubic-bezier(0.785,0.135,0.15,0.86);transition:transform .55s cubic-bezier(0.785,0.135,0.15,0.86),-webkit-transform .55s cubic-bezier(0.785,0.135,0.15,0.86)}
 @media screen and (min-width:1027px){nav.mobilemenu{display:none}
 }nav.mobilemenu ul{margin:0;padding:0}
 nav.mobilemenu li{font-size:4vw;position:relative;text-align:center;display:inline-block;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;padding:0;text-transform:uppercase;font-family:"Open Sans",sans-serif;font-weight:300;width:100%}
@@ -2304,6 +2304,8 @@ section.banner.sub img{display:none}
 section.banner.sub .imageDiv{background-position:center center;background-size:cover;background-repeat:no-repeat;height:150px}
 @media screen and (min-width:768px){section.banner.sub .imageDiv{height:380px}
 }@media screen and (min-width:1027px){section.banner.sub .imageDiv{height:460px}
+}body.scrolled #masthead{box-shadow:0 2px 11px -1px rgba(0,0,0,0.25)}
+@media screen and (min-width:768px){body.scrolled #masthead{box-shadow:none}
 }@media screen and (max-width:320px){section.steps .step-desc,section.steps .step-title .name .midwrap{font-size:5vw}
 section.steps .step-desc{padding-top:5px}
 section.steps .step-title .name .midwrap{padding-left:35px}
