@@ -1489,7 +1489,7 @@ section.steps {
 		padding-bottom: 25px;
 		padding-left: 0;
 		@media screen and (min-width: $tabwidth) {
-			padding-left: 60px;
+			padding-left: 55px;
 		}
 		&.last {
 			border-bottom: none;
@@ -1497,7 +1497,7 @@ section.steps {
 	}
 	.numtext {
 		position:absolute;
-		top: 26px;
+		top: 24px;
 		left: 0;
 		color:$color-dark-grey;
 		font-size: 55px;
@@ -1575,18 +1575,25 @@ section.steps {
 			color: $color-blue;
 			z-index: 10;
 			width: 100%;
-			padding: 5px 0;
+			padding: 0 0;
 			position: relative;
+			height: 58px;
 			@media screen and (min-width: $tabwidth) {
+				padding: 5px 0;
 				font-size: 35px;
+				height: auto;
 			}
 			.midwrap {
 				display: block;
 				position:relative;
 				padding-right: 50px;
 				padding-left: 42px;
+			  	top: 50%;
+			  	transform: translateY(-50%);
 				@media screen and (min-width: $tabwidth) {
 					padding-left: 0;
+					transform: none;
+					top: 0;
 				}
 			}
 		}
@@ -1596,11 +1603,14 @@ section.steps {
 			font-size: 38px;
 			line-height: 52px;
 			position: absolute;
-			top: -4px;
+			top: -9px;
 			right: 0;
 			z-index:10;
 			transform: rotate(0deg);
 			@include transition(all ease .3s);
+			@media screen and (min-width: $tabwidth) {
+				top: -4px;
+			}
 			.icon1 {
 				position:absolute;
 				top: 0;
@@ -1616,8 +1626,11 @@ section.steps {
 
 	}
 	.step-desc {
-		padding-top:10px;
+		padding-top: 15px;
 		margin: 0 auto;
+		@media screen and (min-width: $tabwidth) {
+			padding-top:10px;
+		}
 		p:last-child {
 			margin-bottom: 5px;
 		}
@@ -1794,4 +1807,26 @@ section.meet-team-link {
 }
 .error404 header.page-header h1.page-title {
 	margin-bottom: 0;
+}
+
+@media screen and (max-width: 320px) {
+	section.steps .step-desc,
+	section.steps .step-title .name .midwrap {
+		font-size: 5vw;
+	}
+	section.steps .step-desc {
+		padding-top: 5px;
+	}
+	section.steps .step-title .name .midwrap {
+		padding-left: 35px;
+	}
+	section.steps .numtext {
+		font-size: 50px;
+	}
+	section.steps h2 {
+		font-size: 28px;
+	}
+	section.steps .step-title .plus {
+		font-size: 25px;
+	}
 }
