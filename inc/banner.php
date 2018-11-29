@@ -1,4 +1,7 @@
-<?php if( !is_page('contact-us') ) :?>
+<?php 
+global $post;
+$post_id = ( isset($post->ID) ) ? $post->ID : 0;
+if( !is_page('contact-us') ) :?>
 <?php if( has_post_thumbnail() ) : 
 		if(!is_single() ){
             $str = get_the_title();
@@ -23,8 +26,11 @@
         } else {
             $title = get_the_title();
         }
+$thumbnail_id = get_post_thumbnail_id($post_id);
+$img = wp_get_attachment_image_src($thumbnail_id,'large');
 ?>
-	<section class="banner">
+	<section class="banner sub">
+        <div class="imageDiv" style="background-image:url('<?php echo $img[0]?>');"></div>
 		<?php the_post_thumbnail(); ?>
 		<div class="title">
 			<header class="entry-header">

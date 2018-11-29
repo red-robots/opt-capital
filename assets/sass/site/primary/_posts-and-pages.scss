@@ -1808,6 +1808,23 @@ section.meet-team-link {
 .error404 header.page-header h1.page-title {
 	margin-bottom: 0;
 }
+section.banner.sub {
+	img {
+		display: none;
+	}
+	.imageDiv {
+		background-position: center center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		height: 150px;
+		@media screen and (min-width: $tabwidth) {
+			height: 380px;
+		}
+		@media screen and (min-width: $midwidth) {
+			height: 460px;
+		}
+	}
+}
 
 @media screen and (max-width: 320px) {
 	section.steps .step-desc,
