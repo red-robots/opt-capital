@@ -2254,8 +2254,8 @@ section.steps .step-title .name{width:100%;font-size:22px;font-weight:500;line-h
 @media screen and (min-width:768px){section.steps .step-title .name{padding:5px 0;font-size:35px;height:auto}
 }section.steps .step-title .name .midwrap{display:block;position:relative;padding-right:50px;padding-left:42px;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%)}
 @media screen and (min-width:768px){section.steps .step-title .name .midwrap{padding-left:0;-webkit-transform:none;-ms-transform:none;transform:none;top:0}
-}section.steps .step-title .plus{color:#56595a;text-align:center;font-size:38px;line-height:52px;position:absolute;top:-9px;right:0;z-index:10;-webkit-transform:rotate(0);-ms-transform:rotate(0);transform:rotate(0);-webkit-transition:all ease .3s;transition:all ease .3s}
-@media screen and (min-width:768px){section.steps .step-title .plus{top:-4px}
+}section.steps .step-title .plus{color:#56595a;text-align:center;font-size:28px;line-height:52px;position:absolute;top:-9px;right:0;z-index:10;-webkit-transform:rotate(0);-ms-transform:rotate(0);transform:rotate(0);-webkit-transition:all ease .3s;transition:all ease .3s}
+@media screen and (min-width:768px){section.steps .step-title .plus{top:-4px;font-size:38px}
 }section.steps .step-title .plus .icon1{position:absolute;top:0;right:0;-webkit-transition:all ease-out .2s;transition:all ease-out .2s}
 section.steps .step-title .plus.active .icon1{-webkit-transform:rotate(180deg);-ms-transform:rotate(180deg);transform:rotate(180deg)}
 section.steps .step-desc{padding-top:15px;margin:0 auto}
@@ -2311,7 +2311,7 @@ section.steps .step-desc{padding-top:5px}
 section.steps .step-title .name .midwrap{padding-left:35px}
 section.steps .numtext{font-size:50px}
 section.steps h2{font-size:28px}
-section.steps .step-title .plus{font-size:25px}
+section.steps .step-title .plus{font-size:20px}
 }.blog .format-aside .entry-title,.archive .format-aside .entry-title{display:none}
 .comment-content a{word-wrap:break-word}
 .bypostauthor{display:block}

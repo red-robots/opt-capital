@@ -1600,7 +1600,7 @@ section.steps {
 		.plus {
 			color: $color-dark-grey;
 			text-align: center;
-			font-size: 38px;
+			font-size: 28px;
 			line-height: 52px;
 			position: absolute;
 			top: -9px;
@@ -1610,6 +1610,7 @@ section.steps {
 			@include transition(all ease .3s);
 			@media screen and (min-width: $tabwidth) {
 				top: -4px;
+				font-size: 38px;
 			}
 			.icon1 {
 				position:absolute;
@@ -1852,6 +1853,6 @@ body.scrolled {
 		font-size: 28px;
 	}
 	section.steps .step-title .plus {
-		font-size: 25px;
+		font-size: 20px;
 	}
 }
