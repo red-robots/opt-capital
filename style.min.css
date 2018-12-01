@@ -2321,7 +2321,7 @@ section.banner.sub .imageDiv{background-position:center center;background-size:c
 }.page-template-page-people.subpage #primary{margin-top:20px}
 @media screen and (min-width:1027px){.page-template-page-people.subpage #primary{margin-top:60px}
 }.subpage.single-team #primary{margin-top:100px}
-@media screen and (min-width:1027px){.subpage.single-team #primary{margin-top:0}
+@media screen and (min-width:1027px){.subpage.single-team #primary{margin-top:60px}
 }@media screen and (max-width:320px){section.steps .step-desc,section.steps .step-title .name .midwrap{font-size:5vw}
 section.steps .step-desc{padding-top:5px}
 section.steps .step-title .name .midwrap{padding-left:35px}
