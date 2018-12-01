@@ -248,9 +248,6 @@ section.boxes {
 			display: flex;
 			flex-direction: column;
 		}
-		&.has-link {
-			cursor: pointer;
-		}
 		&:hover {
 			@media screen and (min-width: $tabwidth) {
 				transform: scale(1.1);
@@ -1901,7 +1898,9 @@ body.scrolled {
 		margin-top: 60px;
 	}
 }
-
+.has-link {
+	cursor: pointer;
+}
 
 @media screen and (max-width: 380px) {
 	section.steps .step-desc,

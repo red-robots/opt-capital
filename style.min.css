@@ -2003,8 +2003,7 @@ section.bott-page{padding:0 0 40px;width:100%;float:left}
 @media screen and (min-width:768px){section.boxes{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-flex-wrap:nowrap;-ms-flex-wrap:nowrap;flex-wrap:nowrap;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center}
 }section.boxes .box{width:100%;margin:0 0 40px 0;padding:4% 2% 2% 2%;text-align:center;color:#fff;clear:both;-webkit-transition:all ease .2s;transition:all ease .2s}
 @media screen and (min-width:768px){section.boxes .box{width:auto;-webkit-flex-basis:28%;-ms-flex-preferred-size:28%;flex-basis:28%;-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1);margin:30px 13px;clear:none;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column}
-}section.boxes .box.has-link{cursor:pointer}
-@media screen and (min-width:768px){section.boxes .box:hover{-webkit-transform:scale(1.1);-ms-transform:scale(1.1);transform:scale(1.1)}
+}@media screen and (min-width:768px){section.boxes .box:hover{-webkit-transform:scale(1.1);-ms-transform:scale(1.1);transform:scale(1.1)}
 }section.boxes .box .icon{width:50%;display:inline-block;margin:0 auto}
 section.boxes .box .icon img{width:100%}
 section.boxes .box h2{margin:15px 0 30px 0;font-weight:300;font-size:38px;line-height:1.1}
@@ -2321,7 +2320,8 @@ section.banner.sub .imageDiv{background-position:center center;background-size:c
 @media screen and (min-width:1027px){.page-template-page-people.subpage #primary{margin-top:60px}
 }.subpage.single-team #primary{margin-top:100px}
 @media screen and (min-width:1027px){.subpage.single-team #primary{margin-top:60px}
-}@media screen and (max-width:380px){section.steps .step-desc,section.steps .step-title .name .midwrap{font-size:5vw}
+}.has-link{cursor:pointer}
+@media screen and (max-width:380px){section.steps .step-desc,section.steps .step-title .name .midwrap{font-size:5vw}
 section.steps .step-desc{padding-top:5px}
 section.steps .step-title .name .midwrap{padding-left:35px}
 section.steps .numtext{font-size:50px}

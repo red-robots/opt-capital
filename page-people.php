@@ -40,7 +40,7 @@ get_header(); ?>
                                         $title = get_field('title',$postId);
                                         ?>
 
-                                        <div class="card">
+                                        <div class="card clickable-box">
                                             <div class="pad clear">
                                                 <?php if($img) { ?>
                                                     <div class="image has-image clear">
@@ -90,7 +90,7 @@ get_header(); ?>
                                 $title=get_field('title');
                                 $img=get_field('team_image');
                             ?>
-                                <div class="card">
+                                <div class="card clickable-box">
                                     <div class="pad clear">
                                         <?php if($img) { ?>
                                             <div class="image has-image clear">

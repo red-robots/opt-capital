@@ -157,7 +157,7 @@ $(document).ready(function ($) {
         }
     }
 
-    $('.box').each(function(){
+    $('.box,.clickable-box').each(function(){
     	var box = $(this);
     	if( box.find('.learnmore a').length>0 ) {
     		box.addClass('has-link');
@@ -166,10 +166,15 @@ $(document).ready(function ($) {
     
     $(document).on("click",".boxes .box",function(){
     	if( $(this).find(".learnmore a").length > 0 ) {
-    		var link = $(this).find(".learnmore a").attr("href");
-    		if(link) {
-	    		window.location.href = link;
-	    	}
+    		var pagelink = $(this).find(".learnmore a").attr("href");
+    		window.location.href = pagelink;
+    	}
+    });
+
+    $(".clickable-box").on("click",function(){
+    	if( $(this).find(".learnmore a").length > 0 ) {
+    		var pagelink = $(this).find(".learnmore a").attr('href');
+    		window.location.href = pagelink;
     	}
     });
 
@@ -181,5 +186,7 @@ $(document).ready(function ($) {
             $('body').removeClass('scrolled');    
         }
     }); 
+
+   
 
 });// END #####################################    END
