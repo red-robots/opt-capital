@@ -2067,13 +2067,13 @@ section.people .image.has-image{background:#FFF}
 section.people .imageDiv{width:100%;height:360px;background-position:top center;background-size:contain;background-repeat:no-repeat;background-color:#FFF;position:relative;top:-5px;margin:0 auto}
 @media screen and (min-width:480px){section.people .imageDiv{background-size:contain;width:100%;height:360px;top:-10px}
 }@media screen and (min-width:768px){section.people .imageDiv{width:100%;top:-5px;background-size:cover}
-}.single-person{margin:0;padding:2%;background-color:#fff;box-shadow:0 0 8px 0 rgba(0,0,0,0.1)}
-@media screen and (min-width:768px){.single-person{margin:0;width:34%;float:left}
+}.single-person{margin:0;padding:20px;background-color:#fff;box-shadow:0 0 8px 0 rgba(0,0,0,0.1)}
+@media screen and (min-width:768px){.single-person{padding:2%;margin:0;width:34%;float:left}
 }.single-person .image{width:100%;position:relative;z-index:5}
 @media screen and (min-width:768px){.single-person .image{margin:0 auto}
 }.single-person .image img{width:100%}
-.single-person .details-sub{width:100%;background-color:white;text-align:center;position:relative;z-index:4;padding:70px 10px 30px}
-@media screen and (min-width:768px){.single-person .details-sub{margin:-50px auto 0}
+.single-person .details-sub{width:100%;background-color:white;text-align:center;position:relative;z-index:4;padding:50px 10px 30px}
+@media screen and (min-width:768px){.single-person .details-sub{padding:70px 10px 30px;margin:-50px auto 0}
 }.single-person .details-sub .pre-desc{color:#eb692e;font-size:14px;text-transform:uppercase}
 .single-person .details-sub .deets{color:#333;font-size:15px}
 .single-person .details{width:100%;background-color:white;box-shadow:0 0 8px 0 rgba(0,0,0,0.1);text-align:center;position:relative;z-index:5;padding:20px}
@@ -2083,8 +2083,8 @@ section.people .imageDiv{width:100%;height:360px;background-position:top center;
 .single-person .details span.pre-desc{color:#eb692e;font-size:12px;text-transform:uppercase}
 .single-person .details .deets{color:#333;font-size:14px}
 .single-person .content{padding:5%}
-.person-content{width:100%;float:right;padding:2%;background-color:#fff;font-size:17px;margin-top:20px;box-shadow:0 0 8px 0 rgba(0,0,0,0.1)}
-@media screen and (min-width:768px){.person-content{margin-top:0;width:63%}
+.person-content{width:100%;float:right;padding:20px;background-color:#fff;font-size:17px;margin-top:20px;box-shadow:0 0 8px 0 rgba(0,0,0,0.1)}
+@media screen and (min-width:768px){.person-content{padding:2%;margin-top:0;width:63%}
 }@media screen and (min-width:1027px){.person-content{width:60%}
 }.single-person-info-wrap{width:90%;margin:0 auto}
 section.q-n-a{padding:5% 0}
@@ -2313,9 +2313,9 @@ section.banner.sub .imageDiv{background-position:center center;background-size:c
 @media screen and (min-width:768px){body.scrolled #masthead{box-shadow:none}
 }.single-person .image{overflow:hidden}
 .single-person .image img{display:none}
-.single-person .imagediv{background-position:top center;background-repeat:no-repeat;background-size:cover;position:relative;height:300px}
-@media screen and (min-width:480px){.single-person .imagediv{height:470px}
-}@media screen and (min-width:768px){.single-person .imagediv{height:370px}
+.single-person .imagediv{background-position:top center;background-repeat:no-repeat;background-size:contain;position:relative;height:300px}
+@media screen and (min-width:480px){.single-person .imagediv{height:370px}
+}@media screen and (min-width:768px){.single-person .imagediv{background-size:cover;height:370px}
 }.page-template-page-people.subpage #primary{margin-top:20px}
 @media screen and (min-width:1027px){.page-template-page-people.subpage #primary{margin-top:60px}
 }.subpage.single-team #primary{margin-top:100px}
@@ -2327,8 +2327,8 @@ section.steps .step-title .name .midwrap{padding-left:35px}
 section.steps .numtext{font-size:50px}
 section.steps h2{font-size:28px}
 section.steps .step-title .plus{font-size:20px}
-section.people .imageDiv{display:none}
-section.people .image img{display:block}
+.single-person .imagediv,section.people .imageDiv{display:none}
+.single-person .image img,section.people .image img{display:block}
 }.blog .format-aside .entry-title,.archive .format-aside .entry-title{display:none}
 .comment-content a{word-wrap:break-word}
 .bypostauthor{display:block}

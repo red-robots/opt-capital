@@ -575,10 +575,11 @@ section.people {
 }
 .single-person {
 	margin: 0;
-	padding: 2%;
+	padding: 20px;
 	background-color: #fff;
 	@include box-shadow;
 	@media screen and (min-width: $tabwidth) {
+		padding: 2%;
 		margin: 0px 0 0 0;
 		width: 34%;
 		float: left;
@@ -619,8 +620,9 @@ section.people {
 		text-align: center;
 		position: relative;
 		z-index: 4;
-		padding: 70px 10px 30px;
+		padding: 50px 10px 30px;
 		@media screen and (min-width: $tabwidth) {
+			padding: 70px 10px 30px;
 			margin: -50px auto 0;
 			// width: 80%;
 		}
@@ -691,12 +693,13 @@ section.people {
 .person-content {
 	width: 100%;
 	float: right;
-	padding: 2%;
+	padding: 20px;
 	background-color: #fff;
 	font-size: 17px;
 	margin-top: 20px;
 	@include box-shadow;
 	@media screen and (min-width: $tabwidth) {
+		padding: 2%;
 		margin-top: 0;
 		width: 63%;
 	}
@@ -1874,13 +1877,14 @@ body.scrolled {
 	.imagediv {
 		background-position: top center;
 		background-repeat: no-repeat;
-		background-size: cover;
+		background-size: contain;
 		position: relative;
 		height: 300px;
 		@media screen and (min-width: $xswidth) {
-			height: 470px;
+			height: 370px;
 		}
 		@media screen and (min-width: $tabwidth) {
+			background-size: cover;
 			height: 370px;
 		}
 	}
@@ -1922,9 +1926,11 @@ body.scrolled {
 	section.steps .step-title .plus {
 		font-size: 20px;
 	}
+	.single-person .imagediv,
 	section.people .imageDiv {
 		display: none;
 	}
+	.single-person .image img,
 	section.people .image img {
 		display: block;
 	}
