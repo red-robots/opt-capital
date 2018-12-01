@@ -82,11 +82,13 @@ body.page-template-page-people, .page-template-page-news, .single-post, .archive
 .widget-area {
 	width: 100%;
 	margin: 0px auto;
-	
 	@media screen and (min-width: $tabwidth) {
-		width: 26%;
 		float: right;
+		width: 30%;
 		margin: 0;
+	}
+	@media screen and (min-width: $midwidth) {
+		width: 26%;
 	}
 	@media screen and (min-width: $deskwidth) {
 		/*width: 1200px;*/
@@ -162,8 +164,8 @@ body.page-template-page-people, .page-template-page-news, .single-post, .archive
 	}
 }
 .subpage #primary  {
-	margin-top: 15px;
-	@media screen and (min-width: $tabwidth) {
+	margin-top: 30px;
+	@media screen and (min-width: $midwidth) {
 		margin-top: 100px;
 	}
 	&.nomargintop {

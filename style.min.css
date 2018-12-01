@@ -1896,7 +1896,8 @@ body.page-template-page-people .page-wrapper,.page-template-page-news .page-wrap
 }@media screen and (min-width:1200px){}
 .center{text-align:center}
 .widget-area{width:100%;margin:0 auto}
-@media screen and (min-width:768px){.widget-area{width:26%;float:right;margin:0}
+@media screen and (min-width:768px){.widget-area{float:right;width:30%;margin:0}
+}@media screen and (min-width:1027px){.widget-area{width:26%}
 }@media screen and (min-width:1200px){}
 #masthead{width:100%;float:left;padding:0;position:fixed;top:0;margin:0;z-index:1000;background-color:#FFF;height:80px}
 @media screen and (min-width:1027px){#masthead{height:auto;padding:30px 0;margin:0;position:relative}
@@ -1909,8 +1910,8 @@ body.page-template-page-people .page-wrapper,.page-template-page-news .page-wrap
 .logo a img,h1.logo a img{width:100%;height:auto;float:left}
 #primary{margin-top:100px}
 @media screen and (min-width:1027px){#primary{margin-top:50px}
-}.subpage #primary{margin-top:15px}
-@media screen and (min-width:768px){.subpage #primary{margin-top:100px}
+}.subpage #primary{margin-top:30px}
+@media screen and (min-width:1027px){.subpage #primary{margin-top:100px}
 }.subpage #primary.nomargintop{margin-top:0}
 .home #primary{margin-top:0}
 .readmore{width:auto;display:inline-block}
@@ -1980,7 +1981,7 @@ section.banner .title h1{font-size:7vw;color:#fff}
 }.slide .message span.superbold{font-weight:800}
 .slide .message .desc{width:70%;margin:0 auto;font-weight:500;font-size:.9rem;line-height:1.4}
 @media screen and (min-width:768px){.slide .message .desc{font-size:20px}
-}section.home-middle{width:100%;float:left;padding:0;margin:30px 0 30px 0}
+}section.home-middle{width:100%;float:left;padding:0;margin:20px 0 30px 0}
 @media screen and (min-width:1027px){section.home-middle{margin:90px 0 50px 0}
 }section.home-middle section.video{width:100%;float:left}
 @media screen and (min-width:1027px){section.home-middle section.video{width:64.8%;margin-bottom:0}
@@ -2036,7 +2037,7 @@ section.boxes .box3 .learnmore a:hover{color:#fff}
 .plus-minus-toggle.collapsed:after{-webkit-transform:rotate(90deg);-ms-transform:rotate(90deg);transform:rotate(90deg)}
 .plus-minus-toggle.collapsed:before{-webkit-transform:rotate(180deg);-ms-transform:rotate(180deg);transform:rotate(180deg)}
 div.people{padding-top:80px}
-@media screen and (min-width:768px){div.people{padding-top:0}
+@media screen and (min-width:1027px){div.people{padding-top:0}
 }section.people{margin-bottom:20px}
 section.people .row{margin-left:0;margin-right:0}
 @media screen and (min-width:768px){section.people .row{margin-left:-20px;margin-right:-20px}
@@ -2085,7 +2086,8 @@ section.people .imageDiv{width:100%;height:300px;background-position:top center;
 .single-person .details .deets{color:#333;font-size:14px}
 .single-person .content{padding:5%}
 .person-content{width:100%;float:right;padding:2%;background-color:#fff;font-size:17px;margin-top:20px;box-shadow:0 0 8px 0 rgba(0,0,0,0.1)}
-@media screen and (min-width:768px){.person-content{margin-top:0;width:60%}
+@media screen and (min-width:768px){.person-content{margin-top:0;width:63%}
+}@media screen and (min-width:1027px){.person-content{width:60%}
 }.single-person-info-wrap{width:90%;margin:0 auto}
 section.q-n-a{padding:5% 0}
 section.q-n-a .row{width:100%;margin:0 0 10px 0}
@@ -2236,8 +2238,9 @@ body .gform_wrapper .field_description_below .gfield_description{padding-top:0}
 section.about-meet-our-team{width:100%;margin:-30px auto 0 auto;text-align:center;padding:0 0 30px 0}
 section.bullets{width:100%;float:left;margin:0 0 20px 0}
 section.bullets .bullet{width:100%;margin:0 0 20px 0;border-left:5px solid #eb692e;background-color:#efefef;padding:10px 10px 10px 30px}
-section.steps{width:100%;position:relative;box-shadow:0 0 19px -3px rgba(0,0,0,0.52);overflow:hidden}
-section.steps .step{position:relative;border-bottom:1px solid #c5c7c7;margin:0;padding-top:25px;padding-bottom:25px;padding-left:0}
+section.steps{width:100%;position:relative;box-shadow:0 0 19px -3px rgba(0,0,0,0.52);overflow:hidden;margin-bottom:30px}
+@media screen and (min-width:768px){section.steps{margin-bottom:0}
+}section.steps .step{position:relative;border-bottom:1px solid #c5c7c7;margin:0;padding-top:25px;padding-bottom:25px;padding-left:0}
 @media screen and (min-width:768px){section.steps .step{padding-left:55px}
 }section.steps .step.last{border-bottom:0}
 section.steps .numtext{position:absolute;top:24px;left:0;color:#56595a;font-size:55px;line-height:55px}
@@ -2264,15 +2267,19 @@ section.steps .step-desc{padding-top:15px;margin:0 auto}
 section.steps .step-desc ul:last-child{margin-bottom:5px}
 section.case-study{width:100%}
 section.case-study .case{width:100%;position:relative;float:left;margin:0 0 40px 0}
-section.case-study .pointer{margin:20px 0 100px 0}
+section.case-study .pointer{margin:0 0 15px;position:relative;width:100%;float:left}
 @media screen and (min-width:768px){section.case-study .pointer{width:40%;position:absolute;top:25%;margin:0}
+}section.case-study .pointer:after{content:"";display:block;width:98%;height:2px;background:#eb692e;position:absolute;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%)}
+@media screen and (min-width:768px){section.case-study .pointer:after{width:90%}
 }section.case-study .pointer.odd{left:0}
+section.case-study .pointer.odd:after{margin-left:5px}
 section.case-study .pointer.even{right:0}
+section.case-study .pointer.even:after{right:5px}
 section.case-study .pointer .circle{width:50px;height:50px;border:2px solid #eb692e;border-radius:50%;position:relative;background-color:#fff;z-index:9;overflow:hidden}
 @media screen and (min-width:768px){section.case-study .pointer .circle{width:100px;height:100px}
 }section.case-study .pointer .circle.even{float:right}
 section.case-study .pointer .circle.odd{float:left}
-section.case-study .pointer .line{width:90%;position:relative;z-index:8;border-bottom:2px solid #eb692e;margin:-25px 0 0 0}
+section.case-study .pointer .line{display:none;width:90%;position:relative;z-index:8;border-bottom:2px solid #eb692e;margin:-25px 0 0 0}
 @media screen and (min-width:768px){section.case-study .pointer .line{margin:-50px 0 0 0}
 }section.case-study .pointer .line.even{float:right}
 section.case-study .pointer .line.odd{float:left}
@@ -2306,6 +2313,15 @@ section.banner.sub .imageDiv{background-position:center center;background-size:c
 }@media screen and (min-width:1027px){section.banner.sub .imageDiv{height:460px}
 }body.scrolled #masthead{box-shadow:0 2px 11px -1px rgba(0,0,0,0.25)}
 @media screen and (min-width:768px){body.scrolled #masthead{box-shadow:none}
+}.single-person .image{overflow:hidden}
+.single-person .image img{display:none}
+.single-person .imagediv{background-position:top center;background-repeat:no-repeat;background-size:cover;position:relative;height:300px}
+@media screen and (min-width:480px){.single-person .imagediv{height:470px}
+}@media screen and (min-width:768px){.single-person .imagediv{height:370px}
+}.page-template-page-people.subpage #primary{margin-top:20px}
+@media screen and (min-width:1027px){.page-template-page-people.subpage #primary{margin-top:60px}
+}.subpage.single-team #primary{margin-top:100px}
+@media screen and (min-width:1027px){.subpage.single-team #primary{margin-top:0}
 }@media screen and (max-width:320px){section.steps .step-desc,section.steps .step-title .name .midwrap{font-size:5vw}
 section.steps .step-desc{padding-top:5px}
 section.steps .step-title .name .midwrap{padding-left:35px}

@@ -8,7 +8,7 @@
  */
 
 get_header(); ?>
-
+<div class="wrapper clear">
 	<div id="primary" class="content-area-full">
 		<main id="main" class="site-main" role="main">
 
@@ -26,6 +26,7 @@ get_header(); ?>
 				<div class="top-wrap">
 					<?php if($img) { ?>
 						<div class="image">
+							<div class="imagediv" style="background-image:url(<?php echo $img['url']; ?>)"></div>
 							<img src="<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
 						</div>
 					<?php } ?>
@@ -77,55 +78,56 @@ get_header(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-<div class="single-person-info-wrap">
-	<div class="content-area">
-		
+	<div class="single-person-info-wrap">
+		<div class="content-area">
+			
+		</div>
+		<div class="widget-area">
+			
+		</div>
 	</div>
-	<div class="widget-area">
-		
-	</div>
+	<?php endwhile; // End of the loop. ?>
+	
+	<section class="other-team">
+		<h2>Team Members</h2>
+		<section class="other-team-members">
+
+			<?php
+			$wp_query = new WP_Query();
+			$wp_query->query(array(
+			'post_type'=>'team',
+			'posts_per_page' => -1,
+			'paged' => $paged,
+			// 'tax_query' => array(
+			// 	array(
+			// 		'taxonomy' => 'custom_taxonomy', // your custom taxonomy
+			// 		'field' => 'slug',
+			// 		'terms' => array( 'green', 'blue' ) // the terms (categories) you created
+			// 	)
+			// )
+		));
+			if ($wp_query->have_posts()) : ?>
+			<?php while ($wp_query->have_posts()) :  $wp_query->the_post(); 
+				$title=get_field('title');
+				$img=get_field('team_image');
+			?>
+				<div class="side-person">
+					<a href="<?php the_permalink(); ?>">
+						<div class="sideflex">
+						<!-- <div class="img">
+							<img src="<?php echo $img['sizes']['thumbnail']; ?>" alt="<?php echo $img['alt']; ?>">
+						</div> -->
+						<div class="title">
+							<h2><?php the_title(); ?></h2>
+							<h3><?php echo $title; ?></h3>
+						</div>
+						
+						</div>
+					</a>
+				</div>	
+			<?php endwhile; endif; ?>
+		</section>
+	</section>
 </div>
-<?php endwhile; // End of the loop. ?>
-
-<section class="other-team">
-<h2>Team Members</h2>
-<section class="other-team-members">
-
-	<?php
-	$wp_query = new WP_Query();
-	$wp_query->query(array(
-	'post_type'=>'team',
-	'posts_per_page' => -1,
-	'paged' => $paged,
-	// 'tax_query' => array(
-	// 	array(
-	// 		'taxonomy' => 'custom_taxonomy', // your custom taxonomy
-	// 		'field' => 'slug',
-	// 		'terms' => array( 'green', 'blue' ) // the terms (categories) you created
-	// 	)
-	// )
-));
-	if ($wp_query->have_posts()) : ?>
-	<?php while ($wp_query->have_posts()) :  $wp_query->the_post(); 
-		$title=get_field('title');
-		$img=get_field('team_image');
-	?>
-		<div class="side-person">
-			<a href="<?php the_permalink(); ?>">
-				<div class="sideflex">
-				<!-- <div class="img">
-					<img src="<?php echo $img['sizes']['thumbnail']; ?>" alt="<?php echo $img['alt']; ?>">
-				</div> -->
-				<div class="title">
-					<h2><?php the_title(); ?></h2>
-					<h3><?php echo $title; ?></h3>
-				</div>
-				
-				</div>
-			</a>
-		</div>	
-	<?php endwhile; endif; ?>
-</section>
-</section>
 <?php
 get_footer();

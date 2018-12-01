@@ -135,7 +135,7 @@ section.home-middle {
 	width: 100%;
 	float: left;
 	padding: 0px 0 0 0;
-    margin: 30px 0 30px 0;
+    margin: 20px 0 30px 0;
     @media screen and (min-width: $midwidth) {
         margin: 90px 0 50px 0;
     }
@@ -412,7 +412,7 @@ section.boxes {
 }
 div.people {
 	padding-top: 80px;
-	@media screen and (min-width: $tabwidth) {
+	@media screen and (min-width: $midwidth) {
 		padding-top: 0;
     }
 }
@@ -699,6 +699,9 @@ section.people {
 	@include box-shadow;
 	@media screen and (min-width: $tabwidth) {
 		margin-top: 0;
+		width: 63%;
+	}
+	@media screen and (min-width: $midwidth) {
 		width: 60%;
 	}
 }
@@ -1481,6 +1484,10 @@ section.steps {
 	position: relative;
 	box-shadow: 0px 0px 19px -3px rgba(0,0,0,0.52);
 	overflow: hidden;
+	margin-bottom: 30px;
+	@media screen and (min-width: $tabwidth) {
+		margin-bottom: 0;
+	}
 	.step {
 		position:relative;
 		border-bottom:1px solid #c5c7c7;
@@ -1655,22 +1662,45 @@ section.case-study {
 		margin: 0 0 40px 0;
 	}
 	.pointer {
-		margin: 20px 0 100px 0;
+		margin: 0 0 15px;
+		position: relative;
+		width: 100%;
+		float: left;
 		@media screen and (min-width: $tabwidth) {
 			width: 40%;
 			position: absolute;
 			top: 25%;
-			margin: 0;
+			margin: 0 0;
 		}
 		@media screen and (min-width: $deskwidth) {
 
 		}
+		&:after {
+			content:"";
+			display: block;
+			width: 98%;
+			height: 2px;
+			background: $color-orange;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			@media screen and (min-width: $tabwidth) {
+				width: 90%;
+			}
+		}
 		&.odd {
 			left: 0;
+			&:after {
+				margin-left: 5px;
+			}
 		}
 		&.even {
 			right: 0;
+			&:after {
+				right: 5px;
+			}
 		}
+
 		.circle {
 			width: 50px;
 			height: 50px;
@@ -1692,6 +1722,7 @@ section.case-study {
 			}
 		}
 		.line {
+			display: none;
 			width: 90%;
 			position: relative;
 			z-index: 8;
@@ -1834,6 +1865,41 @@ body.scrolled {
 		}
 	}
 }
+.single-person {
+	.image {
+		overflow: hidden;
+		img {
+			display: none;
+		}
+	}
+	.imagediv {
+		background-position: top center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		position: relative;
+		height: 300px;
+		@media screen and (min-width: $xswidth) {
+			height: 470px;
+		}
+		@media screen and (min-width: $tabwidth) {
+			height: 370px;
+		}
+	}
+}
+.page-template-page-people.subpage #primary {
+	margin-top: 20px;
+	@media screen and (min-width: $midwidth) {
+		margin-top:60px;
+	}
+}
+
+.subpage.single-team #primary {
+	margin-top: 100px;
+	@media screen and (min-width: $midwidth) {
+		margin-top: 0;
+	}
+}
+
 
 @media screen and (max-width: 320px) {
 	section.steps .step-desc,
