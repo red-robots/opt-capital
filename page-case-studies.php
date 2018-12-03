@@ -43,14 +43,23 @@ get_header(); ?>
 		    ?>	
 		    
 		    <div class="case">
-				<div class="pointer <?php echo $divClass; ?>">
+
+		    	<div class="case-title <?php echo $divClass; ?>">
+		    		<h1><?php the_title(); ?></h1>
+		    	</div>
+
+		    	<!-- Old cirle with line -->
+				<!-- <div class="pointer <?php echo $divClass; ?>">
 		    		<div class="circle <?php echo $divClass; ?>">
 		    		<img src="<?php bloginfo('template_url'); ?>/images/circle.jpg">
 		    		</div>
 		    		<div class="line <?php echo $divClass; ?>"></div>
-		    	</div>
+		    	</div> -->
+		    	<!-- Old cirle with line -->
+
+
 		    	<div class="case-content <?php echo $divClass; ?>">
-		    		<h1><?php the_title(); ?></h1>
+		    		
 		    		<?php the_content(); ?>
 		    	</div>
 		    </div>

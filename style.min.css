@@ -2264,7 +2264,17 @@ section.steps .step-desc{padding-top:15px;margin:0 auto}
 }section.steps .step-desc p:last-child{margin-bottom:5px}
 section.steps .step-desc ul:last-child{margin-bottom:5px}
 section.case-study{width:100%}
-section.case-study .case{width:100%;position:relative;float:left;margin:0 0 40px 0}
+section.case-study .case{width:100%;position:relative;float:left;margin:0 0 80px 0}
+@media screen and (min-width:768px){section.case-study .case{margin:0 0 140px 0}
+}section.case-study .case-title{margin:0 0 15px;position:relative;width:100%;float:left;padding:20px}
+@media screen and (min-width:768px){section.case-study .case-title{width:35%;position:absolute;top:5%;margin:0}
+}section.case-study .case-title h1{color:#eb692e;font-size:35px;font-weight:300}
+@media screen and (min-width:768px){section.case-study .case-title h1{font-size:40px}
+}@media screen and (min-width:1200px){section.case-study .case-title h1{font-size:40px}
+}section.case-study .case-title.odd{left:0}
+section.case-study .case-title.odd:after{margin-left:10px}
+section.case-study .case-title.even{right:0}
+section.case-study .case-title.even:after{right:10px}
 section.case-study .pointer{margin:0 0 15px;position:relative;width:100%;float:left}
 @media screen and (min-width:768px){section.case-study .pointer{width:40%;position:absolute;top:25%;margin:0}
 }section.case-study .pointer:after{content:"";display:block;width:98%;height:2px;background:#eb692e;position:absolute;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%)}
@@ -2284,8 +2294,10 @@ section.case-study .pointer .line.odd{float:left}
 section.case-study .case-content{width:100%}
 @media screen and (min-width:768px){section.case-study .case-content{width:60%}
 }section.case-study .case-content.even{float:left}
-section.case-study .case-content.odd{float:right}
-section.case-study .case-content h1{color:#eb692e;font-size:35px;font-weight:300}
+@media screen and (min-width:768px){section.case-study .case-content.even{border-right:5px solid #eb692e;padding-right:30px}
+}section.case-study .case-content.odd{float:right}
+@media screen and (min-width:768px){section.case-study .case-content.odd{border-left:5px solid #eb692e;padding-left:30px}
+}section.case-study .case-content h1{color:#eb692e;font-size:35px;font-weight:300}
 @media screen and (min-width:768px){section.case-study .case-content h1{font-size:40px}
 }@media screen and (min-width:1200px){section.case-study .case-content h1{font-size:40px}
 }section.news{width:100%;float:left;padding:40px 0}
