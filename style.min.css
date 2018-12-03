@@ -2305,7 +2305,6 @@ section.meet-team-link{width:100%;padding:0;text-align:center}
 .content-sidebar-wrap{margin-top:30px}
 @media screen and (min-width:768px){.content-sidebar-wrap{margin-top:100px}
 }.error404 header.page-header h1.page-title{margin-bottom:0}
-section.banner.sub img{display:none}
 section.banner.sub .imageDiv{background-position:center center;background-size:cover;background-repeat:no-repeat;height:150px}
 @media screen and (min-width:768px){section.banner.sub .imageDiv{height:380px}
 }@media screen and (min-width:1027px){section.banner.sub .imageDiv{height:460px}
