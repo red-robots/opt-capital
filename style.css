@@ -9386,9 +9386,9 @@ body.scrolled #masthead {
     .is_winIE section.people .card,
     .is_edge section.people .card,
     .is_IE section.people .card {
-      -webkit-flex-basis: 32%;
-          -ms-flex-preferred-size: 32%;
-              flex-basis: 32%; } }
+      -webkit-flex-basis: 33%;
+          -ms-flex-preferred-size: 33%;
+              flex-basis: 33%; } }
 
 @media screen and (max-width: 380px) {
   section.steps .step-desc,

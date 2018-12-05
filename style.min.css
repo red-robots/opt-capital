@@ -2343,7 +2343,7 @@ section.banner.sub .imageDiv{background-position:center center;background-size:c
 .cat-description p{margin-bottom:0;margin-top:1em}
 .is_winIE section.people .card,.is_edge section.people .card,.is_IE section.people .card{-webkit-flex-basis:100%;-ms-flex-preferred-size:100%;flex-basis:100%}
 @media screen and (min-width:768px){.is_winIE section.people .card,.is_edge section.people .card,.is_IE section.people .card{-webkit-flex-basis:48%;-ms-flex-preferred-size:48%;flex-basis:48%}
-}@media screen and (min-width:1027px){.is_winIE section.people .card,.is_edge section.people .card,.is_IE section.people .card{-webkit-flex-basis:32%;-ms-flex-preferred-size:32%;flex-basis:32%}
+}@media screen and (min-width:1027px){.is_winIE section.people .card,.is_edge section.people .card,.is_IE section.people .card{-webkit-flex-basis:33%;-ms-flex-preferred-size:33%;flex-basis:33%}
 }@media screen and (max-width:380px){section.steps .step-desc,section.steps .step-title .name .midwrap{font-size:5vw}
 section.steps .step-desc{padding-top:5px}
 section.steps .step-title .name .midwrap{padding-left:35px}
