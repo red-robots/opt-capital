@@ -1517,6 +1517,9 @@ section.steps {
 		@media screen and (min-width: $tabwidth) {
 			padding-left: 55px;
 		}
+		@media screen and (min-width: $deskwidth) {
+			padding-left: 60px;
+		}
 		&.last {
 			border-bottom: none;
 		}
@@ -1527,11 +1530,19 @@ section.steps {
 		left: 0;
 		color:$color-dark-grey;
 		font-size: 55px;
-		line-height: 55px;
+		font-weight: 300;
+		line-height: 1;
 		@media screen and (min-width: $tabwidth) {
 			top: 22px;
-			font-size: 58px;
-			line-height: 58px;
+			font-size: 60px;
+		}
+		@media screen and (min-width: $midwidth) {
+			font-size: 70px;
+			top: 15px;
+		}
+		@media screen and (min-width: $deskwidth) {
+			font-size: 80px;
+			top: 10px;
 		}
 	}
 	&:after {
@@ -2004,10 +2015,10 @@ body.scrolled {
 .is_IE section.people .card {
 	flex-basis: 100%;
 	@media screen and (min-width: $tabwidth) {
-		flex-basis: 45%;
+		flex-basis: 48%;
 	}
 	@media screen and (min-width: $midwidth) {
-		flex-basis: 30%;
+		flex-basis: 32%;
 	}
 }
 

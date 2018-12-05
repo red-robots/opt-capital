@@ -2243,9 +2243,12 @@ section.steps{width:100%;position:relative;box-shadow:0 0 19px -3px rgba(0,0,0,0
 @media screen and (min-width:768px){section.steps{margin-bottom:0}
 }section.steps .step{position:relative;border-bottom:1px solid #c5c7c7;margin:0;padding-top:25px;padding-bottom:25px;padding-left:0}
 @media screen and (min-width:768px){section.steps .step{padding-left:55px}
+}@media screen and (min-width:1200px){section.steps .step{padding-left:60px}
 }section.steps .step.last{border-bottom:0}
-section.steps .numtext{position:absolute;top:24px;left:0;color:#56595a;font-size:55px;line-height:55px}
-@media screen and (min-width:768px){section.steps .numtext{top:22px;font-size:58px;line-height:58px}
+section.steps .numtext{position:absolute;top:24px;left:0;color:#56595a;font-size:55px;font-weight:300;line-height:1}
+@media screen and (min-width:768px){section.steps .numtext{top:22px;font-size:60px}
+}@media screen and (min-width:1027px){section.steps .numtext{font-size:70px;top:15px}
+}@media screen and (min-width:1200px){section.steps .numtext{font-size:80px;top:10px}
 }section.steps:after{content:'';opacity:.8;display:block;width:100.1%;height:100%;background-image:url(images/how-it-works.jpg);background-repeat:no-repeat;background-size:cover;position:absolute;top:0;left:0;bottom:0;right:0;z-index:-1}
 section.steps h2{width:90%;text-align:center;font-size:35px;color:#eb692e;font-weight:300;margin:30px auto 50px auto;line-height:1.2;text-transform:none}
 @media screen and (min-width:768px){section.steps h2{width:70%;font-size:40px}
@@ -2339,8 +2342,8 @@ section.banner.sub .imageDiv{background-position:center center;background-size:c
 .cat-description p:first-child{margin-top:0}
 .cat-description p{margin-bottom:0;margin-top:1em}
 .is_winIE section.people .card,.is_edge section.people .card,.is_IE section.people .card{-webkit-flex-basis:100%;-ms-flex-preferred-size:100%;flex-basis:100%}
-@media screen and (min-width:768px){.is_winIE section.people .card,.is_edge section.people .card,.is_IE section.people .card{-webkit-flex-basis:45%;-ms-flex-preferred-size:45%;flex-basis:45%}
-}@media screen and (min-width:1027px){.is_winIE section.people .card,.is_edge section.people .card,.is_IE section.people .card{-webkit-flex-basis:30%;-ms-flex-preferred-size:30%;flex-basis:30%}
+@media screen and (min-width:768px){.is_winIE section.people .card,.is_edge section.people .card,.is_IE section.people .card{-webkit-flex-basis:48%;-ms-flex-preferred-size:48%;flex-basis:48%}
+}@media screen and (min-width:1027px){.is_winIE section.people .card,.is_edge section.people .card,.is_IE section.people .card{-webkit-flex-basis:32%;-ms-flex-preferred-size:32%;flex-basis:32%}
 }@media screen and (max-width:380px){section.steps .step-desc,section.steps .step-title .name .midwrap{font-size:5vw}
 section.steps .step-desc{padding-top:5px}
 section.steps .step-title .name .midwrap{padding-left:35px}
