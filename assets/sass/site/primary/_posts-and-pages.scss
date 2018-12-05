@@ -2010,7 +2010,8 @@ body.scrolled {
 		margin-top: 1em;
 	}
 }
-
+.is_winIE section.people .card,
+.is_edge section.people .card,
 .is_IE section.people .card {
 	flex-basis: 100%;
 	@media screen and (min-width: $tabwidth) {
