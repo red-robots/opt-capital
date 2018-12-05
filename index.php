@@ -75,8 +75,17 @@ if ( have_posts() ) : the_post();
                             );
                         $strategy = new WP_Query($args);
                         if ( $strategy->have_posts() ) {  ?>
-                            <?php while ( $strategy->have_posts() ) : $strategy->the_post(); ?>
-                                <h2 class="title">Strategies</h2>
+                            <?php while ( $strategy->have_posts() ) : $strategy->the_post(); 
+                        		$p_id = get_the_ID();
+                        		$main_title = get_field('main_title',$p_id);
+                        		$subtitle = get_field('subtitle',$p_id);
+                            	?>
+                            	<?php if($main_title) { ?>
+                                <h2 class="title"><?php echo $main_title; ?></h2>
+                            	<?php } ?>
+                            	<?php if($subtitle) { ?>
+                                <h3 class="title2"><?php echo $subtitle; ?></h3>
+                            	<?php } ?>
                                 <?php
                                     $s_content = get_the_content();
                                     $postId = get_the_ID();
@@ -89,7 +98,6 @@ if ( have_posts() ) : the_post();
                                             $strategy_text = wpautop($strategy_text);
                                         }
                                     ?>
-                                    <h3 class="vtitle"><?php the_title(); ?></h3>
                                     <div class="strat-content">
                                         <?php the_excerpt(); ?>
                                     </div>

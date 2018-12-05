@@ -27,9 +27,14 @@ get_header(); ?>
                     <?php foreach($team_lists as $obj) { 
                     $category = $obj['term_name'];
                     $members = $obj['members']; 
+                    $cat_description = get_field('law_firm_description');
                         if($members) { ?>
                             <section class="people">   
                             <h2 class="team-category"><span><?php echo $category; ?></span></h2>
+                            <?php if($category=='Law Firm Team') { ?>
+                            <div class="cat-description"><?php echo $cat_description;?></div>
+                            <?php } ?> 
+
                             <div class="row clear">
                                 <div class="card-wrap">
                                 <?php if($members) { ?>

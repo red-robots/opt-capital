@@ -1926,12 +1926,12 @@ body.page-template-page-people .page-wrapper,.page-template-page-news .page-wrap
 .swipe .insider{background-color:#fff;width:100%;height:20px;position:absolute;left:-165px;-webkit-transform:rotateZ(45deg);-ms-transform:rotateZ(45deg);transform:rotateZ(45deg)}
 .swipe:hover{background-color:#eb692e;border-color:#fff;color:#fff}
 .swipe:hover .insider{-webkit-transition:all .3s ease;transition:all .3s ease;left:135px}
-.site-footer{width:100%;clear:both;float:left;background-color:#f0efef;padding:40px 0;color:#56595a;font-weight:300}
+.site-footer{width:100%;clear:both;float:left;background-color:#f0efef;padding:20px 0 10px;color:#56595a;font-weight:300}
 .site-footer .left-footer{width:100%;float:left;margin:0 0 30px 0}
 @media screen and (min-width:768px){.site-footer .left-footer{width:30%;margin:0 0 10px 0}
 }.site-footer .left-footer ul{margin:0;padding:0;list-style:none}
 @media screen and (min-width:768px){.site-footer .left-footer ul{columns:2;-webkit-columns:2;-moz-columns:2}
-}.site-footer .left-footer li{margin:0 0 5px 0;font-weight:300;text-align:center}
+}.site-footer .left-footer li{margin:0 0 2px 0;font-weight:300;text-align:center}
 @media screen and (min-width:768px){.site-footer .left-footer li{text-align:left}
 }.site-footer .left-footer li .icons a{font-size:25px;margin:0 5px 0 0}
 .site-footer .left-footer a{color:#56595a}
@@ -1990,9 +1990,12 @@ section.home-middle .video-player-wrapper .video-player{width:100%}
 section.home-middle .vtitle{color:#16bae0;font-weight:600;font-size:20px;line-height:1.2;margin-top:15px;margin-bottom:5px}
 section.home-middle section.strategies{width:100%;float:left;margin:30px 0}
 @media screen and (min-width:1027px){section.home-middle section.strategies{width:33%;float:right;border-left:1px solid #f0efef;padding:0 0 0 2%;margin:0}
-}section.home-middle section.strategies h2:first-child,section.home-middle section.strategies h2.title{color:#eb692e;margin:0 0 10px 0;position:relative;line-height:1.1;font-size:8vw;font-weight:300}
-@media screen and (min-width:768px){section.home-middle section.strategies h2:first-child,section.home-middle section.strategies h2.title{font-size:4vw;top:-5px}
-}@media screen and (min-width:1200px){section.home-middle section.strategies h2:first-child,section.home-middle section.strategies h2.title{font-size:52px}
+}section.home-middle section.strategies h2:first-child,section.home-middle section.strategies h2.title{color:#eb692e;margin:0 0 10px 0;position:relative;line-height:1.1;text-transform:uppercase;font-size:45px;font-weight:700}
+@media screen and (min-width:768px){section.home-middle section.strategies h2:first-child,section.home-middle section.strategies h2.title{font-size:55px;top:-5px}
+}@media screen and (min-width:1200px){section.home-middle section.strategies h2:first-child,section.home-middle section.strategies h2.title{font-size:65px}
+}section.home-middle section.strategies h3.title2{color:#eb692e;margin:0 0 10px 0;line-height:1.1;text-transform:uppercase;font-size:20px;font-weight:700}
+@media screen and (min-width:768px){section.home-middle section.strategies h3.title2{font-size:28px}
+}@media screen and (min-width:1200px){section.home-middle section.strategies h3.title2{font-size:30px}
 }section.home-middle section.strategies .learnmore{margin:6px 0 0}
 section.home-middle section.strategies .strat-content{margin-top:10px}
 section.home-middle section.strategies .strat-content h2,section.home-middle section.strategies .strat-content h3{font-size:18px;font-weight:600;margin-top:15px;margin-bottom:5px;position:relative;top:0;color:#56595a}
@@ -2332,7 +2335,13 @@ section.banner.sub .imageDiv{background-position:center center;background-size:c
 }.subpage.single-team #primary{margin-top:100px}
 @media screen and (min-width:1027px){.subpage.single-team #primary{margin-top:60px}
 }.has-link{cursor:pointer}
-@media screen and (max-width:380px){section.steps .step-desc,section.steps .step-title .name .midwrap{font-size:5vw}
+.cat-description{margin-bottom:5px}
+.cat-description p:first-child{margin-top:0}
+.cat-description p{margin-bottom:0;margin-top:1em}
+.is_winIE section.people .card,.is_edge section.people .card,.is_IE section.people .card{-webkit-flex-basis:100%;-ms-flex-preferred-size:100%;flex-basis:100%}
+@media screen and (min-width:768px){.is_winIE section.people .card,.is_edge section.people .card,.is_IE section.people .card{-webkit-flex-basis:45%;-ms-flex-preferred-size:45%;flex-basis:45%}
+}@media screen and (min-width:1027px){.is_winIE section.people .card,.is_edge section.people .card,.is_IE section.people .card{-webkit-flex-basis:30%;-ms-flex-preferred-size:30%;flex-basis:30%}
+}@media screen and (max-width:380px){section.steps .step-desc,section.steps .step-title .name .midwrap{font-size:5vw}
 section.steps .step-desc{padding-top:5px}
 section.steps .step-title .name .midwrap{padding-left:35px}
 section.steps .numtext{font-size:50px}
