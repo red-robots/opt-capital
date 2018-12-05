@@ -99,7 +99,8 @@ function build_taxonomies() {
             'menu_name' => 'Categories',
             'plural'    => 'Categories',
             'single'    => 'Category',
-            'taxonomy'  => 'team_categories'
+            'taxonomy'  => 'team_categories',
+            'show_admin_column' => TRUE
         )
     );
     
@@ -110,7 +111,8 @@ function build_taxonomies() {
             $plural_name = ( isset($p['plural']) && $p['plural'] ) ? $p['plural'] : "Custom Post"; 
             $menu_name = ( isset($p['menu_name']) && $p['menu_name'] ) ? $p['menu_name'] : $p['plural'];
             $taxonomy = ( isset($p['taxonomy']) && $p['taxonomy'] ) ? $p['taxonomy'] : "";
-            
+            $show_admin_column = ( isset($p['show_admin_column']) && $p['show_admin_column'] ) ? true : false;
+
             if( $taxonomy && $p_type ) {
                 $labels = array(
                     'name' => _x( $menu_name, 'taxonomy general name' ),
@@ -126,12 +128,15 @@ function build_taxonomies() {
                     'new_item_name' => __( 'New ' . $single_name ),
                   );
 
-              register_taxonomy($taxonomy,array($p_type), array(
+              register_taxonomy($taxonomy,$p_type, array(
                 'hierarchical' => true,
                 'labels' => $labels,
+                'query_var'=>true,
                 'show_ui' => true,
-                'query_var' => true,
                 'rewrite' => array( 'slug' => $taxonomy ),
+                'show_admin_column'=>$show_admin_column,
+                'public' => true,
+                '_builtin' => true
               ));
             }
             
@@ -148,9 +153,10 @@ function set_custom_cpt_columns($columns) {
     $post_type = ( isset($query['post_type']) ) ? $query['post_type'] : '';
     
     if($post_type=='team') {
+        unset( $columns['taxonomy-team_categories'] );
         unset( $columns['date'] );
         $columns['photo'] = __( 'Photo', 'acstarter' );
-        $columns['team_category'] = __( 'Category', 'acstarter' );
+        $columns['taxonomy-team_categories'] = __( 'Category', 'acstarter' );
         $columns['date'] = __( 'Date', 'acstarter' );
     }
     
@@ -176,19 +182,6 @@ function custom_post_column( $column, $post_id ) {
                 }
                 $the_photo .= '</span>';
                 echo $the_photo;
-                break;
-                
-            case 'team_category' :
-                $terms = $categories = get_the_terms( $post_id, 'team_categories' );
-                $the_categories = '';
-                if($terms) {
-                    $i=1; foreach($terms as $t) {
-                        $comma = ($i>1) ? ', ':'';
-                        $the_categories .= $comma . $t->name;
-                        $i++;
-                    }
-                }
-                echo $the_categories;
                 break;
         }
     }
