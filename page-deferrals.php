@@ -52,7 +52,8 @@ if($color) { ?>
 	<section class="steps">
 		
 		<div class="step-wrap">
-			<h2>How Our Deferral Program Works</h2>
+			<?php $steps_title = get_field('steps_title'); ?>
+			<h2 class="stepTitle"><?php echo $steps_title; ?></h2>
 		<?php while(have_rows('steps')) : the_row(); $i++;
 			$stepTitle = get_sub_field('step_title');
 			$stepDesc = get_sub_field('step_description');

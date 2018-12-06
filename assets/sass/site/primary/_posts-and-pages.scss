@@ -1562,6 +1562,9 @@ section.steps {
 		z-index: -1;
 	}
 	// @include light-grey-grad;
+	h2.stepTitle {
+		font-weight: 500;
+	}
 	h2 {
 		width: 90%;
 		text-align: center;
