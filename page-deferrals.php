@@ -19,7 +19,9 @@ $color = $a['step_text_color'];
 if($color) { ?>
 #stepno_<?php echo $j;?> .numtext,
 #stepno_<?php echo $j;?> .name,
-#stepno_<?php echo $j;?> .plus {
+#stepno_<?php echo $j;?> .plus,
+#stepno_<?php echo $j;?> .step-desc,
+#stepno_<?php echo $j;?> .step-desc p {
 	color:<?php echo $color;?>!important;
 }
 <?php } ?>
