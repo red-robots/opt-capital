@@ -21,10 +21,11 @@ $antispam=antispambot($email);
 				<?php if(have_rows('links', 'option')): ?>
 					<ul>
 						<?php while(have_rows('links', 'option')):the_row(); 
-							$post_id = get_sub_field('link', false, false);?>
+							$post_id = get_sub_field('link', false, false);
+							$footer_title = get_sub_field('footer_title', false, false);?>
 						<li>
 							<a href="<?php echo get_the_permalink($post_id); ?>">
-								<?php echo get_the_title($post_id); ?>
+								<?php echo ($footer_title) ? $footer_title : get_the_title($post_id); ?>
 							</a>
 						</li>
 						<?php endwhile; ?>

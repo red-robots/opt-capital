@@ -187,6 +187,32 @@ $(document).ready(function ($) {
         }
     }); 
 
-   
+	$("#primary-menu a").each(function(){
+		var href = $(this).attr('href');
+		var parent = $(this).parents('li');
+		if(href=='#') {
+			$(this).addClass('hashlink');
+			$(this).attr('title','Select from dropdown');
+		}
+	});
+
+	$(document).on("click",".hashlink",function(e){
+		e.preventDefault();
+		var parent = $(this).parents('li');
+		var msg = '<span class="select-msg">Select from dropdown<i></i></span>';
+		//parent.prepend(msg);
+		parent.find('ul.sub-menu').addClass('animated shake');
+		setTimeout(function(){
+			parent.find('ul.sub-menu').removeClass('animated shake');
+		},400);
+	});
+
+	$("#primary-menu > li").hover( 
+		function(){
+
+		}, function(){
+			//$(this).find('.select-msg').remove();
+		}
+	);
 
 });// END #####################################    END

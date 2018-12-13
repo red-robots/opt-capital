@@ -1702,10 +1702,11 @@ a:hover,a:active{outline:0}
 .main-navigation li:first-of-type{border:0}
 }@media screen and (min-width:1200px){.main-navigation li{font-size:1.1vw}
 }@media screen and (min-width:1300px){.main-navigation li{font-size:15px;line-height:3}
-}.main-navigation li.orange a{background-color:#eb692e;color:#fff;border:1px solid #fff}
+}.main-navigation li.orange a{background-color:#c9d5e7;color:#fff;border:1px solid #fff}
 @media screen and (min-width:768px){.main-navigation li.orange a{border:0}
 }@media screen and (min-width:768px){.main-navigation li.orange a:hover{background-color:#16bae0}
-}.main-navigation a{display:block;text-decoration:none;padding:10px 0;color:#fff;-webkit-transition:all ease .4s;transition:all ease .4s}
+}@media screen and (min-width:768px){.main-navigation .menu>li:hover>a{color:#16bae0}
+}.main-navigation a{outline:0;display:block;text-decoration:none;padding:10px 0;color:#fff;font-weight:500;-webkit-transition:all ease .4s;transition:all ease .4s}
 @media screen and (min-width:768px){.main-navigation a{padding:0 20px;color:#56595a}
 }@media screen and (min-width:1200px){.main-navigation a{padding:0 20px}
 }@media screen and (min-width:768px){.main-navigation a:hover{color:#16bae0}
@@ -1746,7 +1747,9 @@ nav.mobilemenu{background-color:#eb692e;position:fixed;z-index:9;top:0;right:0;h
 }nav.mobilemenu ul{margin:0;padding:0}
 nav.mobilemenu li{font-size:4vw;position:relative;text-align:center;display:inline-block;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;padding:0;text-transform:uppercase;font-family:"Open Sans",sans-serif;font-weight:300;width:100%}
 nav.mobilemenu li.orange a{background-color:#eb692e;color:#fff;border:1px solid #fff}
-nav.mobilemenu a{display:block;text-decoration:none;padding:10px 0;color:#fff}
+nav.mobilemenu li.menu-item-420>a,nav.mobilemenu li.menu-item-98>a{display:none}
+@media screen and (min-width:768px){nav.mobilemenu li.menu-item-420>a,nav.mobilemenu li.menu-item-98>a{display:block}
+}nav.mobilemenu a{display:block;text-decoration:none;padding:10px 0;color:#fff}
 nav.mobilemenu.show{-webkit-transform:translateX(0);-ms-transform:translateX(0);transform:translateX(0)}
 nav.mobilemenu.show ul.main li{-webkit-transform:translateX(0);-ms-transform:translateX(0);transform:translateX(0);opacity:1;color:#fff;text-transform:uppercase;cursor:pointer}
 nav.mobilemenu.show ul.main li:nth-child(1){-webkit-transition-delay:.15s;transition-delay:.15s}
@@ -2342,7 +2345,12 @@ section.banner.sub .imageDiv{background-position:center center;background-size:c
 .cat-description{margin-bottom:5px}
 .cat-description p:first-child{margin-top:0}
 .cat-description p{margin-bottom:0;margin-top:1em}
-.is_winIE section.people .card,.is_edge section.people .card,.is_IE section.people .card{-webkit-flex-basis:100%;-ms-flex-preferred-size:100%;flex-basis:100%}
+.animated{-webkit-animation-duration:.9s;animation-duration:.9s;-webkit-animation-fill-mode:both;animation-fill-mode:both}
+.shake{-webkit-animation-name:shake;animation-name:shake}
+@keyframes shake{from,to{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}
+10%,30%,50%,70%,90%{-webkit-transform:translate3d(-10px,0,0);transform:translate3d(-10px,0,0)}
+20%,40%,60%,80%{-webkit-transform:translate3d(10px,0,0);transform:translate3d(10px,0,0)}
+}.is_winIE section.people .card,.is_edge section.people .card,.is_IE section.people .card{-webkit-flex-basis:100%;-ms-flex-preferred-size:100%;flex-basis:100%}
 @media screen and (min-width:768px){.is_winIE section.people .card,.is_edge section.people .card,.is_IE section.people .card{-webkit-flex-basis:48%;-ms-flex-preferred-size:48%;flex-basis:48%}
 }@media screen and (min-width:1027px){.is_winIE section.people .card,.is_edge section.people .card,.is_IE section.people .card{-webkit-flex-basis:33%;-ms-flex-preferred-size:33%;flex-basis:33%}
 }@media screen and (max-width:380px){section.steps .step-desc,section.steps .step-title .name .midwrap{font-size:5vw}

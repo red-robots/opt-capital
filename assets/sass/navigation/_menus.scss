@@ -138,7 +138,7 @@
 		&.focus > a {
 		}
 		&.orange a {
-			background-color: $color-orange;
+			background-color: #C9D5E7;
 			color: #fff;
 			border: 1px solid #fff;
 			@media screen and (min-width: $tabwidth) {
@@ -153,12 +153,19 @@
 
 		}
 	}
+
+  .menu > li:hover > a {
+    @media screen and (min-width: $tabwidth) {
+      color: rgba($color-blue, 1);
+    }
+  }
 	a {
+    outline: none;
 		display: block;
-		// align-items: center;
 		text-decoration: none;
 		padding: 10px 0px;
 		color: #fff;
+    font-weight: 500;
 		@include transition(all ease .4s);
 		@media screen and (min-width: $tabwidth) {
 			padding: 0% 20px;
@@ -576,6 +583,13 @@ nav.mobilemenu {
 			color: #fff;
 			border: 1px solid #fff;
 		}
+    &.menu-item-420 > a,
+    &.menu-item-98 > a {
+      display: none;
+      @media screen and (min-width: $tabwidth) {
+        display: block;
+      }
+    }
 	}
 	a {
 		display: block;
