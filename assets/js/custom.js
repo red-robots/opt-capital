@@ -204,7 +204,7 @@ $(document).ready(function ($) {
 		parent.find('ul.sub-menu').addClass('animated shake');
 		setTimeout(function(){
 			parent.find('ul.sub-menu').removeClass('animated shake');
-		},400);
+		},500);
 	});
 
 
