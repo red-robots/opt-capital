@@ -207,12 +207,5 @@ $(document).ready(function ($) {
 		},400);
 	});
 
-	$("#primary-menu > li").hover( 
-		function(){
-
-		}, function(){
-			//$(this).find('.select-msg').remove();
-		}
-	);
 
 });// END #####################################    END

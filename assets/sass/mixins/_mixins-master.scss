@@ -69,10 +69,10 @@
 @mixin bluegrad() {
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#236ed1+0,31a0e8+100 */
 	background: rgb(35,110,209); /* Old browsers */
-	background: -moz-linear-gradient(-45deg, rgba(35,110,209,1) 0%, rgba(49,160,232,1) 100%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(-45deg, rgba(35,110,209,1) 0%,rgba(49,160,232,1) 100%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(135deg, rgba(35,110,209,1) 0%,rgba(49,160,232,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#236ed1', endColorstr='#31a0e8',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	background: -moz-linear-gradient(-45deg, #458CBB 0%, #44BAE2 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(-45deg, #458CBB 0%, #44BAE2 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient (135deg, #458CBB 0%, #44BAE2 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#458CBB', endColorstr='#44BAE2',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 @mixin orangegrad() {
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#eb692e+46,fcd16a+100 */
