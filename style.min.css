@@ -1747,8 +1747,8 @@ nav.mobilemenu{background-color:#eb692e;position:fixed;z-index:9;top:0;right:0;h
 }nav.mobilemenu ul{margin:0;padding:0}
 nav.mobilemenu li{font-size:4vw;position:relative;text-align:center;display:inline-block;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;padding:0;text-transform:uppercase;font-family:"Open Sans",sans-serif;font-weight:300;width:100%}
 nav.mobilemenu li.orange a{background-color:#eb692e;color:#fff;border:1px solid #fff}
-nav.mobilemenu li.menu-item-420>a,nav.mobilemenu li.menu-item-98>a{display:none}
-@media screen and (min-width:768px){nav.mobilemenu li.menu-item-420>a,nav.mobilemenu li.menu-item-98>a{display:block}
+nav.mobilemenu li a.hashlink,nav.mobilemenu li.menu-item-420>a,nav.mobilemenu li.menu-item-98>a{display:none}
+@media screen and (min-width:768px){nav.mobilemenu li a.hashlink,nav.mobilemenu li.menu-item-420>a,nav.mobilemenu li.menu-item-98>a{display:block}
 }nav.mobilemenu a{display:block;text-decoration:none;padding:10px 0;color:#fff}
 nav.mobilemenu.show{-webkit-transform:translateX(0);-ms-transform:translateX(0);transform:translateX(0)}
 nav.mobilemenu.show ul.main li{-webkit-transform:translateX(0);-ms-transform:translateX(0);transform:translateX(0);opacity:1;color:#fff;text-transform:uppercase;cursor:pointer}
