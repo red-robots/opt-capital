@@ -2345,12 +2345,7 @@ section.banner.sub .imageDiv{background-position:center center;background-size:c
 .cat-description{margin-bottom:5px}
 .cat-description p:first-child{margin-top:0}
 .cat-description p{margin-bottom:0;margin-top:1em}
-.animated{-webkit-animation-duration:.9s;animation-duration:.9s;-webkit-animation-fill-mode:both;animation-fill-mode:both}
-.shake{-webkit-animation-name:shake;animation-name:shake}
-@keyframes shake{from,to{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}
-10%,30%,50%,70%,90%{-webkit-transform:translate3d(-10px,0,0);transform:translate3d(-10px,0,0)}
-20%,40%,60%,80%{-webkit-transform:translate3d(10px,0,0);transform:translate3d(10px,0,0)}
-}.is_winIE section.people .card,.is_edge section.people .card,.is_IE section.people .card{-webkit-flex-basis:100%;-ms-flex-preferred-size:100%;flex-basis:100%}
+.is_winIE section.people .card,.is_edge section.people .card,.is_IE section.people .card{-webkit-flex-basis:100%;-ms-flex-preferred-size:100%;flex-basis:100%}
 @media screen and (min-width:768px){.is_winIE section.people .card,.is_edge section.people .card,.is_IE section.people .card{-webkit-flex-basis:48%;-ms-flex-preferred-size:48%;flex-basis:48%}
 }@media screen and (min-width:1027px){.is_winIE section.people .card,.is_edge section.people .card,.is_IE section.people .card{-webkit-flex-basis:33%;-ms-flex-preferred-size:33%;flex-basis:33%}
 }@media screen and (max-width:380px){section.steps .step-desc,section.steps .step-title .name .midwrap{font-size:5vw}
