@@ -38,9 +38,9 @@
 	@include orangegrad;
 	padding:0 0;
 	margin: 80px 0 30px 0;
-    height: 400px;
+    height: 300px;
     @media screen and (min-width: $tabwidth) {
-        height: 520px;
+        height: 400px;
     }
 	@media screen and (min-width: $midwidth) {
 		padding: 0;
@@ -137,7 +137,7 @@ section.home-middle {
 	padding: 0px 0 0 0;
     margin: 20px 0 30px 0;
     @media screen and (min-width: $midwidth) {
-        margin: 90px 0 50px 0;
+        margin: 70px 0 50px 0;
     }
 	section.video {
 		width: 100%;

@@ -7627,10 +7627,10 @@ section.banner {
   /* IE6-9 fallback on horizontal gradient */
   padding: 0 0;
   margin: 80px 0 30px 0;
-  height: 400px; }
+  height: 300px; }
   @media screen and (min-width: 768px) {
     #slider {
-      height: 520px; } }
+      height: 400px; } }
   @media screen and (min-width: 1027px) {
     #slider {
       padding: 0;
@@ -7738,7 +7738,7 @@ section.home-middle {
   margin: 20px 0 30px 0; }
   @media screen and (min-width: 1027px) {
     section.home-middle {
-      margin: 90px 0 50px 0; } }
+      margin: 70px 0 50px 0; } }
   section.home-middle section.video {
     width: 100%;
     float: left; }
