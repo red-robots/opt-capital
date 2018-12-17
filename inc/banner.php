@@ -28,10 +28,11 @@ if( !is_page('contact-us') ) :?>
         }
 $thumbnail_id = get_post_thumbnail_id($post_id);
 $img = wp_get_attachment_image_src($thumbnail_id,'large');
+$imageBg = ($img) ? ' style="background-image:url('.$img[0].')"':'';
 ?>
 	<section class="banner sub">
-       <!--  <div class="imageDiv" style="background-image:url('<?php echo $img[0]?>');"></div> -->
-		<?php the_post_thumbnail(); ?>
+        <div class="imageDiv"<?php echo $imageBg;?>></div>
+		<div style="display:none"><?php the_post_thumbnail(); ?></div>
 		<div class="title">
 			<header class="entry-header">
 				<h1 class="entry-title styledTitle"><?php echo $title; ?></h1>

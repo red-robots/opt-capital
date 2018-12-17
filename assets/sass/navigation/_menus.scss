@@ -139,26 +139,33 @@
 		}
 		&.orange a {
 			background-color: #C9D5E7;
-			color: #fff;
+			color: $color-dark-grey;
 			border: 1px solid #fff;
 			@media screen and (min-width: $tabwidth) {
 				border: 0;
 			}
 			&:hover {
-				
+				color: $color-dark-grey;
 				@media screen and (min-width: $tabwidth) {
 					background-color: rgba($color-blue, 1);
 				}
 			}
 
 		}
+    
 	}
 
-  .menu > li:hover > a {
-    @media screen and (min-width: $tabwidth) {
-      color: rgba($color-blue, 1);
+  .menu > li {
+    &:hover > a {
+      @media screen and (min-width: $tabwidth) {
+        color: rgba($color-blue, 1);
+      }
+    }
+    &.orange:hover a {
+      color: $color-dark-grey;
     }
   }
+
 	a {
     outline: none;
 		display: block;
