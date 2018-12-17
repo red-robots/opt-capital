@@ -32,7 +32,7 @@ $imageBg = ($img) ? ' style="background-image:url('.$img[0].')"':'';
 ?>
 	<section class="banner sub">
         <div class="imageDiv"<?php echo $imageBg;?>></div>
-		<div style="display:none"><?php the_post_thumbnail(); ?></div>
+		<div class="bannermobile"><?php the_post_thumbnail(); ?></div>
 		<div class="title">
 			<header class="entry-header">
 				<h1 class="entry-title styledTitle"><?php echo $title; ?></h1>
