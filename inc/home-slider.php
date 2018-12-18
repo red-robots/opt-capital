@@ -23,7 +23,6 @@ if ( have_posts() ) : the_post();
                     } else {
                         $style = '';
                     }
-                    // $style = '';
 				?>
 				<li>
 					<div class="slide">

@@ -40,7 +40,7 @@
 	margin: 80px 0 30px 0;
     height: 300px;
     @media screen and (min-width: $tabwidth) {
-        height: auto;
+        height: 400px;
     }
 	@media screen and (min-width: $midwidth) {
 		padding: 0;
@@ -49,7 +49,7 @@
 	img {
 		display: none;
 		@media screen and (min-width: $tabwidth) {
-			display: block;
+			display: none;
 		}
 	}
 	.slidewrapper,
@@ -66,9 +66,6 @@
         position: absolute;
         top: 0;
         left: 0;
-        @media screen and (min-width: $tabwidth) {
-        	position: relative;
-        }
     }
 }
 .slide {
@@ -572,7 +569,7 @@ section.people {
 	}
 	.imageDiv {
 		width: 100%;
-		// height:360px;
+		height:360px;
 		background-position: top center;
 		background-size: contain;
 		background-repeat: no-repeat;
@@ -583,7 +580,7 @@ section.people {
 		@media screen and (min-width: $xswidth) {
 			background-size: contain;
 			width: 100%;
-			// height: 360px;
+			height: 360px;
 			top: -10px;
 		}
 		@media screen and (min-width: $tabwidth) {
@@ -1952,18 +1949,10 @@ section.banner.sub {
 		background-repeat: no-repeat;
 		height: 150px;
 		@media screen and (min-width: $tabwidth) {
-			// height: 200px;
-			height: auto;
+			height: 200px;
 		}
 		@media screen and (min-width: $midwidth) {
-			// height: 300px;
-		}
-	}
-	.bannermobile {
-		// display: none;
-		background-size: contain;
-		@media screen and (min-width: $tabwidth) {
-			display: block;
+			height: 400px;
 		}
 	}
 }
